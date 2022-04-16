@@ -34,7 +34,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1917"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CAH-am-wUG">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAH-am-wUG">
                                 <rect key="frame" x="0.0" y="44" width="414" height="1873"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vf3-k7-B15">
@@ -923,7 +923,7 @@
                                                     <constraint firstItem="FTv-IP-7vS" firstAttribute="leading" secondItem="keg-47-gV2" secondAttribute="leading" id="1Ve-YU-lfz"/>
                                                     <constraint firstItem="FTv-IP-7vS" firstAttribute="top" secondItem="keg-47-gV2" secondAttribute="top" id="M5M-4w-CLj"/>
                                                     <constraint firstItem="FTv-IP-7vS" firstAttribute="height" secondItem="Rdp-eD-u3K" secondAttribute="height" id="mDQ-6z-Qyu"/>
-                                                    <constraint firstItem="FTv-IP-7vS" firstAttribute="trailing" secondItem="keg-47-gV2" secondAttribute="trailing" constant="133" id="vhZ-0V-gC0"/>
+                                                    <constraint firstItem="FTv-IP-7vS" firstAttribute="trailing" secondItem="keg-47-gV2" secondAttribute="trailing" id="vhZ-0V-gC0"/>
                                                     <constraint firstItem="FTv-IP-7vS" firstAttribute="bottom" secondItem="keg-47-gV2" secondAttribute="bottom" constant="221" id="yyw-Gn-lgB"/>
                                                 </constraints>
                                                 <viewLayoutGuide key="contentLayoutGuide" id="keg-47-gV2"/>
