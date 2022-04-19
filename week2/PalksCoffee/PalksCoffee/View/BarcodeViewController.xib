@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BarcodeViewController" customModule="PalksCoffee" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="palkLogo" translatesAutoresizingMaskIntoConstraints="NO" id="kd7-m6-caf">
+                    <rect key="frame" x="113.5" y="101" width="187" height="66"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="66" id="9L2-V8-3Al"/>
+                        <constraint firstAttribute="width" constant="187" id="cR4-cc-3qF"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mqs-fh-JAa">
+                    <rect key="frame" x="332" y="57" width="62" height="55"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="62" id="2X3-t4-a87"/>
+                        <constraint firstAttribute="height" constant="55" id="AFL-fY-3vq"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="xButton"/>
+                    <connections>
+                        <action selector="clickedCancelButton:" destination="-1" eventType="touchUpInside" id="gvD-sW-9mv"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제라" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WI3-Pt-fOT">
+                    <rect key="frame" x="25" y="305" width="40" height="28"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
+                    <color key="textColor" red="0.0" green="0.066666662690000003" blue="0.60392159219999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barcode" translatesAutoresizingMaskIntoConstraints="NO" id="N2p-hl-7QN">
+                    <rect key="frame" x="20" y="333" width="374" height="197"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="197" id="Wt0-eQ-D8V"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="님" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bDS-RK-5aX">
+                    <rect key="frame" x="73" y="305" width="20" height="28"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                    <color key="textColor" red="0.0" green="0.066666662690000003" blue="0.60392159219999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="N2p-hl-7QN" firstAttribute="top" secondItem="WI3-Pt-fOT" secondAttribute="bottom" id="1hh-xx-coQ"/>
+                <constraint firstItem="Mqs-fh-JAa" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="13" id="3Tu-wT-xnu"/>
+                <constraint firstItem="N2p-hl-7QN" firstAttribute="top" secondItem="kd7-m6-caf" secondAttribute="bottom" constant="166" id="4nA-Bf-ZWH"/>
+                <constraint firstItem="kd7-m6-caf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="7r5-S4-GXv"/>
+                <constraint firstItem="WI3-Pt-fOT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="XX9-rg-kna"/>
+                <constraint firstItem="bDS-RK-5aX" firstAttribute="leading" secondItem="WI3-Pt-fOT" secondAttribute="trailing" constant="8" symbolic="YES" id="XwT-a1-Fvc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="N2p-hl-7QN" secondAttribute="trailing" constant="20" id="dkF-Q1-Jlb"/>
+                <constraint firstItem="kd7-m6-caf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="57" id="lFP-bQ-LlM"/>
+                <constraint firstItem="N2p-hl-7QN" firstAttribute="top" secondItem="bDS-RK-5aX" secondAttribute="bottom" id="moj-fj-sy6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Mqs-fh-JAa" secondAttribute="trailing" constant="20" id="sWi-sN-PVS"/>
+                <constraint firstItem="N2p-hl-7QN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="xeh-Wn-2KA"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="129.91071428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="barcode" width="1674" height="642"/>
+        <image name="palkLogo" width="656" height="294"/>
+        <image name="xButton" width="54" height="52"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

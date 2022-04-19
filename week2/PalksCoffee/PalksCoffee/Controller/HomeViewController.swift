@@ -24,6 +24,11 @@ class HomeViewController: UIViewController {
     yogiyoView.layer.cornerRadius = 10
   }
 
-
+  @IBAction func clickedBarcode(_ sender: Any) {
+    let vc = BarcodeViewController()
+    vc.modalPresentationStyle = .fullScreen
+    self.present(vc, animated: true)
+  }
+  
 }
 

@@ -10,9 +10,11 @@
 		FADFB4A1280EE63700A99DDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADFB4A0280EE63700A99DDB /* AppDelegate.swift */; };
 		FADFB4A3280EE63700A99DDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADFB4A2280EE63700A99DDB /* SceneDelegate.swift */; };
 		FADFB4A5280EE63700A99DDB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADFB4A4280EE63700A99DDB /* HomeViewController.swift */; };
-		FADFB4A8280EE63700A99DDB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FADFB4A6280EE63700A99DDB /* Main.storyboard */; };
+		FADFB4A8280EE63700A99DDB /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FADFB4A6280EE63700A99DDB /* HomeViewController.storyboard */; };
 		FADFB4AA280EE63800A99DDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FADFB4A9280EE63800A99DDB /* Assets.xcassets */; };
 		FADFB4AD280EE63800A99DDB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FADFB4AB280EE63800A99DDB /* LaunchScreen.storyboard */; };
+		FADFB4B8280F1BB500A99DDB /* BarcodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADFB4B6280F1BB500A99DDB /* BarcodeViewController.swift */; };
+		FADFB4B9280F1BB500A99DDB /* BarcodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FADFB4B7280F1BB500A99DDB /* BarcodeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +22,12 @@
 		FADFB4A0280EE63700A99DDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FADFB4A2280EE63700A99DDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FADFB4A4280EE63700A99DDB /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		FADFB4A7280EE63700A99DDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FADFB4A7280EE63700A99DDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/HomeViewController.storyboard; sourceTree = "<group>"; };
 		FADFB4A9280EE63800A99DDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FADFB4AC280EE63800A99DDB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FADFB4AE280EE63800A99DDB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FADFB4B6280F1BB500A99DDB /* BarcodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeViewController.swift; sourceTree = "<group>"; };
+		FADFB4B7280F1BB500A99DDB /* BarcodeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BarcodeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,33 @@
 		FADFB49F280EE63700A99DDB /* PalksCoffee */ = {
 			isa = PBXGroup;
 			children = (
+				FADFB4B5280F1AAE00A99DDB /* Controller */,
+				FADFB4B4280F1AA700A99DDB /* View */,
 				FADFB4A0280EE63700A99DDB /* AppDelegate.swift */,
 				FADFB4A2280EE63700A99DDB /* SceneDelegate.swift */,
-				FADFB4A4280EE63700A99DDB /* HomeViewController.swift */,
-				FADFB4A6280EE63700A99DDB /* Main.storyboard */,
 				FADFB4A9280EE63800A99DDB /* Assets.xcassets */,
 				FADFB4AB280EE63800A99DDB /* LaunchScreen.storyboard */,
 				FADFB4AE280EE63800A99DDB /* Info.plist */,
 			);
 			path = PalksCoffee;
+			sourceTree = "<group>";
+		};
+		FADFB4B4280F1AA700A99DDB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FADFB4A6280EE63700A99DDB /* HomeViewController.storyboard */,
+				FADFB4B7280F1BB500A99DDB /* BarcodeViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FADFB4B5280F1AAE00A99DDB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FADFB4A4280EE63700A99DDB /* HomeViewController.swift */,
+				FADFB4B6280F1BB500A99DDB /* BarcodeViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +148,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FADFB4AD280EE63800A99DDB /* LaunchScreen.storyboard in Resources */,
+				FADFB4B9280F1BB500A99DDB /* BarcodeViewController.xib in Resources */,
 				FADFB4AA280EE63800A99DDB /* Assets.xcassets in Resources */,
-				FADFB4A8280EE63700A99DDB /* Main.storyboard in Resources */,
+				FADFB4A8280EE63700A99DDB /* HomeViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FADFB4A5280EE63700A99DDB /* HomeViewController.swift in Sources */,
+				FADFB4B8280F1BB500A99DDB /* BarcodeViewController.swift in Sources */,
 				FADFB4A1280EE63700A99DDB /* AppDelegate.swift in Sources */,
 				FADFB4A3280EE63700A99DDB /* SceneDelegate.swift in Sources */,
 			);
@@ -147,12 +171,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FADFB4A6280EE63700A99DDB /* Main.storyboard */ = {
+		FADFB4A6280EE63700A99DDB /* HomeViewController.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				FADFB4A7280EE63700A99DDB /* Base */,
 			);
-			name = Main.storyboard;
+			name = HomeViewController.storyboard;
 			sourceTree = "<group>";
 		};
 		FADFB4AB280EE63800A99DDB /* LaunchScreen.storyboard */ = {
@@ -293,7 +317,7 @@
 				INFOPLIST_FILE = PalksCoffee/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = HomeViewController;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -320,7 +344,7 @@
 				INFOPLIST_FILE = PalksCoffee/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = HomeViewController;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
