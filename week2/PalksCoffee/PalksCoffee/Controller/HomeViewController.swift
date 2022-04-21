@@ -48,9 +48,17 @@ class HomeViewController: UIViewController {
     self.present(vc, animated: true)
   }
   
-  func dismissPopUp(animated: Bool) {
-    self.dismiss(animated: animated, completion: nil)
+  @IBAction func clickedSmartorderLabel(_ sender: Any) {
+    print("clickedSmartorderLabel")
+    let vc = StoreViewController()
+    
+    navigationController?.pushViewController(vc, animated: true)
+    //self.present(vc, animated: true)
+    
   }
-  
+  @IBAction func clickedSmartorderImage(_ sender: Any) {
+    let vc = StoreViewController()
+    navigationController?.pushViewController(vc, animated: true)
+  }
 }
 

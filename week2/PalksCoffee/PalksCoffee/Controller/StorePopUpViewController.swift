@@ -1,22 +1,21 @@
 //
-//  BarcodeViewController.swift
+//  StorePopUpViewController.swift
 //  PalksCoffee
 //
-//  Created by 임영선 on 2022/04/20.
+//  Created by 임영선 on 2022/04/21.
 //
 
 import UIKit
 
-class BarcodeViewController: UIViewController {
+class StorePopUpViewController: UIViewController {
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
-  }
+    override func viewDidLoad() {
+        super.viewDidLoad()
 
-  @IBAction func clickedCancelButton(_ sender: Any) {
-    self.dismiss(animated: true)
-  }
-  
+        // Do any additional setup after loading the view.
+    }
+
+
     /*
     // MARK: - Navigation
 
