@@ -9,21 +9,20 @@ import UIKit
 
 class StorePopUpViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+  @IBOutlet weak var cancelButton: UIButton!
+  @IBOutlet weak var popUpView: UIView!
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    popUpView.layer.cornerRadius = 15
+    //cancelButton.layer.cornerRadius = 15
+    navigationController?.isNavigationBarHidden = true
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    navigationController?.isNavigationBarHidden = true
+  }
 
-        // Do any additional setup after loading the view.
-    }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+  @IBAction func clickedCancel(_ sender: Any) {
+    dismiss(animated: false)
+  }
 }

@@ -8,9 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		FA3914F928106F1900154DFC /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3914F828106F1900154DFC /* StoreViewController.swift */; };
-		FA3914FB28106F2400154DFC /* StoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3914FA28106F2400154DFC /* StoreViewController.xib */; };
+		FA3BACCC2812736100988570 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3BACCB2812736100988570 /* MenuViewController.swift */; };
 		FA443F03281191030075E945 /* StorePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA443F01281191030075E945 /* StorePopUpViewController.swift */; };
-		FA443F04281191030075E945 /* StorePopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA443F02281191030075E945 /* StorePopUpViewController.xib */; };
 		FADFB4A1280EE63700A99DDB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADFB4A0280EE63700A99DDB /* AppDelegate.swift */; };
 		FADFB4A3280EE63700A99DDB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADFB4A2280EE63700A99DDB /* SceneDelegate.swift */; };
 		FADFB4A5280EE63700A99DDB /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADFB4A4280EE63700A99DDB /* HomeViewController.swift */; };
@@ -25,9 +24,8 @@
 
 /* Begin PBXFileReference section */
 		FA3914F828106F1900154DFC /* StoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
-		FA3914FA28106F2400154DFC /* StoreViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoreViewController.xib; sourceTree = "<group>"; };
+		FA3BACCB2812736100988570 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		FA443F01281191030075E945 /* StorePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorePopUpViewController.swift; sourceTree = "<group>"; };
-		FA443F02281191030075E945 /* StorePopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StorePopUpViewController.xib; sourceTree = "<group>"; };
 		FADFB49D280EE63700A99DDB /* PalksCoffee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PalksCoffee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FADFB4A0280EE63700A99DDB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FADFB4A2280EE63700A99DDB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,8 +87,6 @@
 				FADFB4A6280EE63700A99DDB /* HomeViewController.storyboard */,
 				FADFB4B7280F1BB500A99DDB /* BarcodeViewController.xib */,
 				FADFB4BB280F20B800A99DDB /* PopUpViewController.xib */,
-				FA3914FA28106F2400154DFC /* StoreViewController.xib */,
-				FA443F02281191030075E945 /* StorePopUpViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -103,6 +99,7 @@
 				FADFB4B6280F1BB500A99DDB /* BarcodeViewController.swift */,
 				FA3914F828106F1900154DFC /* StoreViewController.swift */,
 				FA443F01281191030075E945 /* StorePopUpViewController.swift */,
+				FA3BACCB2812736100988570 /* MenuViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -165,8 +162,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA3914FB28106F2400154DFC /* StoreViewController.xib in Resources */,
-				FA443F04281191030075E945 /* StorePopUpViewController.xib in Resources */,
 				FADFB4AD280EE63800A99DDB /* LaunchScreen.storyboard in Resources */,
 				FADFB4BD280F20B800A99DDB /* PopUpViewController.xib in Resources */,
 				FADFB4B9280F1BB500A99DDB /* BarcodeViewController.xib in Resources */,
@@ -183,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FADFB4BC280F20B800A99DDB /* PopUpViewController.swift in Sources */,
+				FA3BACCC2812736100988570 /* MenuViewController.swift in Sources */,
 				FADFB4A5280EE63700A99DDB /* HomeViewController.swift in Sources */,
 				FA443F03281191030075E945 /* StorePopUpViewController.swift in Sources */,
 				FA3914F928106F1900154DFC /* StoreViewController.swift in Sources */,

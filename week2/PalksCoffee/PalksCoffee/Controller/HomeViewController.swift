@@ -39,7 +39,11 @@ class HomeViewController: UIViewController {
       self.present(popUpVC, animated: false)
       popUpCheck = false
     }
-    
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    self.navigationController?.isNavigationBarHidden = true
   }
 
   @IBAction func clickedBarcode(_ sender: Any) {
@@ -50,9 +54,9 @@ class HomeViewController: UIViewController {
   
   @IBAction func clickedSmartorderLabel(_ sender: Any) {
     print("clickedSmartorderLabel")
-    let vc = StoreViewController()
+    //let vc = StoreViewController()
     
-    navigationController?.pushViewController(vc, animated: true)
+    //navigationController?.pushViewController(vc, animated: true)
     //self.present(vc, animated: true)
     
   }
