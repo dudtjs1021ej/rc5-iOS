@@ -26,13 +26,12 @@ class HomeViewController: UIViewController {
     eventVView.layer.cornerRadius = 10
     yogiyoView.layer.cornerRadius = 10
     
-    let popUpVC = PopUpViewController()
-    popUpVC.modalPresentationStyle = .overCurrentContext
-    self.present(popUpVC, animated: false)
+    //UserDefaults.standard.set(true, forKey: "popUp")
   }
   
   // 팝업 창 체크
   override func viewDidAppear(_ animated: Bool) {
+    print(UserDefaults.standard.bool(forKey: "popUp"))
     if UserDefaults.standard.bool(forKey: "popUp") == true {
       let popUpVC = PopUpViewController()
       popUpVC.modalPresentationStyle = .overCurrentContext
@@ -50,15 +49,7 @@ class HomeViewController: UIViewController {
     vc.modalPresentationStyle = .fullScreen
     self.present(vc, animated: true)
   }
-  
-  @IBAction func clickedSmartorderLabel(_ sender: Any) {
-    print("clickedSmartorderLabel")
-    //let vc = StoreViewController()
-    
-    //navigationController?.pushViewController(vc, animated: true)
-    //self.present(vc, animated: true)
-    
-  }
+
   @IBAction func clickedSmartorderImage(_ sender: Any) {
     let vc = StoreViewController()
     navigationController?.pushViewController(vc, animated: true)

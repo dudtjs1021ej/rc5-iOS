@@ -41,6 +41,7 @@
                     <buttonConfiguration key="configuration" style="plain" title="다시 보지 않기"/>
                     <connections>
                         <action selector="clickedCancelButton:" destination="-1" eventType="touchUpInside" id="lDs-m1-FRo"/>
+                        <action selector="clickedTodayCancelButton:" destination="-1" eventType="touchUpInside" id="XD3-7D-nqy"/>
                     </connections>
                 </button>
             </subviews>

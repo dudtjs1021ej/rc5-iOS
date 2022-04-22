@@ -327,7 +327,6 @@
                                                                     </attributedString>
                                                                 </state>
                                                                 <connections>
-                                                                    <action selector="clickedSmartorderLabel:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6pl-9m-0WU"/>
                                                                     <segue destination="M1V-aG-87J" kind="show" id="PND-Ow-PMz"/>
                                                                 </connections>
                                                             </button>
