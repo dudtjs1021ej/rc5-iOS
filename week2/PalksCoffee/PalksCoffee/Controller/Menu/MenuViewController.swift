@@ -12,7 +12,9 @@ class MenuViewController: UIViewController {
   @IBOutlet weak var menuView: UIView!
   @IBOutlet weak var coffeeContainerView: UIView!
   @IBOutlet weak var drinkContainerView: UIView!
+  
   var selectedIndex = 0
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     drinkContainerView.alpha = 0 // 음료 메뉴 투명도 0

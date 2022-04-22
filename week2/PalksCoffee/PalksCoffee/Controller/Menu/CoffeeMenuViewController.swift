@@ -14,9 +14,10 @@ class CoffeeMenuViewController: UIViewController {
   @IBOutlet weak var sumPriceLabel: UILabel!
   @IBOutlet weak var payButton: UIButton!
   
-  let menu: [String] = ["더블에스프레소", "앗메리카노(HOT)", "앗메리카노(ICED)", "원조커피(HOT)", "원조커피(ICED)"]
-  let price: [Int] = [1500, 1500, 2000, 2500, 2500]
-  let imageViewName: [String] = ["espresso", "americano_hot","americano_ice", "original_hot", "original_ice"]
+  let menu: [String] = ["더블에스프레소", "앗메리카노(HOT)", "앗메리카노(ICED)", "원조커피(HOT)", "원조커피(ICED)",
+                        "카페모카(HOT)", "카페모카(ICED)", "빽's라떼(HOT)", "빽's라떼(ICED)", "바닐라라떼(HOT)", "바닐라라떼(ICED)"]
+  let price: [Int] = [1500, 1500, 2000, 2500, 2500, 3500, 3500, 3000, 3000, 3500, 3500]
+  let imageViewName: [String] = ["espresso", "americano_hot","americano_ice", "original_hot", "original_ice", "moca_hot", "moca_ice", "lattee_hot", "lattee_ice", "ba_hot", "ba_ice"]
   
   let cart = Cart.shared
   

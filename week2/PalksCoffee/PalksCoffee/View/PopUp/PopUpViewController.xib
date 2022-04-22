@@ -35,10 +35,10 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zh3-V2-2Pn">
-                    <rect key="frame" x="63.5" y="641" width="133" height="31"/>
+                    <rect key="frame" x="63.5" y="641" width="104.5" height="31"/>
                     <color key="tintColor" red="0.94901961089999998" green="0.94509804249999996" blue="0.94509804249999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="오늘 하루 보지 않기"/>
+                    <buttonConfiguration key="configuration" style="plain" title="다시 보지 않기"/>
                     <connections>
                         <action selector="clickedCancelButton:" destination="-1" eventType="touchUpInside" id="lDs-m1-FRo"/>
                     </connections>

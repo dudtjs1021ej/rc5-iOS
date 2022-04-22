@@ -14,6 +14,7 @@
 		FA27617E2812F772003E3663 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27617D2812F772003E3663 /* Cart.swift */; };
 		FA2761802812FACC003E3663 /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27617F2812FACC003E3663 /* PayViewController.swift */; };
 		FA2761842813022D003E3663 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2761832813022C003E3663 /* CartTableViewCell.swift */; };
+		FA27618828132423003E3663 /* DrinkMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27618728132423003E3663 /* DrinkMenuViewController.swift */; };
 		FA3914F928106F1900154DFC /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3914F828106F1900154DFC /* StoreViewController.swift */; };
 		FA3BACCC2812736100988570 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3BACCB2812736100988570 /* MenuViewController.swift */; };
 		FA443F03281191030075E945 /* StorePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA443F01281191030075E945 /* StorePopUpViewController.swift */; };
@@ -37,6 +38,7 @@
 		FA27617D2812F772003E3663 /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		FA27617F2812FACC003E3663 /* PayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PayViewController.swift; path = PalksCoffee/Controller/PayViewController.swift; sourceTree = SOURCE_ROOT; };
 		FA2761832813022C003E3663 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		FA27618728132423003E3663 /* DrinkMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkMenuViewController.swift; sourceTree = "<group>"; };
 		FA3914F828106F1900154DFC /* StoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		FA3BACCB2812736100988570 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		FA443F01281191030075E945 /* StorePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorePopUpViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				FA3BACCB2812736100988570 /* MenuViewController.swift */,
+				FA27618728132423003E3663 /* DrinkMenuViewController.swift */,
 				FA27617528128785003E3663 /* CoffeeMenuViewController.swift */,
 				FA2761792812965D003E3663 /* DetailCoffeeMenuViewController.swift */,
 				FA27617B2812D9C8003E3663 /* OptionMenuViewController.swift */,
@@ -242,6 +245,7 @@
 				FA2761802812FACC003E3663 /* PayViewController.swift in Sources */,
 				FA3BACCC2812736100988570 /* MenuViewController.swift in Sources */,
 				FA27617C2812D9C8003E3663 /* OptionMenuViewController.swift in Sources */,
+				FA27618828132423003E3663 /* DrinkMenuViewController.swift in Sources */,
 				FADFB4A5280EE63700A99DDB /* HomeViewController.swift in Sources */,
 				FA443F03281191030075E945 /* StorePopUpViewController.swift in Sources */,
 				FA27617828128AC7003E3663 /* CoffeeMenuTableViewCell.swift in Sources */,

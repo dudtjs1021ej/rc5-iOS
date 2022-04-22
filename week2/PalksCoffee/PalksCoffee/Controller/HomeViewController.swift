@@ -31,13 +31,12 @@ class HomeViewController: UIViewController {
     self.present(popUpVC, animated: false)
   }
   
-  
+  // 팝업 창 체크
   override func viewDidAppear(_ animated: Bool) {
-    if popUpCheck == true {
+    if UserDefaults.standard.bool(forKey: "popUp") == true {
       let popUpVC = PopUpViewController()
       popUpVC.modalPresentationStyle = .overCurrentContext
       self.present(popUpVC, animated: false)
-      popUpCheck = false
     }
   }
   

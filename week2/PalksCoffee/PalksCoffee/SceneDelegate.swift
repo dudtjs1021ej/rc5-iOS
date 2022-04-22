@@ -10,17 +10,10 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
   var window: UIWindow?
-
+  var imageView: UIImageView? // 이미지뷰 생성
 
   func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
     
-//    guard let windowScene = (scene as? UIWindowScene) else { return }
-//    window = UIWindow(windowScene: windowScene)
-//    
-//    let rootVC = UINavigationController(rootViewController: HomeViewController())
-//    
-//    self.window?.rootViewController = rootVC
-//    window?.makeKeyAndVisible()
   }
 
   func sceneDidDisconnect(_ scene: UIScene) {
@@ -30,21 +23,30 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     // The scene may re-connect later, as its session was not necessarily discarded (see `application:didDiscardSceneSessions` instead).
   }
 
+  // 액티브 상태가 됐을 경우 - 이미지뷰 삭제
   func sceneDidBecomeActive(_ scene: UIScene) {
-    // Called when the scene has moved from an inactive state to an active state.
-    // Use this method to restart any tasks that were paused (or not yet started) when the scene was inactive.
+    if let imageView = imageView {
+      imageView.removeFromSuperview()
+    }
   }
 
+  // Switcher모드 - window에 이미지 추가
   func sceneWillResignActive(_ scene: UIScene) {
-    // Called when the scene will move from an active state to an inactive state.
-    // This may occur due to temporary interruptions (ex. an incoming phone call).
+    guard let window = window else {
+      return
+    }
+    imageView = UIImageView(frame: window.frame)
+    imageView?.image = UIImage(named: "switcher")
+    window.addSubview(imageView!)
   }
 
+  // 백그라운드 상태였다가 돌아온 경우
   func sceneWillEnterForeground(_ scene: UIScene) {
     // Called as the scene transitions from the background to the foreground.
     // Use this method to undo the changes made on entering the background.
   }
 
+  // 백그라운드 상태로 갔을 경우
   func sceneDidEnterBackground(_ scene: UIScene) {
     // Called as the scene transitions from the foreground to the background.
     // Use this method to save data, release shared resources, and store enough scene-specific state information
