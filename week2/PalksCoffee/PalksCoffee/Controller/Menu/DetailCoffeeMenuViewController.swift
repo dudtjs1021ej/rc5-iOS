@@ -40,6 +40,15 @@ class DetailCoffeeMenuViewController: UIViewController {
     priceLabel.text = "\(String(price*coffeeCount))원"
   }
   @IBAction func clickedCart(_ sender: Any) {
+    let cart = Cart.shared
+    // 싱글턴패턴 -> 공통 프로퍼티에 장바구니 목록 담음
+    cart.price.append(price*coffeeCount)
+    cart.menu.append(menuLabel.text ?? "")
+    cart.option.append(optionCount)
+    cart.count.append(coffeeCount)
+    
+    // 장바구니 데이터를 set하기 위해 NotificationCenter post
+    NotificationCenter.default.post(name: NSNotification.Name("setCartData"), object: nil)
     dismiss(animated: true)
   }
 

@@ -10,15 +10,31 @@ import UIKit
 class CoffeeMenuViewController: UIViewController {
 
   @IBOutlet weak var tableView: UITableView!
+  @IBOutlet weak var sumCountLabel: UILabel!
+  @IBOutlet weak var sumPriceLabel: UILabel!
+  @IBOutlet weak var payButton: UIButton!
   
   let menu: [String] = ["더블에스프레소", "앗메리카노(HOT)", "앗메리카노(ICED)", "원조커피(HOT)", "원조커피(ICED)"]
   let price: [Int] = [1500, 1500, 2000, 2500, 2500]
   let imageViewName: [String] = ["espresso", "americano_hot","americano_ice", "original_hot", "original_ice"]
   
+  let cart = Cart.shared
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     tableView.dataSource = self
     tableView.delegate = self
+    
+    payButton.layer.cornerRadius = 10
+    
+    // 장바구니 목록을 보여주기 위한 NotificationCenter
+    NotificationCenter.default.addObserver(self, selector: #selector(setCartData), name: NSNotification.Name("setCartData"), object: nil)
+  }
+  @objc func setCartData(_ notification: NSNotification) {
+    let sumCount = cart.count.reduce(0, +)
+    sumCountLabel.text = "총 \(String(sumCount))개"
+    let sumPrice = cart.price.reduce(0, +)
+    sumPriceLabel.text = "\(String(sumPrice))원"
   }
 }
 
