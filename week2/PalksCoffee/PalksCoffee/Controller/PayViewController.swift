@@ -13,19 +13,88 @@ class PayViewController: UIViewController {
   @IBOutlet weak var sumPriceLabel: UILabel!
   @IBOutlet weak var tableView: UITableView!
   
+  @IBOutlet weak var couponButton: UIButton!
+  @IBOutlet weak var giftButton: UIButton!
+  
+  @IBOutlet var takeOutButtons: [UIButton]!
+  @IBOutlet var payButtons: [UIButton]!
+  
   let cart = Cart.shared
+  var takeoutButtonSelectedIndex = 0
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    // 장바구니 데이터 초기화
     let sumCount = cart.count.reduce(0, +)
     sumCountLabel.text = "총 \(String(sumCount))개"
     let sumPrice = cart.price.reduce(0, +)
     sumPriceLabel.text = "\(String(sumPrice))원"
+    
+    // 버튼 테두리 추가
+    couponButton.layer.borderWidth = 1
+    couponButton.layer.borderColor = UIColor(named: "palkColor")?.cgColor
+    couponButton.layer.cornerRadius = 15
+    
+    giftButton.layer.borderWidth = 1
+    giftButton.layer.borderColor = UIColor(named: "palkColor")?.cgColor
+    giftButton.layer.cornerRadius = 15
+    
+    // 포장버튼 테두리, action 추가
+    for button in takeOutButtons{
+      button.layer.cornerRadius = 20
+      button.layer.borderWidth = 1
+      button.layer.borderColor = UIColor(named: "palkColor")?.cgColor
+  
+      button.addTarget(self, action: #selector(takeOutButtonAction), for: .touchUpInside)
+    }
+    
+    // 결제버튼 테두리, action 추가
+    for button in payButtons{
+      button.layer.cornerRadius = 20
+      button.layer.borderWidth = 1
+      button.layer.borderColor = UIColor(named: "palkColor")?.cgColor
+  
+      button.addTarget(self, action: #selector(payButtonAction), for: .touchUpInside)
+    }
     
     tableView.delegate = self
     tableView.dataSource = self
   }
   @IBAction func clickedCancel(_ sender: Any) {
     dismiss(animated: true, completion: nil)
+  }
+  
+  @objc func takeOutButtonAction(_ sender: UIButton) {
+    for (index, button) in takeOutButtons.enumerated() {
+      if button == sender { // 선택된 버튼만 배경색 넣어줌
+        self.takeoutButtonSelectedIndex = index
+        button.backgroundColor = UIColor(named: "palkColor")
+        button.tintColor = .white
+      } else {
+        button.backgroundColor = .white
+        button.tintColor = UIColor(named: "palkColor")
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor(named: "palkColor")?.cgColor
+      }
+    }
+  }
+  
+  @objc func payButtonAction(_ sender: UIButton) {
+    for (index, button) in payButtons.enumerated() {
+      if button == sender { // 선택된 버튼만 배경색 넣어줌
+        self.takeoutButtonSelectedIndex = index
+        button.backgroundColor = UIColor(named: "palkColor")
+        button.tintColor = .white
+      } else {
+        button.backgroundColor = .white
+        button.tintColor = UIColor(named: "palkColor")
+        button.layer.borderWidth = 1
+        button.layer.borderColor = UIColor(named: "palkColor")?.cgColor
+      }
+    }
+  }
+  @IBAction func clickedOrder(_ sender: Any) {
+    self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
   }
 }
 

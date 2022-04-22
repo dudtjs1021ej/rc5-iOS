@@ -91,6 +91,16 @@
 			path = PopUp;
 			sourceTree = "<group>";
 		};
+		FA276186281321B3003E3663 /* PopUp */ = {
+			isa = PBXGroup;
+			children = (
+				FADFB4BA280F20B800A99DDB /* PopUpViewController.swift */,
+				FADFB4B6280F1BB500A99DDB /* BarcodeViewController.swift */,
+				FA443F01281191030075E945 /* StorePopUpViewController.swift */,
+			);
+			path = PopUp;
+			sourceTree = "<group>";
+		};
 		FA3BACCD281286CF00988570 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,13 +156,11 @@
 		FADFB4B5280F1AAE00A99DDB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				FA3BACCD281286CF00988570 /* Menu */,
 				FADFB4A4280EE63700A99DDB /* HomeViewController.swift */,
-				FADFB4BA280F20B800A99DDB /* PopUpViewController.swift */,
-				FADFB4B6280F1BB500A99DDB /* BarcodeViewController.swift */,
 				FA3914F828106F1900154DFC /* StoreViewController.swift */,
-				FA443F01281191030075E945 /* StorePopUpViewController.swift */,
 				FA27617F2812FACC003E3663 /* PayViewController.swift */,
+				FA3BACCD281286CF00988570 /* Menu */,
+				FA276186281321B3003E3663 /* PopUp */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
