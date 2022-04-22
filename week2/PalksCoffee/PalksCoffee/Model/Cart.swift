@@ -12,4 +12,5 @@ class Cart {
   var price: [Int] = []
   var option: [Int] = []
   var count: [Int] = []
+  var imageName: [String] = []
 }

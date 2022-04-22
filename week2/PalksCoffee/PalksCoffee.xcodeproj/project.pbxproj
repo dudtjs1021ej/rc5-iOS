@@ -13,6 +13,7 @@
 		FA27617C2812D9C8003E3663 /* OptionMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27617B2812D9C8003E3663 /* OptionMenuViewController.swift */; };
 		FA27617E2812F772003E3663 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27617D2812F772003E3663 /* Cart.swift */; };
 		FA2761802812FACC003E3663 /* PayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27617F2812FACC003E3663 /* PayViewController.swift */; };
+		FA2761842813022D003E3663 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2761832813022C003E3663 /* CartTableViewCell.swift */; };
 		FA3914F928106F1900154DFC /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3914F828106F1900154DFC /* StoreViewController.swift */; };
 		FA3BACCC2812736100988570 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3BACCB2812736100988570 /* MenuViewController.swift */; };
 		FA443F03281191030075E945 /* StorePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA443F01281191030075E945 /* StorePopUpViewController.swift */; };
@@ -35,6 +36,7 @@
 		FA27617B2812D9C8003E3663 /* OptionMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionMenuViewController.swift; sourceTree = "<group>"; };
 		FA27617D2812F772003E3663 /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		FA27617F2812FACC003E3663 /* PayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PayViewController.swift; path = PalksCoffee/Controller/PayViewController.swift; sourceTree = SOURCE_ROOT; };
+		FA2761832813022C003E3663 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		FA3914F828106F1900154DFC /* StoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		FA3BACCB2812736100988570 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		FA443F01281191030075E945 /* StorePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorePopUpViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA276181281301FD003E3663 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA27617D2812F772003E3663 /* Cart.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA27618228130214003E3663 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FA27617728128AC7003E3663 /* CoffeeMenuTableViewCell.swift */,
+				FA2761832813022C003E3663 /* CartTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FA2761852813089E003E3663 /* PopUp */ = {
+			isa = PBXGroup;
+			children = (
+				FADFB4BB280F20B800A99DDB /* PopUpViewController.xib */,
+				FADFB4B7280F1BB500A99DDB /* BarcodeViewController.xib */,
+			);
+			path = PopUp;
+			sourceTree = "<group>";
+		};
 		FA3BACCD281286CF00988570 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -93,15 +121,14 @@
 		FADFB49F280EE63700A99DDB /* PalksCoffee */ = {
 			isa = PBXGroup;
 			children = (
-				FADFB4B5280F1AAE00A99DDB /* Controller */,
+				FA276181281301FD003E3663 /* Model */,
 				FADFB4B4280F1AA700A99DDB /* View */,
+				FADFB4B5280F1AAE00A99DDB /* Controller */,
 				FADFB4A0280EE63700A99DDB /* AppDelegate.swift */,
 				FADFB4A2280EE63700A99DDB /* SceneDelegate.swift */,
 				FADFB4A9280EE63800A99DDB /* Assets.xcassets */,
 				FADFB4AB280EE63800A99DDB /* LaunchScreen.storyboard */,
 				FADFB4AE280EE63800A99DDB /* Info.plist */,
-				FA27617728128AC7003E3663 /* CoffeeMenuTableViewCell.swift */,
-				FA27617D2812F772003E3663 /* Cart.swift */,
 			);
 			path = PalksCoffee;
 			sourceTree = "<group>";
@@ -110,8 +137,8 @@
 			isa = PBXGroup;
 			children = (
 				FADFB4A6280EE63700A99DDB /* HomeViewController.storyboard */,
-				FADFB4B7280F1BB500A99DDB /* BarcodeViewController.xib */,
-				FADFB4BB280F20B800A99DDB /* PopUpViewController.xib */,
+				FA2761852813089E003E3663 /* PopUp */,
+				FA27618228130214003E3663 /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -215,6 +242,7 @@
 				FA27617628128785003E3663 /* CoffeeMenuViewController.swift in Sources */,
 				FA27617E2812F772003E3663 /* Cart.swift in Sources */,
 				FA27617A2812965D003E3663 /* DetailCoffeeMenuViewController.swift in Sources */,
+				FA2761842813022D003E3663 /* CartTableViewCell.swift in Sources */,
 				FADFB4A1280EE63700A99DDB /* AppDelegate.swift in Sources */,
 				FADFB4A3280EE63700A99DDB /* SceneDelegate.swift in Sources */,
 			);

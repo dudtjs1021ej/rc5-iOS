@@ -66,6 +66,7 @@ extension CoffeeMenuViewController: UITableViewDataSource, UITableViewDelegate {
     vc.menuLabel.text = menu[indexPath.row]
     vc.priceLabel.text = "\(String(price[indexPath.row]))원"
     vc.coffeeImageView.image = UIImage(named: imageViewName[indexPath.row])
+    vc.imageName = imageViewName[indexPath.row]
   }
   
 }
