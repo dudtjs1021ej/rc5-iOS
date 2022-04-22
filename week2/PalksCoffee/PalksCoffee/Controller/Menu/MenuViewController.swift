@@ -53,5 +53,8 @@ class MenuViewController: UIViewController {
       coffeeContainerView.alpha = 0
     }
   }
+  @IBAction func clickedBackButton(_ sender: Any) {
+    dismiss(animated: false)
+  }
   
 }

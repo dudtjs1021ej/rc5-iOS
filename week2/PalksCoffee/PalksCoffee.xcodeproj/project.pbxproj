@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA27617628128785003E3663 /* CoffeeMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27617528128785003E3663 /* CoffeeMenuViewController.swift */; };
+		FA27617828128AC7003E3663 /* CoffeeMenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27617728128AC7003E3663 /* CoffeeMenuTableViewCell.swift */; };
+		FA27617A2812965D003E3663 /* DetailCoffeeMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2761792812965D003E3663 /* DetailCoffeeMenuViewController.swift */; };
 		FA3914F928106F1900154DFC /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3914F828106F1900154DFC /* StoreViewController.swift */; };
 		FA3BACCC2812736100988570 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3BACCB2812736100988570 /* MenuViewController.swift */; };
 		FA443F03281191030075E945 /* StorePopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA443F01281191030075E945 /* StorePopUpViewController.swift */; };
@@ -23,6 +26,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA27617528128785003E3663 /* CoffeeMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeMenuViewController.swift; sourceTree = "<group>"; };
+		FA27617728128AC7003E3663 /* CoffeeMenuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeMenuTableViewCell.swift; sourceTree = "<group>"; };
+		FA2761792812965D003E3663 /* DetailCoffeeMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailCoffeeMenuViewController.swift; sourceTree = "<group>"; };
 		FA3914F828106F1900154DFC /* StoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		FA3BACCB2812736100988570 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		FA443F01281191030075E945 /* StorePopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorePopUpViewController.swift; sourceTree = "<group>"; };
@@ -51,6 +57,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA3BACCD281286CF00988570 /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				FA3BACCB2812736100988570 /* MenuViewController.swift */,
+				FA27617528128785003E3663 /* CoffeeMenuViewController.swift */,
+				FA2761792812965D003E3663 /* DetailCoffeeMenuViewController.swift */,
+			);
+			path = Menu;
+			sourceTree = "<group>";
+		};
 		FADFB494280EE63700A99DDB = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +93,7 @@
 				FADFB4A9280EE63800A99DDB /* Assets.xcassets */,
 				FADFB4AB280EE63800A99DDB /* LaunchScreen.storyboard */,
 				FADFB4AE280EE63800A99DDB /* Info.plist */,
+				FA27617728128AC7003E3663 /* CoffeeMenuTableViewCell.swift */,
 			);
 			path = PalksCoffee;
 			sourceTree = "<group>";
@@ -94,12 +111,12 @@
 		FADFB4B5280F1AAE00A99DDB /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				FA3BACCD281286CF00988570 /* Menu */,
 				FADFB4A4280EE63700A99DDB /* HomeViewController.swift */,
 				FADFB4BA280F20B800A99DDB /* PopUpViewController.swift */,
 				FADFB4B6280F1BB500A99DDB /* BarcodeViewController.swift */,
 				FA3914F828106F1900154DFC /* StoreViewController.swift */,
 				FA443F01281191030075E945 /* StorePopUpViewController.swift */,
-				FA3BACCB2812736100988570 /* MenuViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -181,8 +198,11 @@
 				FA3BACCC2812736100988570 /* MenuViewController.swift in Sources */,
 				FADFB4A5280EE63700A99DDB /* HomeViewController.swift in Sources */,
 				FA443F03281191030075E945 /* StorePopUpViewController.swift in Sources */,
+				FA27617828128AC7003E3663 /* CoffeeMenuTableViewCell.swift in Sources */,
 				FA3914F928106F1900154DFC /* StoreViewController.swift in Sources */,
 				FADFB4B8280F1BB500A99DDB /* BarcodeViewController.swift in Sources */,
+				FA27617628128785003E3663 /* CoffeeMenuViewController.swift in Sources */,
+				FA27617A2812965D003E3663 /* DetailCoffeeMenuViewController.swift in Sources */,
 				FADFB4A1280EE63700A99DDB /* AppDelegate.swift in Sources */,
 				FADFB4A3280EE63700A99DDB /* SceneDelegate.swift in Sources */,
 			);
