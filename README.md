@@ -18,6 +18,6 @@
 
 | 주차 | 날짜 | 커리큘럼 | 과제 | 기간 |  REAEDME |   
 | :----------: | :----------: | :----------: | :----------: | :----------: | :----------: | 
-| 1주차 | <img width="210" src="./gif/week1.gif"> | OT & AutoLayout | 🏡 오늘의 집 클론코딩 | 22.04.09 ~ 22.04.15 | [이동](./week1/README.md) |
-| 2주차 | <img width="210" src="./gif/week2.gif"> | Life Cycle | ☕️ 빽다방 클론코딩 | 22.04.16 ~ 22.04.22 | [이동](./week2/README.md) |
+| 1주차 | <img width="210" src="./gif/week1.gif"> | OT & AutoLayout | 🏡 오늘의 집 클론코딩 | 22.04.09 ~ 22.04.15 | [이동](./week1/TodayHouse/README.md) |
+| 2주차 | <img width="210" src="./gif/week2.gif"> | Life Cycle | ☕️ 빽다방 클론코딩 | 22.04.16 ~ 22.04.22 | [이동](./week2/PalksCoffee/README.md) |
 
