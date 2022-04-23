@@ -14,7 +14,6 @@ class StorePopUpViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     popUpView.layer.cornerRadius = 15
-    //cancelButton.layer.cornerRadius = 15
     navigationController?.isNavigationBarHidden = true
   }
   

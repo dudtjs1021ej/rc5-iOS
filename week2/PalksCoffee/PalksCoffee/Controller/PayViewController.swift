@@ -9,18 +9,20 @@ import UIKit
 
 class PayViewController: UIViewController {
 
+  // MARK: - Properties
   @IBOutlet weak var sumCountLabel: UILabel!
   @IBOutlet weak var sumPriceLabel: UILabel!
   @IBOutlet weak var tableView: UITableView!
-  
   @IBOutlet weak var couponButton: UIButton!
   @IBOutlet weak var giftButton: UIButton!
-  
   @IBOutlet var takeOutButtons: [UIButton]!
   @IBOutlet var payButtons: [UIButton]!
   
   let cart = Cart.shared
   var takeoutButtonSelectedIndex = 0
+  
+  // MARK: - LifeCycle
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     
@@ -60,6 +62,9 @@ class PayViewController: UIViewController {
     tableView.delegate = self
     tableView.dataSource = self
   }
+  
+  // MARK: - Methods
+  
   @IBAction func clickedCancel(_ sender: Any) {
     dismiss(animated: true, completion: nil)
   }
@@ -98,6 +103,8 @@ class PayViewController: UIViewController {
   }
 }
 
+// MARK: - UITableViewDelegate, UITableViewDataSource
+
 extension PayViewController: UITableViewDelegate, UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return cart.menu.count
@@ -113,13 +120,10 @@ extension PayViewController: UITableViewDelegate, UITableViewDataSource {
     if cart.option[indexPath.row] != 0 {
       cell.optionLabel.text = "ㄴ 샷추가(\(cart.option[indexPath.row]))"
     }
-   
     return cell
   }
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 100
   }
-  
-  
 }

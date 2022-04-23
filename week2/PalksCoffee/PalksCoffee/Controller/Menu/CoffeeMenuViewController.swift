@@ -9,6 +9,8 @@ import UIKit
 
 class CoffeeMenuViewController: UIViewController {
 
+  //MARK: - Properties
+  
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var sumCountLabel: UILabel!
   @IBOutlet weak var sumPriceLabel: UILabel!
@@ -20,6 +22,8 @@ class CoffeeMenuViewController: UIViewController {
   let imageViewName: [String] = ["espresso", "americano_hot","americano_ice", "original_hot", "original_ice", "moca_hot", "moca_ice", "lattee_hot", "lattee_ice", "ba_hot", "ba_ice"]
   
   let cart = Cart.shared
+  
+  // MARK: - LifeCycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -38,6 +42,8 @@ class CoffeeMenuViewController: UIViewController {
     sumPriceLabel.text = "\(String(sumPrice))원"
   }
 }
+
+// MARK: - UITableViewDataSource, UITableViewDelegate
 
 extension CoffeeMenuViewController: UITableViewDataSource, UITableViewDelegate {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -69,5 +75,4 @@ extension CoffeeMenuViewController: UITableViewDataSource, UITableViewDelegate {
     vc.coffeeImageView.image = UIImage(named: imageViewName[indexPath.row])
     vc.imageName = imageViewName[indexPath.row]
   }
-  
 }

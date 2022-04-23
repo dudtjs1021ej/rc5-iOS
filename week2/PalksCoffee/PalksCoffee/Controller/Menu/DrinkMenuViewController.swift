@@ -8,6 +8,8 @@
 import UIKit
 
 class DrinkMenuViewController: UIViewController {
+  
+  //MARK: - Properties
 
   @IBOutlet weak var tableView: UITableView!
   
@@ -18,6 +20,8 @@ class DrinkMenuViewController: UIViewController {
   let imageViewName: [String] = ["st_ice","ss_hot", "ss_ice", "ho_hot", "ho_ice",
                                   "cho_hot", "cho_ice", "green_hot", "green_ice"]
   
+  // MARK: - LifeCycle
+  
   override func viewDidLoad() {
     super.viewDidLoad()
 
@@ -26,6 +30,8 @@ class DrinkMenuViewController: UIViewController {
       
   }
 }
+
+// MARK: - UITableViewDataSource, UITableViewDelegate
 
 extension DrinkMenuViewController: UITableViewDataSource, UITableViewDelegate {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

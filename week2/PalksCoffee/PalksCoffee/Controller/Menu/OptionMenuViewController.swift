@@ -7,12 +7,15 @@
 
 import UIKit
 
+// MARK: - OptionCountProtocol
 protocol OptionCountProtocol {
   func dataSend(optionCount: Int)
 }
 
 class OptionMenuViewController: UIViewController {
 
+  // MARK: Properties
+  
   @IBOutlet weak var detailView: UIView!
   @IBOutlet weak var optionView: UIView!
   @IBOutlet weak var countLabel: UILabel!
@@ -20,14 +23,18 @@ class OptionMenuViewController: UIViewController {
   var delegate: OptionCountProtocol?
   
   var count: Int = 1
+  
+  // MARK: - LifeCycle
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     optionView.layer.cornerRadius = 10
-    
     detailView.layer.borderColor = UIColor(named: "lightGrayColor")?.cgColor
     detailView.layer.borderWidth = 1
     detailView.layer.cornerRadius = 10
   }
+  
+  // MARK: - Methods
   
   @IBAction func clickedCancel(_ sender: Any) {
     dismiss(animated: false)
@@ -39,10 +46,12 @@ class OptionMenuViewController: UIViewController {
       countLabel.text = String(count)
     }
   }
+  
   @IBAction func clickedPlus(_ sender: Any) {
     count += 1
     countLabel.text = String(count)
   }
+  
   @IBAction func ClickedSelect(_ sender: Any) {
     delegate?.dataSend(optionCount: count) // delegate로 선택 옵션 수량 보냄
     print("OptionMenuViewController \(count)")

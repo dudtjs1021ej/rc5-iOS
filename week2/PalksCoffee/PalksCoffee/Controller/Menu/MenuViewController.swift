@@ -8,12 +8,17 @@
 import UIKit
 
 class MenuViewController: UIViewController {
+  
+  // MARK: - Properties
+  
   @IBOutlet var menuButtons: [UIButton]!
   @IBOutlet weak var menuView: UIView!
   @IBOutlet weak var coffeeContainerView: UIView!
   @IBOutlet weak var drinkContainerView: UIView!
   
   var selectedIndex = 0
+  
+  //MARK: - LifeCycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -28,6 +33,9 @@ class MenuViewController: UIViewController {
     coffeeMenuButton.setTitleColor(.white, for: .normal)
     
   }
+  
+  // MARK: - Methdos
+  
   // 선택한 버튼의 background와 textColor만 변하게 설정
   @objc func buttonAction(_ sender: UIButton) {
     for (index, button) in menuButtons.enumerated() {

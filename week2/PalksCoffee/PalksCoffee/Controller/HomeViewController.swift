@@ -8,6 +8,8 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+  
+  // MARK: Properties
 
   @IBOutlet weak var menuView: UIView!
   @IBOutlet weak var giftshopView: UIView!
@@ -16,6 +18,8 @@ class HomeViewController: UIViewController {
   @IBOutlet weak var yogiyoView: UIView!
   
   var popUpCheck: Bool = true
+  
+  // MARK: - LifeCycle
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -44,6 +48,8 @@ class HomeViewController: UIViewController {
     self.navigationController?.isNavigationBarHidden = true
   }
 
+  // MARK: - Methods
+  
   @IBAction func clickedBarcode(_ sender: Any) {
     let vc = BarcodeViewController()
     vc.modalPresentationStyle = .fullScreen

@@ -8,6 +8,8 @@
 import UIKit
 
 class DetailCoffeeMenuViewController: UIViewController {
+  
+  // MARK: - Properties
 
   @IBOutlet weak var coffeeImageView: UIImageView!
   @IBOutlet weak var menuLabel: UILabel!
@@ -23,13 +25,18 @@ class DetailCoffeeMenuViewController: UIViewController {
     return price*coffeeCount + (500*optionCount)
   }
   
+  // MARK: - LifeCycle
+  
   override func viewDidLoad() {
     super.viewDidLoad()
   }
-
+  
+  // MARK: - Methods
+  
   @IBAction func clickedCancel(_ sender: Any) {
     dismiss(animated: true)
   }
+  
   @IBAction func clickedMinus(_ sender: Any) {
     if coffeeCount > 1 { // 0이 되지 않게
       coffeeCount -= 1
@@ -37,11 +44,13 @@ class DetailCoffeeMenuViewController: UIViewController {
       priceLabel.text = "\(String(sumPrice))원"
     }
   }
+  
   @IBAction func clickedPlus(_ sender: Any) {
     coffeeCount += 1
     countLabel.text = String(coffeeCount)
     priceLabel.text = "\(String(sumPrice))원"
   }
+  
   @IBAction func clickedCart(_ sender: Any) {
     let cart = Cart.shared
     // 싱글턴패턴 -> 공통 프로퍼티에 장바구니 목록 담음
@@ -63,6 +72,8 @@ class DetailCoffeeMenuViewController: UIViewController {
     }
   }
 }
+
+// MARK: - OptionCountProtocol
 
 extension DetailCoffeeMenuViewController: OptionCountProtocol {
   func dataSend(optionCount: Int) {
