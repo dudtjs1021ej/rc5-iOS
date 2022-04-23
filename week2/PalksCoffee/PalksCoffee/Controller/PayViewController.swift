@@ -99,7 +99,12 @@ class PayViewController: UIViewController {
     }
   }
   @IBAction func clickedOrder(_ sender: Any) {
-    self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+    let alert = UIAlertController(title: "주문완료", message: "주문이 완료되었습니다.", preferredStyle: .alert)
+    let okAction = UIAlertAction(title: "확인", style: .default) { (action) in
+      self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+    }
+    alert.addAction(okAction)
+    present(alert,animated: true)
   }
 }
 
