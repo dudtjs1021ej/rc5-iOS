@@ -55,7 +55,7 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pY-hd-2Ca">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pY-hd-2Ca">
                         <rect key="frame" x="291" y="113" width="19" height="16"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="19" id="MDt-k3-Ln3"/>
@@ -72,7 +72,7 @@
                             <constraint firstAttribute="width" constant="17" id="Yh8-7K-bpW"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stY-xR-BNJ">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="stY-xR-BNJ">
                         <rect key="frame" x="254" y="113" width="19" height="16"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="19" id="JD4-li-jbc"/>
@@ -120,11 +120,13 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="chatCountLabel" destination="stY-xR-BNJ" id="GQ3-i6-hJk"/>
+                <outlet property="chatImageView" destination="qCg-Kp-PbJ" id="I5T-eH-hQz"/>
                 <outlet property="heartCountLabel" destination="5pY-hd-2Ca" id="ZT6-9P-Sxh"/>
+                <outlet property="heartImageView" destination="3sP-8K-JzV" id="D4c-Jd-tXo"/>
                 <outlet property="locationLabel" destination="V8x-hN-ZYY" id="XSC-UA-l5E"/>
                 <outlet property="priceLabel" destination="ngi-YK-KYH" id="g7u-2e-8Ja"/>
                 <outlet property="productImageView" destination="uiN-ac-lwb" id="nVH-n9-Xdl"/>
-                <outlet property="reuploadLabel" destination="1UX-Da-uml" id="1eX-fe-Qof"/>
+                <outlet property="timeLabel" destination="1UX-Da-uml" id="1eX-fe-Qof"/>
                 <outlet property="titleLabel" destination="Yoe-sY-yKM" id="JnW-Bb-hvc"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="144.64285714285714"/>

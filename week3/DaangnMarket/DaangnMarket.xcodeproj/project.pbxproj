@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA0277CC2819A7B100555739 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0277CB2819A7B100555739 /* TransactionModel.swift */; };
 		FA3C255A281959E6004BDCA3 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3C2558281959E6004BDCA3 /* HomeTableViewCell.swift */; };
 		FA3C255B281959E6004BDCA3 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3C2559281959E6004BDCA3 /* HomeTableViewCell.xib */; };
 		FA79985F2816E35B00BE6B40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA79985E2816E35B00BE6B40 /* AppDelegate.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA0277CB2819A7B100555739 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
 		FA3C2558281959E6004BDCA3 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		FA3C2559281959E6004BDCA3 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		FA79985B2816E35B00BE6B40 /* DaangnMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaangnMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,6 +43,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA0277C42819A5B500555739 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FA0277CB2819A7B100555739 /* TransactionModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FA0277C52819A5BA00555739 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA0277C92819A62400555739 /* Cell */,
+				FA7998642816E35B00BE6B40 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA0277C62819A5BF00555739 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA0277C82819A61D00555739 /* Cell */,
+				FA7998622816E35B00BE6B40 /* HomeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FA0277C72819A5EF00555739 /* Applications */ = {
+			isa = PBXGroup;
+			children = (
+				FA79986C2816E35B00BE6B40 /* Info.plist */,
+				FA79985E2816E35B00BE6B40 /* AppDelegate.swift */,
+				FA7998602816E35B00BE6B40 /* SceneDelegate.swift */,
+				FA7998692816E35B00BE6B40 /* LaunchScreen.storyboard */,
+			);
+			path = Applications;
+			sourceTree = "<group>";
+		};
+		FA0277C82819A61D00555739 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FA3C2558281959E6004BDCA3 /* HomeTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FA0277C92819A62400555739 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FA3C2559281959E6004BDCA3 /* HomeTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FA0277CA2819A63C00555739 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FA7998672816E35B00BE6B40 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		FA7998522816E35A00BE6B40 = {
 			isa = PBXGroup;
 			children = (
@@ -60,15 +123,11 @@
 		FA79985D2816E35B00BE6B40 /* DaangnMarket */ = {
 			isa = PBXGroup;
 			children = (
-				FA79985E2816E35B00BE6B40 /* AppDelegate.swift */,
-				FA7998602816E35B00BE6B40 /* SceneDelegate.swift */,
-				FA7998622816E35B00BE6B40 /* HomeViewController.swift */,
-				FA7998642816E35B00BE6B40 /* Main.storyboard */,
-				FA7998672816E35B00BE6B40 /* Assets.xcassets */,
-				FA7998692816E35B00BE6B40 /* LaunchScreen.storyboard */,
-				FA79986C2816E35B00BE6B40 /* Info.plist */,
-				FA3C2558281959E6004BDCA3 /* HomeTableViewCell.swift */,
-				FA3C2559281959E6004BDCA3 /* HomeTableViewCell.xib */,
+				FA0277CA2819A63C00555739 /* Resources */,
+				FA0277C72819A5EF00555739 /* Applications */,
+				FA0277C42819A5B500555739 /* Model */,
+				FA0277C52819A5BA00555739 /* View */,
+				FA0277C62819A5BF00555739 /* Controller */,
 			);
 			path = DaangnMarket;
 			sourceTree = "<group>";
@@ -149,6 +208,7 @@
 				FA79985F2816E35B00BE6B40 /* AppDelegate.swift in Sources */,
 				FA3C255A281959E6004BDCA3 /* HomeTableViewCell.swift in Sources */,
 				FA7998612816E35B00BE6B40 /* SceneDelegate.swift in Sources */,
+				FA0277CC2819A7B100555739 /* TransactionModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,7 +358,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DaangnMarket/Info.plist;
+				INFOPLIST_FILE = DaangnMarket/Applications/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -325,7 +385,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DaangnMarket/Info.plist;
+				INFOPLIST_FILE = DaangnMarket/Applications/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
