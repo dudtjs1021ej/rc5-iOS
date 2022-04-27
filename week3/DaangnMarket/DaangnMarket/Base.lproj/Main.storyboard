@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,7 +14,7 @@
             <objects>
                 <viewController id="jrj-SK-NlC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="He2-ij-vUg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="BVw-uT-6R4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -24,17 +25,68 @@
             </objects>
             <point key="canvasLocation" x="1050.7246376811595" y="328.79464285714283"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="fdN-H1-aW6">
             <objects>
-                <viewController id="VxX-ih-Lrr" sceneMemberID="viewController">
+                <viewController id="VxX-ih-Lrr" customClass="HomeViewController" customModule="DaangnMarket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xtw-CH-s7Q">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5fb-QK-1Rh">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EeY-xZ-kKM">
+                                <rect key="frame" x="319" y="718" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="IaP-HA-wHn"/>
+                                    <constraint firstAttribute="height" constant="80" id="kOk-B2-DWF"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemOrangeColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <imageReference key="image" image="plus.circle.fill" catalog="system" symbolScale="large"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="50"/>
+                                    <color key="baseForegroundColor" systemColor="systemOrangeColor"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="NBT-oe-9Pr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NBT-oe-9Pr" firstAttribute="trailing" secondItem="EeY-xZ-kKM" secondAttribute="trailing" constant="15" id="9ae-Oe-y9b"/>
+                            <constraint firstItem="5fb-QK-1Rh" firstAttribute="trailing" secondItem="NBT-oe-9Pr" secondAttribute="trailing" id="FCG-82-wHM"/>
+                            <constraint firstItem="5fb-QK-1Rh" firstAttribute="leading" secondItem="NBT-oe-9Pr" secondAttribute="leading" id="icH-Ye-ltu"/>
+                            <constraint firstItem="NBT-oe-9Pr" firstAttribute="bottom" secondItem="EeY-xZ-kKM" secondAttribute="bottom" constant="15" id="k5m-Lg-Gpn"/>
+                            <constraint firstAttribute="bottom" secondItem="5fb-QK-1Rh" secondAttribute="bottom" id="lGK-UM-gfO"/>
+                            <constraint firstItem="5fb-QK-1Rh" firstAttribute="top" secondItem="NBT-oe-9Pr" secondAttribute="top" id="zMF-7v-qxc"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="JeD-Fx-4EU"/>
+                    <navigationItem key="navigationItem" id="re1-UP-kbR">
+                        <leftBarButtonItems>
+                            <barButtonItem title="마두동" id="DV0-aj-W3T">
+                                <color key="tintColor" red="0.1294117719" green="0.13333332540000001" blue="0.13725490870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </barButtonItem>
+                            <barButtonItem image="chevron.down" catalog="system" id="IHX-x6-9A1">
+                                <color key="tintColor" red="0.1294117719" green="0.13333332540000001" blue="0.13725490870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <rightBarButtonItems>
+                            <barButtonItem image="bell" catalog="system" id="dUD-yp-ruJ">
+                                <color key="tintColor" red="0.1294117719" green="0.13333332540000001" blue="0.13725490870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </barButtonItem>
+                            <barButtonItem image="text.justify" catalog="system" id="QWd-w2-JqK">
+                                <color key="tintColor" red="0.1294117719" green="0.13333332540000001" blue="0.13725490870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </barButtonItem>
+                            <barButtonItem image="magnifyingglass" catalog="system" id="LQX-DB-Y9a">
+                                <color key="tintColor" red="0.1294117719" green="0.13333332540000001" blue="0.13725490870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="homeTableView" destination="5fb-QK-1Rh" id="d0I-jn-mq3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kx3-oA-hko" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -44,7 +96,7 @@
         <scene sceneID="Ehr-XJ-x8O">
             <objects>
                 <tabBarController id="6q7-Oj-Otn" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="O9c-Vk-Yfl">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="O9c-Vk-Yfl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.99607843159999998" green="0.99607843159999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -68,7 +120,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DaangnMarket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -84,7 +136,7 @@
             <objects>
                 <viewController id="UfW-Xa-JXF" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bly-MJ-smm">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="ceT-pB-E35"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -100,7 +152,7 @@
             <objects>
                 <viewController id="zJe-u3-zww" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GHF-l5-K3e">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Zvc-8P-Mc4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -208,18 +260,26 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bell" catalog="system" width="128" height="124"/>
+        <image name="chevron.down" catalog="system" width="128" height="72"/>
         <image name="clickTabbar1" width="32" height="28"/>
         <image name="clickTabbar2" width="32" height="32"/>
         <image name="clickTabbar3" width="38" height="38"/>
         <image name="clickTabbar4" width="36" height="36"/>
         <image name="clickTabbar5" width="34" height="38"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
         <image name="tabbar1" width="30" height="28"/>
         <image name="tabbar2" width="34" height="36"/>
         <image name="tabbar3" width="32" height="32"/>
         <image name="tabbar4" width="28" height="27"/>
         <image name="tabbar5" width="30" height="32"/>
+        <image name="text.justify" catalog="system" width="128" height="100"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
