@@ -13,8 +13,8 @@
 		FA4E1368281A802600F947CD /* CommunityMenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4E1366281A802600F947CD /* CommunityMenuCollectionViewCell.swift */; };
 		FA4E1369281A802600F947CD /* CommunityMenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA4E1367281A802600F947CD /* CommunityMenuCollectionViewCell.xib */; };
 		FA4E136B281A81E400F947CD /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4E136A281A81E400F947CD /* CommunityViewController.swift */; };
-		FA4E136E281AADF400F947CD /* CommunityPostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4E136C281AADF400F947CD /* CommunityPostCollectionViewCell.swift */; };
-		FA4E136F281AADF400F947CD /* CommunityPostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA4E136D281AADF400F947CD /* CommunityPostCollectionViewCell.xib */; };
+		FA4E1372281AB6E000F947CD /* CommunityPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4E1370281AB6E000F947CD /* CommunityPostTableViewCell.swift */; };
+		FA4E1373281AB6E000F947CD /* CommunityPostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA4E1371281AB6E000F947CD /* CommunityPostTableViewCell.xib */; };
 		FA79985F2816E35B00BE6B40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA79985E2816E35B00BE6B40 /* AppDelegate.swift */; };
 		FA7998612816E35B00BE6B40 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7998602816E35B00BE6B40 /* SceneDelegate.swift */; };
 		FA7998632816E35B00BE6B40 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7998622816E35B00BE6B40 /* HomeViewController.swift */; };
@@ -30,8 +30,8 @@
 		FA4E1366281A802600F947CD /* CommunityMenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityMenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		FA4E1367281A802600F947CD /* CommunityMenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityMenuCollectionViewCell.xib; sourceTree = "<group>"; };
 		FA4E136A281A81E400F947CD /* CommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
-		FA4E136C281AADF400F947CD /* CommunityPostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityPostCollectionViewCell.swift; sourceTree = "<group>"; };
-		FA4E136D281AADF400F947CD /* CommunityPostCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityPostCollectionViewCell.xib; sourceTree = "<group>"; };
+		FA4E1370281AB6E000F947CD /* CommunityPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityPostTableViewCell.swift; sourceTree = "<group>"; };
+		FA4E1371281AB6E000F947CD /* CommunityPostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityPostTableViewCell.xib; sourceTree = "<group>"; };
 		FA79985B2816E35B00BE6B40 /* DaangnMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaangnMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA79985E2816E35B00BE6B40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA7998602816E35B00BE6B40 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,7 +96,7 @@
 			children = (
 				FA3C2558281959E6004BDCA3 /* HomeTableViewCell.swift */,
 				FA4E1366281A802600F947CD /* CommunityMenuCollectionViewCell.swift */,
-				FA4E136C281AADF400F947CD /* CommunityPostCollectionViewCell.swift */,
+				FA4E1370281AB6E000F947CD /* CommunityPostTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -106,7 +106,7 @@
 			children = (
 				FA3C2559281959E6004BDCA3 /* HomeTableViewCell.xib */,
 				FA4E1367281A802600F947CD /* CommunityMenuCollectionViewCell.xib */,
-				FA4E136D281AADF400F947CD /* CommunityPostCollectionViewCell.xib */,
+				FA4E1371281AB6E000F947CD /* CommunityPostTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -207,10 +207,10 @@
 			files = (
 				FA79986B2816E35B00BE6B40 /* LaunchScreen.storyboard in Resources */,
 				FA7998682816E35B00BE6B40 /* Assets.xcassets in Resources */,
-				FA4E136F281AADF400F947CD /* CommunityPostCollectionViewCell.xib in Resources */,
 				FA4E1369281A802600F947CD /* CommunityMenuCollectionViewCell.xib in Resources */,
 				FA3C255B281959E6004BDCA3 /* HomeTableViewCell.xib in Resources */,
 				FA7998662816E35B00BE6B40 /* Main.storyboard in Resources */,
+				FA4E1373281AB6E000F947CD /* CommunityPostTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,7 +223,7 @@
 			files = (
 				FA7998632816E35B00BE6B40 /* HomeViewController.swift in Sources */,
 				FA79985F2816E35B00BE6B40 /* AppDelegate.swift in Sources */,
-				FA4E136E281AADF400F947CD /* CommunityPostCollectionViewCell.swift in Sources */,
+				FA4E1372281AB6E000F947CD /* CommunityPostTableViewCell.swift in Sources */,
 				FA3C255A281959E6004BDCA3 /* HomeTableViewCell.swift in Sources */,
 				FA7998612816E35B00BE6B40 /* SceneDelegate.swift in Sources */,
 				FA0277CC2819A7B100555739 /* TransactionModel.swift in Sources */,

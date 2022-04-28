@@ -25,6 +25,7 @@ class HomeViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     homeTableView.register(UINib(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "homeCell")
+    homeTableView.separatorInset.left = 0
     homeTableView.delegate = self
     homeTableView.dataSource = self
   }
