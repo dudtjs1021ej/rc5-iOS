@@ -9,17 +9,83 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Community View Controller-->
         <scene sceneID="uf7-oq-sHi">
             <objects>
-                <viewController id="jrj-SK-NlC" sceneMemberID="viewController">
+                <viewController id="jrj-SK-NlC" customClass="CommunityViewController" customModule="DaangnMarket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="He2-ij-vUg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="39a-3w-7ml">
+                                <rect key="frame" x="0.0" y="88" width="414" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="3rU-8h-EGL"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zg1-GV-Afz">
+                                    <size key="itemSize" width="76" height="32"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RJj-p3-QHM">
+                                <rect key="frame" x="0.0" y="128" width="414" height="685"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="IZz-EP-o2p">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="BVw-uT-6R4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="RJj-p3-QHM" firstAttribute="leading" secondItem="BVw-uT-6R4" secondAttribute="leading" id="3d4-Ji-bX8"/>
+                            <constraint firstItem="RJj-p3-QHM" firstAttribute="top" secondItem="39a-3w-7ml" secondAttribute="bottom" id="JGQ-KA-MPN"/>
+                            <constraint firstItem="BVw-uT-6R4" firstAttribute="bottom" secondItem="RJj-p3-QHM" secondAttribute="bottom" id="cVY-WC-wAP"/>
+                            <constraint firstItem="39a-3w-7ml" firstAttribute="trailing" secondItem="BVw-uT-6R4" secondAttribute="trailing" id="dn4-LX-6Zc"/>
+                            <constraint firstItem="BVw-uT-6R4" firstAttribute="trailing" secondItem="RJj-p3-QHM" secondAttribute="trailing" id="ioG-dV-csy"/>
+                            <constraint firstItem="39a-3w-7ml" firstAttribute="top" secondItem="BVw-uT-6R4" secondAttribute="top" id="pLg-Jr-EqX"/>
+                            <constraint firstItem="39a-3w-7ml" firstAttribute="leading" secondItem="BVw-uT-6R4" secondAttribute="leading" id="tSv-pd-NbP"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="27u-6m-yDl"/>
+                    <navigationItem key="navigationItem" id="Ph1-Ib-jLc">
+                        <leftBarButtonItems>
+                            <barButtonItem title="마두동" style="done" id="K38-aA-aYl">
+                                <color key="tintColor" red="0.1294117719" green="0.13333332540000001" blue="0.13725490870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </barButtonItem>
+                            <barButtonItem image="chevron.down" catalog="system" id="bwQ-VC-j50">
+                                <inset key="imageInsets" minX="-38" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <color key="tintColor" red="0.1294117719" green="0.13333332540000001" blue="0.13725490870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <rightBarButtonItems>
+                            <barButtonItem id="Iad-zM-Zu8">
+                                <imageReference key="image" image="bell" catalog="system" symbolScale="large"/>
+                                <inset key="imageInsets" minX="-10" minY="0.0" maxX="2" maxY="0.0"/>
+                                <inset key="largeContentSizeImageInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
+                                <color key="tintColor" red="0.1294117719" green="0.13333332540000001" blue="0.13725490870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </barButtonItem>
+                            <barButtonItem id="Fj4-lC-7Le">
+                                <imageReference key="image" image="text.badge.star" catalog="system" symbolScale="large"/>
+                                <inset key="imageInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <color key="tintColor" red="0.1294117719" green="0.13333332540000001" blue="0.13725490870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="magnifyingglass" catalog="system" id="4gf-rL-F7m">
+                                <inset key="imageInsets" minX="21" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <color key="tintColor" red="0.1294117719" green="0.13333332540000001" blue="0.13725490870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="menuCollectionView" destination="39a-3w-7ml" id="Pf7-Pz-iSI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rnc-89-M9g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -65,7 +131,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="re1-UP-kbR">
                         <leftBarButtonItems>
-                            <barButtonItem title="마두동" id="DV0-aj-W3T">
+                            <barButtonItem title="마두동" style="done" id="DV0-aj-W3T">
                                 <color key="tintColor" red="0.1294117719" green="0.13333332540000001" blue="0.13725490870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </barButtonItem>
                             <barButtonItem image="chevron.down" catalog="system" id="IHX-x6-9A1">
@@ -281,6 +347,7 @@
         <image name="tabbar3" width="32" height="32"/>
         <image name="tabbar4" width="28" height="27"/>
         <image name="tabbar5" width="30" height="32"/>
+        <image name="text.badge.star" catalog="system" width="128" height="109"/>
         <image name="text.justify" catalog="system" width="128" height="100"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
