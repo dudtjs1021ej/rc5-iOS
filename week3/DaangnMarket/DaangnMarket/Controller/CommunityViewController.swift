@@ -35,7 +35,7 @@ extension CommunityViewController: UICollectionViewDelegate, UICollectionViewDat
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     guard let cell = menuCollectionView.dequeueReusableCell(withReuseIdentifier: "communityMenuCell", for: indexPath)
             as? CommunityMenuCollectionViewCell else { return UICollectionViewCell() }
-    cell.menuButton.setAttributedTitle(NSAttributedString(string: menuArray[indexPath.row]), for: .normal)
+    cell.tagLabel.text = menuArray[indexPath.row]
     return cell
   }
 }

@@ -12,7 +12,7 @@ class HomeViewController: UIViewController {
   // MARK: - Properties
   @IBOutlet weak var homeTableView: UITableView!
   
-  let transactions = [
+  var transactions = [
     TransactionModel(images: [UIImage(named: "homeImageView1")!], title: "스타벅스 캐리어", location: "고양시 덕양구 화정동", time: "5분 전", price: 30000, heart: 10, chat: nil, detail: "dfsfdsfsdfdsfsdfdsfdsfsd"),
     TransactionModel(images: [UIImage(named: "homeImageView2")!], title: "내일 장농과 옷장 5만원에 가져가세요", location: "고양시 일산서구 주엽동", time: "끌올 8분 전", price: 50000, heart: 1, chat: 2, detail: "dfsfdsfsdfdsfsdfdsfdsfsd"),
     TransactionModel(images: [UIImage(named: "homeImageView3")!], title: "아이폰 12프로 명품 케이스", location: "고양시 일산서구 대화동", time: "끌올 10분 전", price: 12000, heart: 3, chat: nil, detail: "dfsfdsfsdfdsfsdfdsfdsfsd"),
@@ -39,6 +39,14 @@ class HomeViewController: UIViewController {
     let result = numberFormatter.string(from: NSNumber(value: value))! + "원"
     return result
   }
+  
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "transaction" {
+      guard let vc: TransactionViewController = segue.destination as? TransactionViewController else { return }
+      vc.delegate = self
+    }
+  }
 }
 
 
@@ -51,8 +59,17 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     guard let cell = homeTableView.dequeueReusableCell(withIdentifier: "homeCell")
             as? HomeTableViewCell else { return UITableViewCell() }
+    
+    // 셀의 재사용 -> 초기화
+    cell.heartCountLabel.text = nil
+    cell.heartImageView.isHidden = true
+    cell.chatCountLabel.text = nil
+    cell.chatImageView.isHidden = true
+    
+    
     let transaction = transactions[indexPath.row]
-    cell.productImageView.image = transaction.images[0]
+    guard let images = transaction.images else { return UITableViewCell() }
+    cell.productImageView.image = images[0]
     cell.titleLabel.text = transaction.title
     cell.locationLabel.text = transaction.location
     cell.timeLabel.text = transaction.time
@@ -71,6 +88,14 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
     return 142
+  }
+}
+
+extension HomeViewController: TransactionProtocol {
+  func dataSend(productImage: UIImage, title: String, price: Int, detail: String) {
+    transactions.insert(TransactionModel(images: [productImage], title: title, location: "고양시 일산동구 마두동", time: "1분 전", price: price, heart: nil, chat: nil, detail: detail), at: 0)
+    print(transactions)
+    homeTableView.reloadData()
   }
 }
 

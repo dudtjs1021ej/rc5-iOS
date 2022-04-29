@@ -9,12 +9,13 @@ import UIKit
 
 class CommunityMenuCollectionViewCell: UICollectionViewCell {
 
-  @IBOutlet weak var menuButton: UIButton!
+  @IBOutlet weak var tagLabel: UILabel!
+  
   override func awakeFromNib() {
     super.awakeFromNib()
-    menuButton.layer.borderWidth = 1
-    menuButton.layer.borderColor = UIColor(named: "lightGrayColor")?.cgColor
-    menuButton.layer.cornerRadius = 18
+    tagLabel.layer.borderWidth = 1
+    tagLabel.layer.borderColor = UIColor(named: "lightGrayColor")?.cgColor
+    tagLabel.layer.cornerRadius = 18
   }
 
 }

@@ -25,6 +25,10 @@
 		FA4E137C281AE92700F947CD /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4E137A281AE92700F947CD /* SettingTableViewCell.swift */; };
 		FA4E137D281AE92700F947CD /* SettingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA4E137B281AE92700F947CD /* SettingTableViewCell.xib */; };
 		FA4E1381281AED7C00F947CD /* SettingHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA4E1380281AED7C00F947CD /* SettingHeaderView.xib */; };
+		FA61E86A281BE75A005CCD9A /* NearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61E869281BE75A005CCD9A /* NearViewController.swift */; };
+		FA61E86D281BE8E3005CCD9A /* NearTagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61E86B281BE8E3005CCD9A /* NearTagCollectionViewCell.swift */; };
+		FA61E86E281BE8E3005CCD9A /* NearTagCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA61E86C281BE8E3005CCD9A /* NearTagCollectionViewCell.xib */; };
+		FA61E870281BFB7E005CCD9A /* TransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA61E86F281BFB7E005CCD9A /* TransactionViewController.swift */; };
 		FA79985F2816E35B00BE6B40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA79985E2816E35B00BE6B40 /* AppDelegate.swift */; };
 		FA7998612816E35B00BE6B40 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7998602816E35B00BE6B40 /* SceneDelegate.swift */; };
 		FA7998632816E35B00BE6B40 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7998622816E35B00BE6B40 /* HomeViewController.swift */; };
@@ -52,6 +56,10 @@
 		FA4E137A281AE92700F947CD /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		FA4E137B281AE92700F947CD /* SettingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTableViewCell.xib; sourceTree = "<group>"; };
 		FA4E1380281AED7C00F947CD /* SettingHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingHeaderView.xib; sourceTree = "<group>"; };
+		FA61E869281BE75A005CCD9A /* NearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearViewController.swift; sourceTree = "<group>"; };
+		FA61E86B281BE8E3005CCD9A /* NearTagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearTagCollectionViewCell.swift; sourceTree = "<group>"; };
+		FA61E86C281BE8E3005CCD9A /* NearTagCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NearTagCollectionViewCell.xib; sourceTree = "<group>"; };
+		FA61E86F281BFB7E005CCD9A /* TransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionViewController.swift; sourceTree = "<group>"; };
 		FA79985B2816E35B00BE6B40 /* DaangnMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DaangnMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA79985E2816E35B00BE6B40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA7998602816E35B00BE6B40 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +107,8 @@
 				FA4E136A281A81E400F947CD /* CommunityViewController.swift */,
 				FA4E1374281AE4E300F947CD /* SettingsViewController.swift */,
 				FA3D4177281BBB0E007E2CEE /* ChatViewController.swift */,
+				FA61E869281BE75A005CCD9A /* NearViewController.swift */,
+				FA61E86F281BFB7E005CCD9A /* TransactionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -123,6 +133,7 @@
 				FA4E137A281AE92700F947CD /* SettingTableViewCell.swift */,
 				FA3D416F281B9C5E007E2CEE /* SettingHeaderView.swift */,
 				FA3D4173281BB916007E2CEE /* ChatTableViewCell.swift */,
+				FA61E86B281BE8E3005CCD9A /* NearTagCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -136,6 +147,7 @@
 				FA4E137B281AE92700F947CD /* SettingTableViewCell.xib */,
 				FA4E1380281AED7C00F947CD /* SettingHeaderView.xib */,
 				FA3D4174281BB916007E2CEE /* ChatTableViewCell.xib */,
+				FA61E86C281BE8E3005CCD9A /* NearTagCollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -236,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA4E1381281AED7C00F947CD /* SettingHeaderView.xib in Resources */,
+				FA61E86E281BE8E3005CCD9A /* NearTagCollectionViewCell.xib in Resources */,
 				FA3D4176281BB916007E2CEE /* ChatTableViewCell.xib in Resources */,
 				FA79986B2816E35B00BE6B40 /* LaunchScreen.storyboard in Resources */,
 				FA7998682816E35B00BE6B40 /* Assets.xcassets in Resources */,
@@ -257,6 +270,7 @@
 				FA7998632816E35B00BE6B40 /* HomeViewController.swift in Sources */,
 				FA4E1375281AE4E300F947CD /* SettingsViewController.swift in Sources */,
 				FA79985F2816E35B00BE6B40 /* AppDelegate.swift in Sources */,
+				FA61E86D281BE8E3005CCD9A /* NearTagCollectionViewCell.swift in Sources */,
 				FA3D4172281BB655007E2CEE /* DashedLineView.swift in Sources */,
 				FA3D4170281B9C5F007E2CEE /* SettingHeaderView.swift in Sources */,
 				FA3D417A281BBC10007E2CEE /* ChatModel.swift in Sources */,
@@ -266,7 +280,9 @@
 				FA4E137C281AE92700F947CD /* SettingTableViewCell.swift in Sources */,
 				FA0277CC2819A7B100555739 /* TransactionModel.swift in Sources */,
 				FA3D4178281BBB0E007E2CEE /* ChatViewController.swift in Sources */,
+				FA61E870281BFB7E005CCD9A /* TransactionViewController.swift in Sources */,
 				FA4E1368281A802600F947CD /* CommunityMenuCollectionViewCell.swift in Sources */,
+				FA61E86A281BE75A005CCD9A /* NearViewController.swift in Sources */,
 				FA3D4175281BB916007E2CEE /* ChatTableViewCell.swift in Sources */,
 				FA4E136B281A81E400F947CD /* CommunityViewController.swift in Sources */,
 			);
