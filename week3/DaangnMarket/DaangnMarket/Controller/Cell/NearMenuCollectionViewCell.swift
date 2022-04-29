@@ -9,9 +9,10 @@ import UIKit
 
 class NearMenuCollectionViewCell: UICollectionViewCell {
 
-    override func awakeFromNib() {
+  @IBOutlet weak var menuImageView: UIImageView!
+  @IBOutlet weak var menuLabel: UILabel!
+  override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
 }
