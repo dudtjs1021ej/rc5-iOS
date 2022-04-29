@@ -12,6 +12,10 @@
 		FA3C255B281959E6004BDCA3 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3C2559281959E6004BDCA3 /* HomeTableViewCell.xib */; };
 		FA3D4170281B9C5F007E2CEE /* SettingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3D416F281B9C5E007E2CEE /* SettingHeaderView.swift */; };
 		FA3D4172281BB655007E2CEE /* DashedLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3D4171281BB655007E2CEE /* DashedLineView.swift */; };
+		FA3D4175281BB916007E2CEE /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3D4173281BB916007E2CEE /* ChatTableViewCell.swift */; };
+		FA3D4176281BB916007E2CEE /* ChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3D4174281BB916007E2CEE /* ChatTableViewCell.xib */; };
+		FA3D4178281BBB0E007E2CEE /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3D4177281BBB0E007E2CEE /* ChatViewController.swift */; };
+		FA3D417A281BBC10007E2CEE /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3D4179281BBC10007E2CEE /* ChatModel.swift */; };
 		FA4E1368281A802600F947CD /* CommunityMenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4E1366281A802600F947CD /* CommunityMenuCollectionViewCell.swift */; };
 		FA4E1369281A802600F947CD /* CommunityMenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA4E1367281A802600F947CD /* CommunityMenuCollectionViewCell.xib */; };
 		FA4E136B281A81E400F947CD /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4E136A281A81E400F947CD /* CommunityViewController.swift */; };
@@ -35,6 +39,10 @@
 		FA3C2559281959E6004BDCA3 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		FA3D416F281B9C5E007E2CEE /* SettingHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingHeaderView.swift; sourceTree = "<group>"; };
 		FA3D4171281BB655007E2CEE /* DashedLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashedLineView.swift; sourceTree = "<group>"; };
+		FA3D4173281BB916007E2CEE /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		FA3D4174281BB916007E2CEE /* ChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatTableViewCell.xib; sourceTree = "<group>"; };
+		FA3D4177281BBB0E007E2CEE /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		FA3D4179281BBC10007E2CEE /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		FA4E1366281A802600F947CD /* CommunityMenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityMenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		FA4E1367281A802600F947CD /* CommunityMenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityMenuCollectionViewCell.xib; sourceTree = "<group>"; };
 		FA4E136A281A81E400F947CD /* CommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				FA0277CB2819A7B100555739 /* TransactionModel.swift */,
+				FA3D4179281BBC10007E2CEE /* ChatModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -89,6 +98,7 @@
 				FA7998622816E35B00BE6B40 /* HomeViewController.swift */,
 				FA4E136A281A81E400F947CD /* CommunityViewController.swift */,
 				FA4E1374281AE4E300F947CD /* SettingsViewController.swift */,
+				FA3D4177281BBB0E007E2CEE /* ChatViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -112,6 +122,7 @@
 				FA4E1370281AB6E000F947CD /* CommunityPostTableViewCell.swift */,
 				FA4E137A281AE92700F947CD /* SettingTableViewCell.swift */,
 				FA3D416F281B9C5E007E2CEE /* SettingHeaderView.swift */,
+				FA3D4173281BB916007E2CEE /* ChatTableViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -124,6 +135,7 @@
 				FA4E1371281AB6E000F947CD /* CommunityPostTableViewCell.xib */,
 				FA4E137B281AE92700F947CD /* SettingTableViewCell.xib */,
 				FA4E1380281AED7C00F947CD /* SettingHeaderView.xib */,
+				FA3D4174281BB916007E2CEE /* ChatTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -224,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA4E1381281AED7C00F947CD /* SettingHeaderView.xib in Resources */,
+				FA3D4176281BB916007E2CEE /* ChatTableViewCell.xib in Resources */,
 				FA79986B2816E35B00BE6B40 /* LaunchScreen.storyboard in Resources */,
 				FA7998682816E35B00BE6B40 /* Assets.xcassets in Resources */,
 				FA4E137D281AE92700F947CD /* SettingTableViewCell.xib in Resources */,
@@ -246,12 +259,15 @@
 				FA79985F2816E35B00BE6B40 /* AppDelegate.swift in Sources */,
 				FA3D4172281BB655007E2CEE /* DashedLineView.swift in Sources */,
 				FA3D4170281B9C5F007E2CEE /* SettingHeaderView.swift in Sources */,
+				FA3D417A281BBC10007E2CEE /* ChatModel.swift in Sources */,
 				FA4E1372281AB6E000F947CD /* CommunityPostTableViewCell.swift in Sources */,
 				FA3C255A281959E6004BDCA3 /* HomeTableViewCell.swift in Sources */,
 				FA7998612816E35B00BE6B40 /* SceneDelegate.swift in Sources */,
 				FA4E137C281AE92700F947CD /* SettingTableViewCell.swift in Sources */,
 				FA0277CC2819A7B100555739 /* TransactionModel.swift in Sources */,
+				FA3D4178281BBB0E007E2CEE /* ChatViewController.swift in Sources */,
 				FA4E1368281A802600F947CD /* CommunityMenuCollectionViewCell.swift in Sources */,
+				FA3D4175281BB916007E2CEE /* ChatTableViewCell.swift in Sources */,
 				FA4E136B281A81E400F947CD /* CommunityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

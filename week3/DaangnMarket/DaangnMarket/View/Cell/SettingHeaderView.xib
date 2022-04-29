@@ -17,14 +17,13 @@
                     <rect key="frame" x="10" y="10" width="410" height="90"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="settingProfileImageView" translatesAutoresizingMaskIntoConstraints="NO" id="WgV-GF-mPZ">
-                            <rect key="frame" x="0.0" y="0.0" width="96" height="90"/>
+                            <rect key="frame" x="0.0" y="-21" width="96" height="132"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="96" id="hne-dM-Les"/>
-                                <constraint firstAttribute="height" constant="90" id="ulc-7T-deH"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="마두동 #1234567" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQZ-HE-fLO">
-                            <rect key="frame" x="112" y="51" width="98" height="16"/>
+                            <rect key="frame" x="112" y="45" width="98" height="16"/>
                             <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -40,7 +39,7 @@
                             <buttonConfiguration key="configuration" style="plain" image="chevron.right" catalog="system"/>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제라" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ER3-ao-zgz">
-                            <rect key="frame" x="112" y="22" width="29.5" height="20.5"/>
+                            <rect key="frame" x="112" y="21.5" width="29.5" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
@@ -49,14 +48,14 @@
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="oQZ-HE-fLO" firstAttribute="leading" secondItem="WgV-GF-mPZ" secondAttribute="trailing" constant="16" id="0vK-4t-Qd2"/>
+                        <constraint firstItem="WgV-GF-mPZ" firstAttribute="height" secondItem="PcT-ja-GFO" secondAttribute="height" multiplier="1.46667" id="1FX-Im-ywZ"/>
                         <constraint firstItem="bbp-4J-Pfi" firstAttribute="centerY" secondItem="PcT-ja-GFO" secondAttribute="centerY" id="1G3-au-PbT"/>
                         <constraint firstItem="WgV-GF-mPZ" firstAttribute="leading" secondItem="PcT-ja-GFO" secondAttribute="leading" id="IcG-i1-R17"/>
-                        <constraint firstItem="ER3-ao-zgz" firstAttribute="top" secondItem="PcT-ja-GFO" secondAttribute="top" constant="22" id="PID-qk-nzz"/>
+                        <constraint firstItem="ER3-ao-zgz" firstAttribute="centerY" secondItem="PcT-ja-GFO" secondAttribute="centerY" multiplier="0.7" id="J3o-15-aBb"/>
                         <constraint firstAttribute="trailing" secondItem="bbp-4J-Pfi" secondAttribute="trailing" constant="10" id="Ruw-CP-Gsv"/>
-                        <constraint firstAttribute="height" constant="90" id="SdB-tY-lrq"/>
                         <constraint firstItem="ER3-ao-zgz" firstAttribute="leading" secondItem="WgV-GF-mPZ" secondAttribute="trailing" constant="16" id="TZm-uH-4Bn"/>
                         <constraint firstItem="WgV-GF-mPZ" firstAttribute="centerY" secondItem="PcT-ja-GFO" secondAttribute="centerY" id="You-nb-Dc4"/>
-                        <constraint firstItem="oQZ-HE-fLO" firstAttribute="top" secondItem="ER3-ao-zgz" secondAttribute="bottom" constant="8.5" id="rEK-MO-JYL"/>
+                        <constraint firstItem="oQZ-HE-fLO" firstAttribute="top" secondItem="ER3-ao-zgz" secondAttribute="bottom" constant="3" id="rEK-MO-JYL"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tTC-5p-hUT" customClass="DashedLineView" customModule="DaangnMarket" customModuleProvider="target">
@@ -82,20 +81,19 @@
                         <constraint firstItem="XRs-Co-Brm" firstAttribute="leading" secondItem="tTC-5p-hUT" secondAttribute="leading" constant="8" id="Gon-am-35w"/>
                         <constraint firstItem="uoQ-sK-rNN" firstAttribute="centerY" secondItem="tTC-5p-hUT" secondAttribute="centerY" id="KV1-s7-Ryw"/>
                         <constraint firstAttribute="trailing" secondItem="uoQ-sK-rNN" secondAttribute="trailing" constant="20" id="NQF-yt-xr6"/>
-                        <constraint firstAttribute="height" constant="49" id="TJU-dO-Dcp"/>
                     </constraints>
                 </view>
                 <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xUF-Vk-DoG">
-                    <rect key="frame" x="30" y="178" width="370" height="100"/>
+                    <rect key="frame" x="30" y="178" width="370" height="95"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ncp-kf-9js">
-                            <rect key="frame" x="0.0" y="0.0" width="123.5" height="100"/>
+                            <rect key="frame" x="0.0" y="0.0" width="123.5" height="95"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuImageView1" translatesAutoresizingMaskIntoConstraints="NO" id="7oO-4S-THd">
-                                    <rect key="frame" x="0.0" y="0.0" width="123.5" height="79.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="123.5" height="75.5"/>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hzv-k8-yGs">
-                                    <rect key="frame" x="0.0" y="79.5" width="123.5" height="20.5"/>
+                                    <rect key="frame" x="0.0" y="75.5" width="123.5" height="19.5"/>
                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="판매내역"/>
@@ -107,13 +105,13 @@
                             </constraints>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="qSH-E9-pm7">
-                            <rect key="frame" x="123.5" y="0.0" width="123" height="100"/>
+                            <rect key="frame" x="123.5" y="0.0" width="123" height="95"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuImageView2" translatesAutoresizingMaskIntoConstraints="NO" id="kE8-01-7oz">
-                                    <rect key="frame" x="0.0" y="0.0" width="123" height="79.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="123" height="75.5"/>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hjy-bq-UUS">
-                                    <rect key="frame" x="0.0" y="79.5" width="123" height="20.5"/>
+                                    <rect key="frame" x="0.0" y="75.5" width="123" height="19.5"/>
                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="구매내역"/>
@@ -125,13 +123,13 @@
                             </constraints>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wFS-y4-4F4">
-                            <rect key="frame" x="246.5" y="0.0" width="123.5" height="100"/>
+                            <rect key="frame" x="246.5" y="0.0" width="123.5" height="95"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuImageView3" translatesAutoresizingMaskIntoConstraints="NO" id="ZL8-cw-AdZ">
-                                    <rect key="frame" x="0.0" y="0.0" width="123.5" height="79.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="123.5" height="75.5"/>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LD2-K3-JjR">
-                                    <rect key="frame" x="0.0" y="79.5" width="123.5" height="20.5"/>
+                                    <rect key="frame" x="0.0" y="75.5" width="123.5" height="19.5"/>
                                     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="관심내역"/>
@@ -143,19 +141,19 @@
                             </constraints>
                         </stackView>
                     </subviews>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="100" id="KUP-ft-pW7"/>
-                    </constraints>
                 </stackView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
                 <constraint firstItem="PcT-ja-GFO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="10" id="06o-52-hOv"/>
+                <constraint firstItem="xUF-Vk-DoG" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.3" id="Bro-l0-2tz"/>
                 <constraint firstAttribute="trailing" secondItem="PcT-ja-GFO" secondAttribute="trailing" constant="10" id="Exv-LE-8YB"/>
+                <constraint firstItem="PcT-ja-GFO" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.283912" id="FWq-gX-VCs"/>
                 <constraint firstItem="PcT-ja-GFO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="GfH-il-Yzp"/>
                 <constraint firstAttribute="trailing" secondItem="tTC-5p-hUT" secondAttribute="trailing" constant="10" id="GzX-2q-D8y"/>
                 <constraint firstItem="xUF-Vk-DoG" firstAttribute="top" secondItem="tTC-5p-hUT" secondAttribute="bottom" constant="15" id="HGh-YD-87z"/>
                 <constraint firstItem="tTC-5p-hUT" firstAttribute="top" secondItem="PcT-ja-GFO" secondAttribute="bottom" constant="14" id="V8k-cG-FgD"/>
+                <constraint firstItem="tTC-5p-hUT" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.154574" id="VbD-k6-uhs"/>
                 <constraint firstItem="tTC-5p-hUT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="YA5-Wm-ejM"/>
                 <constraint firstAttribute="trailing" secondItem="xUF-Vk-DoG" secondAttribute="trailing" constant="30" id="h0P-gn-Tz3"/>
                 <constraint firstItem="xUF-Vk-DoG" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="30" id="o4U-Vv-rTL"/>

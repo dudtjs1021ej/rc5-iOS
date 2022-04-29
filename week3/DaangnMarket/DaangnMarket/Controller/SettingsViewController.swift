@@ -37,7 +37,7 @@ class SettingsController: UIViewController {
 //    let nibs = Bundle.main.loadNibNamed(identifier, owner: self, options: nil)
 //    guard let customHeaderView = nibs?.first as? SettingHeaderView else { return }
     guard let headerView = Bundle.main.loadNibNamed("SettingHeaderView", owner: self, options: nil)?.first as? SettingHeaderView else { return }
-    headerView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: 300)
+    headerView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: 350)
     settingTableView.tableHeaderView = headerView
   }
 }
