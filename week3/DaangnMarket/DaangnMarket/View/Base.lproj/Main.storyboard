@@ -31,9 +31,8 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="l6r-Z8-CP7">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="l6r-Z8-CP7">
                                 <rect key="frame" x="0.0" y="128" width="414" height="685"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MDC-KC-eOG">
                                 <rect key="frame" x="312" y="718" width="97" height="80"/>
@@ -57,6 +56,7 @@
                             <constraint firstItem="BVw-uT-6R4" firstAttribute="bottom" secondItem="l6r-Z8-CP7" secondAttribute="bottom" id="MKV-RJ-G2N"/>
                             <constraint firstItem="BVw-uT-6R4" firstAttribute="trailing" secondItem="MDC-KC-eOG" secondAttribute="trailing" constant="5" id="Rb9-se-PKP"/>
                             <constraint firstItem="BVw-uT-6R4" firstAttribute="bottom" secondItem="MDC-KC-eOG" secondAttribute="bottom" constant="15" id="Tpu-P8-N2y"/>
+                            <constraint firstItem="MDC-KC-eOG" firstAttribute="leading" relation="lessThanOrEqual" secondItem="BVw-uT-6R4" secondAttribute="leading" constant="312" id="VbS-r8-2Y5"/>
                             <constraint firstItem="BVw-uT-6R4" firstAttribute="trailing" secondItem="l6r-Z8-CP7" secondAttribute="trailing" id="WCn-AP-Tds"/>
                             <constraint firstItem="39a-3w-7ml" firstAttribute="trailing" secondItem="BVw-uT-6R4" secondAttribute="trailing" id="dn4-LX-6Zc"/>
                             <constraint firstItem="39a-3w-7ml" firstAttribute="top" secondItem="BVw-uT-6R4" secondAttribute="top" id="pLg-Jr-EqX"/>
@@ -133,6 +133,7 @@
                         <constraints>
                             <constraint firstItem="NBT-oe-9Pr" firstAttribute="trailing" secondItem="EeY-xZ-kKM" secondAttribute="trailing" constant="5" id="9ae-Oe-y9b"/>
                             <constraint firstItem="5fb-QK-1Rh" firstAttribute="trailing" secondItem="NBT-oe-9Pr" secondAttribute="trailing" id="FCG-82-wHM"/>
+                            <constraint firstItem="EeY-xZ-kKM" firstAttribute="leading" relation="lessThanOrEqual" secondItem="NBT-oe-9Pr" secondAttribute="leading" constant="312" id="KTn-Bd-Q0g"/>
                             <constraint firstItem="5fb-QK-1Rh" firstAttribute="leading" secondItem="NBT-oe-9Pr" secondAttribute="leading" id="icH-Ye-ltu"/>
                             <constraint firstItem="NBT-oe-9Pr" firstAttribute="bottom" secondItem="EeY-xZ-kKM" secondAttribute="bottom" constant="15" id="k5m-Lg-Gpn"/>
                             <constraint firstAttribute="bottom" secondItem="5fb-QK-1Rh" secondAttribute="bottom" id="lGK-UM-gfO"/>
@@ -230,17 +231,40 @@
             </objects>
             <point key="canvasLocation" x="1076.8115942028987" y="1901.7857142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings Controller-->
         <scene sceneID="2kn-P7-VA2">
             <objects>
-                <viewController id="zJe-u3-zww" sceneMemberID="viewController">
+                <viewController id="zJe-u3-zww" customClass="SettingsController" customModule="DaangnMarket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GHF-l5-K3e">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ia9-Df-k1Q">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Zvc-8P-Mc4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Zvc-8P-Mc4" firstAttribute="trailing" secondItem="ia9-Df-k1Q" secondAttribute="trailing" id="0T5-7j-JOP"/>
+                            <constraint firstItem="ia9-Df-k1Q" firstAttribute="top" secondItem="Zvc-8P-Mc4" secondAttribute="top" id="HbQ-TH-pMQ"/>
+                            <constraint firstItem="Zvc-8P-Mc4" firstAttribute="bottom" secondItem="ia9-Df-k1Q" secondAttribute="bottom" id="PVa-iZ-0Pc"/>
+                            <constraint firstItem="ia9-Df-k1Q" firstAttribute="leading" secondItem="Zvc-8P-Mc4" secondAttribute="leading" id="xH9-86-4kf"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="MUS-13-1VA"/>
+                    <navigationItem key="navigationItem" id="MUS-13-1VA">
+                        <barButtonItem key="leftBarButtonItem" title="나의 당근" style="done" id="dmc-WT-3Mf">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="gearshape" catalog="system" id="Ey5-Ck-ojM">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="settingTableView" destination="ia9-Df-k1Q" id="m9C-RM-vQu"/>
+                        <outlet property="titleNavigationItem" destination="MUS-13-1VA" id="IEz-Bv-QFr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lyJ-wU-Qyo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -350,6 +374,7 @@
         <image name="clickTabbar3" width="38" height="38"/>
         <image name="clickTabbar4" width="36" height="36"/>
         <image name="clickTabbar5" width="34" height="38"/>
+        <image name="gearshape" catalog="system" width="128" height="121"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
         <image name="tabbar1" width="30" height="28"/>
