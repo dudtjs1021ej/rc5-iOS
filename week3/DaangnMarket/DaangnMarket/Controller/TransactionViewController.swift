@@ -25,6 +25,9 @@ class TransactionViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    self.navigationController?.navigationBar.tintColor = .black
+    self.navigationController?.navigationBar.topItem?.title = ""
+    
     cameraImageView.layer.cornerRadius = 10
     picker.delegate = self
     detailTextView.text = textViewPlaceHolder

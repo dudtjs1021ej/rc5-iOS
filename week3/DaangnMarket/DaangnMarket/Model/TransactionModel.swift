@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 struct TransactionModel {
+  let nickname: String
   let images: [UIImage]?
   let title: String
   let location: String

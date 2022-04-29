@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		FA0277CC2819A7B100555739 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0277CB2819A7B100555739 /* TransactionModel.swift */; };
+		FA31EF62281C123B00EE3DFC /* DetailTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31EF60281C123B00EE3DFC /* DetailTransactionViewController.swift */; };
+		FA31EF63281C123B00EE3DFC /* DetailTransactionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA31EF61281C123B00EE3DFC /* DetailTransactionViewController.xib */; };
 		FA3C255A281959E6004BDCA3 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3C2558281959E6004BDCA3 /* HomeTableViewCell.swift */; };
 		FA3C255B281959E6004BDCA3 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3C2559281959E6004BDCA3 /* HomeTableViewCell.xib */; };
 		FA3D4170281B9C5F007E2CEE /* SettingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3D416F281B9C5E007E2CEE /* SettingHeaderView.swift */; };
@@ -16,6 +18,7 @@
 		FA3D4176281BB916007E2CEE /* ChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3D4174281BB916007E2CEE /* ChatTableViewCell.xib */; };
 		FA3D4178281BBB0E007E2CEE /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3D4177281BBB0E007E2CEE /* ChatViewController.swift */; };
 		FA3D417A281BBC10007E2CEE /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3D4179281BBC10007E2CEE /* ChatModel.swift */; };
+		FA4370E7281C28BD0076991F /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4370E6281C28BD0076991F /* PostModel.swift */; };
 		FA4E1368281A802600F947CD /* CommunityMenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4E1366281A802600F947CD /* CommunityMenuCollectionViewCell.swift */; };
 		FA4E1369281A802600F947CD /* CommunityMenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA4E1367281A802600F947CD /* CommunityMenuCollectionViewCell.xib */; };
 		FA4E136B281A81E400F947CD /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4E136A281A81E400F947CD /* CommunityViewController.swift */; };
@@ -39,6 +42,8 @@
 
 /* Begin PBXFileReference section */
 		FA0277CB2819A7B100555739 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
+		FA31EF60281C123B00EE3DFC /* DetailTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTransactionViewController.swift; sourceTree = "<group>"; };
+		FA31EF61281C123B00EE3DFC /* DetailTransactionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTransactionViewController.xib; sourceTree = "<group>"; };
 		FA3C2558281959E6004BDCA3 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		FA3C2559281959E6004BDCA3 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		FA3D416F281B9C5E007E2CEE /* SettingHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingHeaderView.swift; sourceTree = "<group>"; };
@@ -47,6 +52,7 @@
 		FA3D4174281BB916007E2CEE /* ChatTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatTableViewCell.xib; sourceTree = "<group>"; };
 		FA3D4177281BBB0E007E2CEE /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		FA3D4179281BBC10007E2CEE /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
+		FA4370E6281C28BD0076991F /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		FA4E1366281A802600F947CD /* CommunityMenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityMenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		FA4E1367281A802600F947CD /* CommunityMenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityMenuCollectionViewCell.xib; sourceTree = "<group>"; };
 		FA4E136A281A81E400F947CD /* CommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +92,7 @@
 			children = (
 				FA0277CB2819A7B100555739 /* TransactionModel.swift */,
 				FA3D4179281BBC10007E2CEE /* ChatModel.swift */,
+				FA4370E6281C28BD0076991F /* PostModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -95,6 +102,7 @@
 			children = (
 				FA0277C92819A62400555739 /* Cell */,
 				FA7998642816E35B00BE6B40 /* Main.storyboard */,
+				FA31EF61281C123B00EE3DFC /* DetailTransactionViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -109,6 +117,7 @@
 				FA3D4177281BBB0E007E2CEE /* ChatViewController.swift */,
 				FA61E869281BE75A005CCD9A /* NearViewController.swift */,
 				FA61E86F281BFB7E005CCD9A /* TransactionViewController.swift */,
+				FA31EF60281C123B00EE3DFC /* DetailTransactionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -254,6 +263,7 @@
 				FA7998682816E35B00BE6B40 /* Assets.xcassets in Resources */,
 				FA4E137D281AE92700F947CD /* SettingTableViewCell.xib in Resources */,
 				FA4E1369281A802600F947CD /* CommunityMenuCollectionViewCell.xib in Resources */,
+				FA31EF63281C123B00EE3DFC /* DetailTransactionViewController.xib in Resources */,
 				FA3C255B281959E6004BDCA3 /* HomeTableViewCell.xib in Resources */,
 				FA7998662816E35B00BE6B40 /* Main.storyboard in Resources */,
 				FA4E1373281AB6E000F947CD /* CommunityPostTableViewCell.xib in Resources */,
@@ -267,6 +277,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA31EF62281C123B00EE3DFC /* DetailTransactionViewController.swift in Sources */,
+				FA4370E7281C28BD0076991F /* PostModel.swift in Sources */,
 				FA7998632816E35B00BE6B40 /* HomeViewController.swift in Sources */,
 				FA4E1375281AE4E300F947CD /* SettingsViewController.swift in Sources */,
 				FA79985F2816E35B00BE6B40 /* AppDelegate.swift in Sources */,
