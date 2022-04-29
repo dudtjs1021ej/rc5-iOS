@@ -19,6 +19,7 @@
 		FA3D4178281BBB0E007E2CEE /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3D4177281BBB0E007E2CEE /* ChatViewController.swift */; };
 		FA3D417A281BBC10007E2CEE /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3D4179281BBC10007E2CEE /* ChatModel.swift */; };
 		FA4370E7281C28BD0076991F /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4370E6281C28BD0076991F /* PostModel.swift */; };
+		FA4370EA281C32730076991F /* Tabman in Frameworks */ = {isa = PBXBuildFile; productRef = FA4370E9281C32730076991F /* Tabman */; };
 		FA4E1368281A802600F947CD /* CommunityMenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4E1366281A802600F947CD /* CommunityMenuCollectionViewCell.swift */; };
 		FA4E1369281A802600F947CD /* CommunityMenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA4E1367281A802600F947CD /* CommunityMenuCollectionViewCell.xib */; };
 		FA4E136B281A81E400F947CD /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4E136A281A81E400F947CD /* CommunityViewController.swift */; };
@@ -81,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA4370EA281C32730076991F /* Tabman in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +216,9 @@
 			dependencies = (
 			);
 			name = DaangnMarket;
+			packageProductDependencies = (
+				FA4370E9281C32730076991F /* Tabman */,
+			);
 			productName = DaangnMarket;
 			productReference = FA79985B2816E35B00BE6B40 /* DaangnMarket.app */;
 			productType = "com.apple.product-type.application";
@@ -242,6 +247,9 @@
 				Base,
 			);
 			mainGroup = FA7998522816E35A00BE6B40;
+			packageReferences = (
+				FA4370E8281C32730076991F /* XCRemoteSwiftPackageReference "Tabman" */,
+			);
 			productRefGroup = FA79985C2816E35B00BE6B40 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -514,6 +522,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FA4370E8281C32730076991F /* XCRemoteSwiftPackageReference "Tabman" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/uias/Tabman";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FA4370E9281C32730076991F /* Tabman */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FA4370E8281C32730076991F /* XCRemoteSwiftPackageReference "Tabman" */;
+			productName = Tabman;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FA7998532816E35A00BE6B40 /* Project object */;
 }

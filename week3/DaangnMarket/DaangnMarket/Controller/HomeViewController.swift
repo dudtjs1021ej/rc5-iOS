@@ -97,12 +97,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     print(indexPath.row)
     print(transactions[indexPath.row])
     let transaction = transactions[indexPath.row]
-//    guard let images = transaction.images else { return }
-//    vc.productImageView.image = images[0]
     vc.transaction = transaction
-//    vc.locationLabel.text = transaction.location
-//    vc.timeLabel.text = transaction.time
-//    vc.priceLabel.text = decimalWon(value: transaction.price)
+    vc.hidesBottomBarWhenPushed = true
     navigationController?.pushViewController(vc, animated: true)
   }
 }
