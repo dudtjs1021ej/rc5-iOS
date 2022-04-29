@@ -48,6 +48,41 @@ class HomeViewController: UIViewController {
       vc.delegate = self
     }
   }
+  
+  @objc func clickedDot(_ sender: UIButton) {
+    let contentView = sender.superview
+    guard let cell = contentView?.superview as? HomeTableViewCell else { return }
+    guard let indexPath = homeTableView.indexPath(for: cell) else { return }
+    print(indexPath.row)
+    
+    let optionMenu = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+    let updateAction = UIAlertAction(title: "수정", style: .default, handler: {
+        (alert: UIAlertAction!) -> Void in
+      guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "writeVC") as? TransactionViewController else { return }
+      vc.transaction = self.transactions[indexPath.row]
+      vc.indexPath = indexPath
+      vc.delegate = self
+      self.navigationController?.pushViewController(vc, animated: true)
+      
+      
+    })
+    let deleteAction = UIAlertAction(title: "삭제", style: .default, handler: {
+        (alert: UIAlertAction!) -> Void in
+      self.transactions.remove(at: indexPath.row)
+      self.homeTableView.reloadData()
+      print(indexPath.row)
+      
+    })
+    let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: {
+        (alert: UIAlertAction!) -> Void in
+    })
+    optionMenu.addAction(updateAction)
+    optionMenu.addAction(deleteAction)
+    optionMenu.addAction(cancelAction)
+
+    self.present(optionMenu, animated: true)
+    
+  }
 }
 
 
@@ -84,6 +119,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
       cell.chatCountLabel.text = String(chat)
       cell.chatImageView.isHidden = false
     }
+    //cell.dotButton.tag = indexPath.row
+    cell.dotButton.addTarget(self, action: #selector(clickedDot), for: .touchUpInside)
+    
+    // 내가 쓴 글만 수정, 삭제 가능
+    if transaction.nickname == "제라" {
+      cell.dotButton.isHidden = false
+    }
     return cell
   }
   
@@ -104,9 +146,17 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension HomeViewController: TransactionProtocol {
+  func updateData(indexPath: IndexPath, productImage: UIImage, title: String, price: Int, detail: String) {
+    print("updateData")
+    transactions.remove(at: indexPath.row)
+    transactions.insert(TransactionModel(nickname: "제라", images: [productImage], title: title, location: "고양시 일산동구 마두동", time: "1분 전", price: price, heart: nil, chat: nil, detail: detail), at: indexPath.row)
+    homeTableView.reloadData()
+  }
+  
+  
+  
   func dataSend(productImage: UIImage, title: String, price: Int, detail: String) {
     transactions.insert(TransactionModel(nickname: "제라", images: [productImage], title: title, location: "고양시 일산동구 마두동", time: "1분 전", price: price, heart: nil, chat: nil, detail: detail), at: 0)
-    print(transactions)
     homeTableView.reloadData()
   }
 }

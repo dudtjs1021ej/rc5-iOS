@@ -182,7 +182,7 @@
         <!--중고거래 글쓰기-->
         <scene sceneID="g1f-wu-X4m">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="zfP-U9-bwa" customClass="TransactionViewController" customModule="DaangnMarket" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="writeVC" hidesBottomBarWhenPushed="YES" id="zfP-U9-bwa" customClass="TransactionViewController" customModule="DaangnMarket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Kc-BR-qhe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

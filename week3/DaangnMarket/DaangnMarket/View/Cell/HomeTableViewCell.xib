@@ -23,7 +23,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제품설명" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yoe-sY-yKM">
-                        <rect key="frame" x="122" y="15" width="188" height="30"/>
+                        <rect key="frame" x="122" y="15" width="168" height="30"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="vId-i9-9Bg"/>
                         </constraints>
@@ -89,6 +89,15 @@
                             <constraint firstAttribute="height" constant="17" id="WaD-Ye-ezL"/>
                         </constraints>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nb3-SC-VZO">
+                        <rect key="frame" x="290" y="19.5" width="20" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="08t-5K-bzG"/>
+                            <constraint firstAttribute="height" constant="21" id="hIt-yB-XHS"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="dotButton"/>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="stY-xR-BNJ" firstAttribute="centerY" secondItem="3sP-8K-JzV" secondAttribute="centerY" id="4vp-Ih-ddT"/>
@@ -98,17 +107,20 @@
                     <constraint firstItem="uiN-ac-lwb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="HGs-Ky-kgc"/>
                     <constraint firstItem="3sP-8K-JzV" firstAttribute="centerY" secondItem="5pY-hd-2Ca" secondAttribute="centerY" id="HXi-ET-fYf"/>
                     <constraint firstAttribute="bottom" secondItem="5pY-hd-2Ca" secondAttribute="bottom" constant="13" id="JnD-nE-VW3"/>
-                    <constraint firstAttribute="trailing" secondItem="Yoe-sY-yKM" secondAttribute="trailing" constant="10" id="Jrm-i5-14v"/>
+                    <constraint firstAttribute="trailing" secondItem="Yoe-sY-yKM" secondAttribute="trailing" constant="30" id="Jrm-i5-14v"/>
                     <constraint firstItem="qCg-Kp-PbJ" firstAttribute="centerY" secondItem="stY-xR-BNJ" secondAttribute="centerY" id="MO2-2Q-6WR"/>
                     <constraint firstItem="ngi-YK-KYH" firstAttribute="top" secondItem="V8x-hN-ZYY" secondAttribute="bottom" constant="8" symbolic="YES" id="RQg-CM-IwM"/>
                     <constraint firstAttribute="bottomMargin" secondItem="stY-xR-BNJ" secondAttribute="bottom" constant="2" id="RcT-gK-dWv"/>
                     <constraint firstItem="V8x-hN-ZYY" firstAttribute="top" secondItem="Yoe-sY-yKM" secondAttribute="bottom" constant="8" id="Rlj-xH-Ndn"/>
                     <constraint firstAttribute="bottomMargin" secondItem="3sP-8K-JzV" secondAttribute="bottom" constant="1.5" id="TgB-5b-78N"/>
+                    <constraint firstAttribute="trailing" secondItem="Nb3-SC-VZO" secondAttribute="trailing" constant="10" id="Uif-im-q0X"/>
                     <constraint firstAttribute="bottom" secondItem="uiN-ac-lwb" secondAttribute="bottom" constant="15" id="UmM-kG-KEg"/>
+                    <constraint firstItem="Nb3-SC-VZO" firstAttribute="centerY" secondItem="Yoe-sY-yKM" secondAttribute="centerY" id="ZQn-Yr-VsA"/>
                     <constraint firstItem="1UX-Da-uml" firstAttribute="top" secondItem="Yoe-sY-yKM" secondAttribute="bottom" constant="8" id="aSS-3a-shI"/>
                     <constraint firstItem="uiN-ac-lwb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="bXP-SR-woq"/>
                     <constraint firstItem="Yoe-sY-yKM" firstAttribute="leading" secondItem="uiN-ac-lwb" secondAttribute="trailing" constant="8" symbolic="YES" id="cyh-dX-ZyL"/>
                     <constraint firstItem="1UX-Da-uml" firstAttribute="leading" secondItem="V8x-hN-ZYY" secondAttribute="trailing" constant="5" id="hln-sz-K7v"/>
+                    <constraint firstAttribute="trailing" secondItem="Nb3-SC-VZO" secondAttribute="trailing" constant="10" id="hyA-5q-9Kt"/>
                     <constraint firstAttribute="trailing" secondItem="5pY-hd-2Ca" secondAttribute="trailing" constant="10" id="ibl-dK-bx1"/>
                     <constraint firstItem="V8x-hN-ZYY" firstAttribute="leading" secondItem="uiN-ac-lwb" secondAttribute="trailing" constant="8" id="jOt-0C-VnY"/>
                     <constraint firstAttribute="trailingMargin" secondItem="1UX-Da-uml" secondAttribute="trailing" constant="5" id="lW2-LX-a53"/>
@@ -121,6 +133,7 @@
             <connections>
                 <outlet property="chatCountLabel" destination="stY-xR-BNJ" id="GQ3-i6-hJk"/>
                 <outlet property="chatImageView" destination="qCg-Kp-PbJ" id="I5T-eH-hQz"/>
+                <outlet property="dotButton" destination="Nb3-SC-VZO" id="6cK-4J-srU"/>
                 <outlet property="heartCountLabel" destination="5pY-hd-2Ca" id="ZT6-9P-Sxh"/>
                 <outlet property="heartImageView" destination="3sP-8K-JzV" id="D4c-Jd-tXo"/>
                 <outlet property="locationLabel" destination="V8x-hN-ZYY" id="XSC-UA-l5E"/>
@@ -133,6 +146,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="dotButton" width="20" height="28"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="message" catalog="system" width="128" height="113"/>
         <image name="profileImageView2" width="112" height="100"/>
