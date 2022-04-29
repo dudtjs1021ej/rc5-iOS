@@ -8,8 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		FA0277CC2819A7B100555739 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0277CB2819A7B100555739 /* TransactionModel.swift */; };
+		FA3016A8281C3F7A0054F8A1 /* FirstFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3016A7281C3F7A0054F8A1 /* FirstFoodViewController.swift */; };
+		FA3016AA281C3F8E0054F8A1 /* SecondFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3016A9281C3F8E0054F8A1 /* SecondFoodViewController.swift */; };
+		FA3016AD281C40B60054F8A1 /* FirstFoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3016AB281C40B60054F8A1 /* FirstFoodTableViewCell.swift */; };
+		FA3016AE281C40B60054F8A1 /* FirstFoodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3016AC281C40B60054F8A1 /* FirstFoodTableViewCell.xib */; };
+		FA3016B1281C40C10054F8A1 /* SecondFoodTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3016AF281C40C10054F8A1 /* SecondFoodTableViewCell.swift */; };
+		FA3016B2281C40C10054F8A1 /* SecondFoodTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3016B0281C40C10054F8A1 /* SecondFoodTableViewCell.xib */; };
 		FA31EF62281C123B00EE3DFC /* DetailTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA31EF60281C123B00EE3DFC /* DetailTransactionViewController.swift */; };
 		FA31EF63281C123B00EE3DFC /* DetailTransactionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA31EF61281C123B00EE3DFC /* DetailTransactionViewController.xib */; };
+		FA359459281C4C4B007F13B5 /* NearMenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA359457281C4C4B007F13B5 /* NearMenuCollectionViewCell.swift */; };
+		FA35945A281C4C4B007F13B5 /* NearMenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA359458281C4C4B007F13B5 /* NearMenuCollectionViewCell.xib */; };
 		FA3C255A281959E6004BDCA3 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3C2558281959E6004BDCA3 /* HomeTableViewCell.swift */; };
 		FA3C255B281959E6004BDCA3 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3C2559281959E6004BDCA3 /* HomeTableViewCell.xib */; };
 		FA3D4170281B9C5F007E2CEE /* SettingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3D416F281B9C5E007E2CEE /* SettingHeaderView.swift */; };
@@ -20,6 +28,7 @@
 		FA3D417A281BBC10007E2CEE /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3D4179281BBC10007E2CEE /* ChatModel.swift */; };
 		FA4370E7281C28BD0076991F /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4370E6281C28BD0076991F /* PostModel.swift */; };
 		FA4370EA281C32730076991F /* Tabman in Frameworks */ = {isa = PBXBuildFile; productRef = FA4370E9281C32730076991F /* Tabman */; };
+		FA4370EC281C36F60076991F /* TabManFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4370EB281C36F60076991F /* TabManFoodViewController.swift */; };
 		FA4E1368281A802600F947CD /* CommunityMenuCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4E1366281A802600F947CD /* CommunityMenuCollectionViewCell.swift */; };
 		FA4E1369281A802600F947CD /* CommunityMenuCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA4E1367281A802600F947CD /* CommunityMenuCollectionViewCell.xib */; };
 		FA4E136B281A81E400F947CD /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4E136A281A81E400F947CD /* CommunityViewController.swift */; };
@@ -43,8 +52,16 @@
 
 /* Begin PBXFileReference section */
 		FA0277CB2819A7B100555739 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
+		FA3016A7281C3F7A0054F8A1 /* FirstFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstFoodViewController.swift; sourceTree = "<group>"; };
+		FA3016A9281C3F8E0054F8A1 /* SecondFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondFoodViewController.swift; sourceTree = "<group>"; };
+		FA3016AB281C40B60054F8A1 /* FirstFoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstFoodTableViewCell.swift; sourceTree = "<group>"; };
+		FA3016AC281C40B60054F8A1 /* FirstFoodTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstFoodTableViewCell.xib; sourceTree = "<group>"; };
+		FA3016AF281C40C10054F8A1 /* SecondFoodTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondFoodTableViewCell.swift; sourceTree = "<group>"; };
+		FA3016B0281C40C10054F8A1 /* SecondFoodTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondFoodTableViewCell.xib; sourceTree = "<group>"; };
 		FA31EF60281C123B00EE3DFC /* DetailTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTransactionViewController.swift; sourceTree = "<group>"; };
 		FA31EF61281C123B00EE3DFC /* DetailTransactionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailTransactionViewController.xib; sourceTree = "<group>"; };
+		FA359457281C4C4B007F13B5 /* NearMenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearMenuCollectionViewCell.swift; sourceTree = "<group>"; };
+		FA359458281C4C4B007F13B5 /* NearMenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NearMenuCollectionViewCell.xib; sourceTree = "<group>"; };
 		FA3C2558281959E6004BDCA3 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		FA3C2559281959E6004BDCA3 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		FA3D416F281B9C5E007E2CEE /* SettingHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingHeaderView.swift; sourceTree = "<group>"; };
@@ -54,6 +71,7 @@
 		FA3D4177281BBB0E007E2CEE /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		FA3D4179281BBC10007E2CEE /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		FA4370E6281C28BD0076991F /* PostModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		FA4370EB281C36F60076991F /* TabManFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabManFoodViewController.swift; sourceTree = "<group>"; };
 		FA4E1366281A802600F947CD /* CommunityMenuCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityMenuCollectionViewCell.swift; sourceTree = "<group>"; };
 		FA4E1367281A802600F947CD /* CommunityMenuCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommunityMenuCollectionViewCell.xib; sourceTree = "<group>"; };
 		FA4E136A281A81E400F947CD /* CommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +138,9 @@
 				FA61E869281BE75A005CCD9A /* NearViewController.swift */,
 				FA61E86F281BFB7E005CCD9A /* TransactionViewController.swift */,
 				FA31EF60281C123B00EE3DFC /* DetailTransactionViewController.swift */,
+				FA4370EB281C36F60076991F /* TabManFoodViewController.swift */,
+				FA3016A7281C3F7A0054F8A1 /* FirstFoodViewController.swift */,
+				FA3016A9281C3F8E0054F8A1 /* SecondFoodViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -145,6 +166,9 @@
 				FA3D416F281B9C5E007E2CEE /* SettingHeaderView.swift */,
 				FA3D4173281BB916007E2CEE /* ChatTableViewCell.swift */,
 				FA61E86B281BE8E3005CCD9A /* NearTagCollectionViewCell.swift */,
+				FA3016AB281C40B60054F8A1 /* FirstFoodTableViewCell.swift */,
+				FA3016AF281C40C10054F8A1 /* SecondFoodTableViewCell.swift */,
+				FA359457281C4C4B007F13B5 /* NearMenuCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -159,6 +183,9 @@
 				FA4E1380281AED7C00F947CD /* SettingHeaderView.xib */,
 				FA3D4174281BB916007E2CEE /* ChatTableViewCell.xib */,
 				FA61E86C281BE8E3005CCD9A /* NearTagCollectionViewCell.xib */,
+				FA3016AC281C40B60054F8A1 /* FirstFoodTableViewCell.xib */,
+				FA3016B0281C40C10054F8A1 /* SecondFoodTableViewCell.xib */,
+				FA359458281C4C4B007F13B5 /* NearMenuCollectionViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -265,12 +292,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA4E1381281AED7C00F947CD /* SettingHeaderView.xib in Resources */,
+				FA3016B2281C40C10054F8A1 /* SecondFoodTableViewCell.xib in Resources */,
 				FA61E86E281BE8E3005CCD9A /* NearTagCollectionViewCell.xib in Resources */,
+				FA3016AE281C40B60054F8A1 /* FirstFoodTableViewCell.xib in Resources */,
 				FA3D4176281BB916007E2CEE /* ChatTableViewCell.xib in Resources */,
 				FA79986B2816E35B00BE6B40 /* LaunchScreen.storyboard in Resources */,
 				FA7998682816E35B00BE6B40 /* Assets.xcassets in Resources */,
 				FA4E137D281AE92700F947CD /* SettingTableViewCell.xib in Resources */,
 				FA4E1369281A802600F947CD /* CommunityMenuCollectionViewCell.xib in Resources */,
+				FA35945A281C4C4B007F13B5 /* NearMenuCollectionViewCell.xib in Resources */,
 				FA31EF63281C123B00EE3DFC /* DetailTransactionViewController.xib in Resources */,
 				FA3C255B281959E6004BDCA3 /* HomeTableViewCell.xib in Resources */,
 				FA7998662816E35B00BE6B40 /* Main.storyboard in Resources */,
@@ -288,23 +318,29 @@
 				FA31EF62281C123B00EE3DFC /* DetailTransactionViewController.swift in Sources */,
 				FA4370E7281C28BD0076991F /* PostModel.swift in Sources */,
 				FA7998632816E35B00BE6B40 /* HomeViewController.swift in Sources */,
+				FA4370EC281C36F60076991F /* TabManFoodViewController.swift in Sources */,
+				FA3016B1281C40C10054F8A1 /* SecondFoodTableViewCell.swift in Sources */,
 				FA4E1375281AE4E300F947CD /* SettingsViewController.swift in Sources */,
 				FA79985F2816E35B00BE6B40 /* AppDelegate.swift in Sources */,
 				FA61E86D281BE8E3005CCD9A /* NearTagCollectionViewCell.swift in Sources */,
 				FA3D4172281BB655007E2CEE /* DashedLineView.swift in Sources */,
 				FA3D4170281B9C5F007E2CEE /* SettingHeaderView.swift in Sources */,
+				FA359459281C4C4B007F13B5 /* NearMenuCollectionViewCell.swift in Sources */,
 				FA3D417A281BBC10007E2CEE /* ChatModel.swift in Sources */,
 				FA4E1372281AB6E000F947CD /* CommunityPostTableViewCell.swift in Sources */,
 				FA3C255A281959E6004BDCA3 /* HomeTableViewCell.swift in Sources */,
 				FA7998612816E35B00BE6B40 /* SceneDelegate.swift in Sources */,
 				FA4E137C281AE92700F947CD /* SettingTableViewCell.swift in Sources */,
 				FA0277CC2819A7B100555739 /* TransactionModel.swift in Sources */,
+				FA3016AA281C3F8E0054F8A1 /* SecondFoodViewController.swift in Sources */,
 				FA3D4178281BBB0E007E2CEE /* ChatViewController.swift in Sources */,
 				FA61E870281BFB7E005CCD9A /* TransactionViewController.swift in Sources */,
+				FA3016AD281C40B60054F8A1 /* FirstFoodTableViewCell.swift in Sources */,
 				FA4E1368281A802600F947CD /* CommunityMenuCollectionViewCell.swift in Sources */,
 				FA61E86A281BE75A005CCD9A /* NearViewController.swift in Sources */,
 				FA3D4175281BB916007E2CEE /* ChatTableViewCell.swift in Sources */,
 				FA4E136B281A81E400F947CD /* CommunityViewController.swift in Sources */,
+				FA3016A8281C3F7A0054F8A1 /* FirstFoodViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

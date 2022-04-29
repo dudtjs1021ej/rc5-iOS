@@ -10,19 +10,22 @@ import UIKit
 class NearViewController: UIViewController {
 
   @IBOutlet weak var tagCollectionView: UICollectionView!
+  @IBOutlet weak var menuCollectionView: UICollectionView!
+  
   let tagArray = ["알바", "중고차", "아르바이트", "일자리", "부동산", "전기차", "구인구직", "속눈썹펌", "물고기"]
   override func viewDidLoad() {
     super.viewDidLoad()
+    
     tagCollectionView.register(UINib(nibName: "NearTagCollectionViewCell", bundle: nil),
                                forCellWithReuseIdentifier: "nearTagCell")
-    //tagCollectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
     tagCollectionView.delegate = self
     tagCollectionView.dataSource = self
     
-//    let flowLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-//    flowLayout.estimatedItemSize = CGSize(width: 500.0, height: 50.0)
-//
-//    tagCollectionView.collectionViewLayout = flowLayout
+    menuCollectionView.register(UINib(nibName: "NearMenuCollectionViewCell", bundle: nil),
+                                forCellWithReuseIdentifier: "nearTagCell")
+    menuCollectionView.delegate = self
+    menuCollectionView.dataSource = self
+    
 
         
   }
