@@ -60,7 +60,6 @@ class TransactionViewController: UIViewController {
         print("indexPath error")
         return
       }
-      print(delegate)
       delegate?.updateData(indexPath: indexPath, productImage: image, title: title, price: Int(price) ?? 0, detail: detail)
       print("update")
       self.transaction = nil

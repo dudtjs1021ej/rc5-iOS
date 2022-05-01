@@ -96,13 +96,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     guard let cell = homeTableView.dequeueReusableCell(withIdentifier: "homeCell")
             as? HomeTableViewCell else { return UITableViewCell() }
     
-    // 셀의 재사용 -> 초기화
-    cell.heartCountLabel.text = nil
-    cell.heartImageView.isHidden = true
-    cell.chatCountLabel.text = nil
-    cell.chatImageView.isHidden = true
-    
-    
     let transaction = transactions[indexPath.row]
     guard let images = transaction.images else { return UITableViewCell() }
     cell.productImageView.image = images[0]

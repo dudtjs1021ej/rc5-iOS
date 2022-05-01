@@ -28,27 +28,22 @@ class HomeTableViewCell: UITableViewCell {
   
   override func awakeFromNib() {
     super.awakeFromNib()
+    
     productImageView.layer.cornerRadius = 10
     heartImageView.isHidden = true
     chatImageView.isHidden = true
     dotButton.isHidden = true
     
   }
-  
-//  override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-//    super.init(style: style, reuseIdentifier: reuseIdentifier)
-//    dotButton.addTarget(self, action: #selector(clickedDot), for: .touchUpInside)
-//  }
-//
-//  required init?(coder: NSCoder) {
-//    fatalError("init(coder:) has not been implemented")
-//  }
+  override func prepareForReuse() {
+    // 셀의 재사용 -> 초기화
+    heartCountLabel.text = nil
+    heartImageView.isHidden = true
+    chatCountLabel.text = nil
+    chatImageView.isHidden = true
+  }
   
   override func setSelected(_ selected: Bool, animated: Bool) {
       super.setSelected(selected, animated: animated)
   }
-  
-//  @objc func clickedDot() {
-//    delegate?.clickedDot()
-//  }
 }
