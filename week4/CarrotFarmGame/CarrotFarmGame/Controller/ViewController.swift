@@ -14,6 +14,13 @@ class ViewController: UIViewController {
     // Do any additional setup after loading the view.
   }
 
-
+  @IBAction func clickedGameStart(_ sender: Any) {
+  }
+  
+  @IBAction func clickedHelp(_ sender: Any) {
+    let vc = HelpViewController()
+    vc.modalPresentationStyle = .overCurrentContext
+    present(vc, animated: true, completion: nil)
+  }
 }
 

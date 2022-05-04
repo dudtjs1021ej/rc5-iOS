@@ -13,6 +13,10 @@
 		FA43A1602821629400569D01 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA43A15E2821629400569D01 /* Main.storyboard */; };
 		FA43A1622821629500569D01 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA43A1612821629500569D01 /* Assets.xcassets */; };
 		FA43A1652821629500569D01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA43A1632821629500569D01 /* LaunchScreen.storyboard */; };
+		FA53504C2822858400B0F44C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA53504A2822858400B0F44C /* MainViewController.swift */; };
+		FA53504D2822858400B0F44C /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA53504B2822858400B0F44C /* MainViewController.xib */; };
+		FA535050282286A800B0F44C /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA53504E282286A800B0F44C /* HelpViewController.swift */; };
+		FA535051282286A800B0F44C /* HelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA53504F282286A800B0F44C /* HelpViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		FA43A1612821629500569D01 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA43A1642821629500569D01 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA43A1662821629500569D01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA53504A2822858400B0F44C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		FA53504B2822858400B0F44C /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		FA53504E282286A800B0F44C /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		FA53504F282286A800B0F44C /* HelpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelpViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,35 @@
 		FA43A1572821629400569D01 /* CarrotFarmGame */ = {
 			isa = PBXGroup;
 			children = (
+				FA5350532822870A00B0F44C /* Controller */,
+				FA5350522822870400B0F44C /* View */,
 				FA43A1582821629400569D01 /* AppDelegate.swift */,
 				FA43A15A2821629400569D01 /* SceneDelegate.swift */,
-				FA43A15C2821629400569D01 /* ViewController.swift */,
-				FA43A15E2821629400569D01 /* Main.storyboard */,
 				FA43A1612821629500569D01 /* Assets.xcassets */,
 				FA43A1632821629500569D01 /* LaunchScreen.storyboard */,
 				FA43A1662821629500569D01 /* Info.plist */,
 			);
 			path = CarrotFarmGame;
+			sourceTree = "<group>";
+		};
+		FA5350522822870400B0F44C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA43A15E2821629400569D01 /* Main.storyboard */,
+				FA53504F282286A800B0F44C /* HelpViewController.xib */,
+				FA53504B2822858400B0F44C /* MainViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FA5350532822870A00B0F44C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA43A15C2821629400569D01 /* ViewController.swift */,
+				FA53504E282286A800B0F44C /* HelpViewController.swift */,
+				FA53504A2822858400B0F44C /* MainViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +154,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA43A1652821629500569D01 /* LaunchScreen.storyboard in Resources */,
+				FA535051282286A800B0F44C /* HelpViewController.xib in Resources */,
 				FA43A1622821629500569D01 /* Assets.xcassets in Resources */,
 				FA43A1602821629400569D01 /* Main.storyboard in Resources */,
+				FA53504D2822858400B0F44C /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,6 +171,8 @@
 				FA43A15D2821629400569D01 /* ViewController.swift in Sources */,
 				FA43A1592821629400569D01 /* AppDelegate.swift in Sources */,
 				FA43A15B2821629400569D01 /* SceneDelegate.swift in Sources */,
+				FA53504C2822858400B0F44C /* MainViewController.swift in Sources */,
+				FA535050282286A800B0F44C /* HelpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,13 +321,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9738W25PF4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CarrotFarmGame/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeRight;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationLandscapeRight;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,13 +350,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9738W25PF4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CarrotFarmGame/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationLandscapeRight;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationLandscapeRight;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
