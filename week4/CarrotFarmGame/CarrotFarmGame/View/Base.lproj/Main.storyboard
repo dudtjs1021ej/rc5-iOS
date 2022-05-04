@@ -19,10 +19,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="750" height="400"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdf-FW-PAD">
-                                <rect key="frame" x="394.5" y="344" width="111" height="41"/>
+                                <rect key="frame" x="397.5" y="344" width="105" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="ISb-OA-ihf"/>
-                                    <constraint firstAttribute="width" constant="111" id="TS7-D7-HhW"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Image-1"/>
@@ -31,9 +30,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dZO-a0-aB3">
-                                <rect key="frame" x="284" y="344" width="107" height="41"/>
+                                <rect key="frame" x="277.5" y="344" width="120" height="41"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="107" id="dj1-BE-TzO"/>
                                     <constraint firstAttribute="height" constant="41" id="q1s-Wv-evi"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
@@ -46,12 +44,14 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="vvW-fv-kUc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1qn-1I-782"/>
+                            <constraint firstItem="hdf-FW-PAD" firstAttribute="width" secondItem="vvW-fv-kUc" secondAttribute="width" multiplier="0.14" id="1Rf-H5-iLv"/>
+                            <constraint firstItem="vvW-fv-kUc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="1qn-1I-782"/>
                             <constraint firstAttribute="bottom" secondItem="hdf-FW-PAD" secondAttribute="bottom" constant="15" id="7Mb-PR-gT0"/>
                             <constraint firstItem="hdf-FW-PAD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="1.2" id="Cky-nt-zZr"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vvW-fv-kUc" secondAttribute="trailing" id="NMa-NO-AWW"/>
+                            <constraint firstAttribute="trailing" secondItem="vvW-fv-kUc" secondAttribute="trailing" id="NMa-NO-AWW"/>
                             <constraint firstItem="vvW-fv-kUc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="dc4-44-ofs"/>
                             <constraint firstAttribute="bottom" secondItem="vvW-fv-kUc" secondAttribute="bottom" id="jE2-zD-PJ6"/>
+                            <constraint firstItem="dZO-a0-aB3" firstAttribute="width" secondItem="vvW-fv-kUc" secondAttribute="width" multiplier="0.16" id="r0G-fv-5Sb"/>
                             <constraint firstItem="dZO-a0-aB3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.9" id="sIT-oM-sMT"/>
                             <constraint firstAttribute="bottom" secondItem="dZO-a0-aB3" secondAttribute="bottom" constant="15" id="vc6-CE-0uk"/>
                         </constraints>

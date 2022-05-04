@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="CarrotFarmGame" customModuleProvider="target">
             <connections>
+                <outlet property="timeLabel" destination="TCI-fz-Kmv" id="rCZ-rb-mm1"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,13 +18,41 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="750" height="400"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gameBackground" translatesAutoresizingMaskIntoConstraints="NO" id="7Nd-ho-kov">
+                    <rect key="frame" x="0.0" y="0.0" width="750" height="400"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCI-fz-Kmv">
+                    <rect key="frame" x="128.5" y="9.5" width="28.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.14754757290000001" green="0.47491031890000002" blue="0.95658987760000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HwY-du-yV9">
+                    <rect key="frame" x="658.5" y="126.5" width="11" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.89886194470000003" green="0.3642604351" blue="0.17063421009999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="HwY-du-yV9" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="1.77" id="9b1-qu-sT2"/>
+                <constraint firstItem="TCI-fz-Kmv" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="0.1" id="AKs-ZN-Soj"/>
+                <constraint firstItem="HwY-du-yV9" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" multiplier="0.685" id="AQp-Cd-EP3"/>
+                <constraint firstAttribute="trailing" secondItem="7Nd-ho-kov" secondAttribute="trailing" id="EtI-bV-1I7"/>
+                <constraint firstItem="TCI-fz-Kmv" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="0.38" id="V7R-M4-qpp"/>
+                <constraint firstItem="7Nd-ho-kov" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Zx9-XI-ASu"/>
+                <constraint firstItem="7Nd-ho-kov" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="ksE-2G-use"/>
+                <constraint firstAttribute="bottom" secondItem="7Nd-ho-kov" secondAttribute="bottom" id="vfd-e7-G5i"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <point key="canvasLocation" x="132" y="113"/>
         </view>
     </objects>
     <resources>
+        <image name="gameBackground" width="828" height="627"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -9,21 +9,38 @@ import UIKit
 
 class MainViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+  // MARK: Properties
+  @IBOutlet weak var timeLabel: UILabel!
+  var timer: Timer = Timer()
+  var time: Int = 5
+  // MARK: - LifeCycle
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    timeLabel.text = String(time)
+    createTimer()
+    
+  }
 
-        // Do any additional setup after loading the view.
+  // MARK: - Methods
+  private func createTimer() {
+    timer = Timer.scheduledTimer(timeInterval: 1,
+                                     target: self,
+                                     selector: #selector(fireTimer),
+                                     userInfo: nil,
+                                     repeats: true)
+    DispatchQueue.main.async {
+      self.timer.fire()
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+  }
+  @objc private func fireTimer() {
+    timeLabel.text = String(time)
+    time -= 1
+    if time < 0 {
+      timer.invalidate() // 타이머 정지
+      let vc = EndViewController()
+      vc.modalPresentationStyle = .overCurrentContext
+      present(vc, animated: false, completion: nil)
     }
-    */
+  }
 
 }

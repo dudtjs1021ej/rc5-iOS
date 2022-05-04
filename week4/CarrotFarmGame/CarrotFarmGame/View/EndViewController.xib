@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EndViewController" customModule="CarrotFarmGame" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="750" height="400"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="endBackground" translatesAutoresizingMaskIntoConstraints="NO" id="3jF-Ix-qel">
+                    <rect key="frame" x="116.5" y="58.5" width="517" height="283"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wWe-kc-9Gr">
+                    <rect key="frame" x="136" y="75.5" width="478" height="249"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain"/>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="3jF-Ix-qel" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="4Hk-zk-Q9z"/>
+                <constraint firstItem="3jF-Ix-qel" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="6vy-q6-VZ0"/>
+                <constraint firstItem="wWe-kc-9Gr" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9Fw-3Y-Td3"/>
+                <constraint firstItem="wWe-kc-9Gr" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="9lg-sI-HQy"/>
+                <constraint firstItem="wWe-kc-9Gr" firstAttribute="width" secondItem="3jF-Ix-qel" secondAttribute="width" multiplier="0.924565" id="BkI-wM-Wd8"/>
+                <constraint firstItem="wWe-kc-9Gr" firstAttribute="height" secondItem="3jF-Ix-qel" secondAttribute="height" multiplier="0.879859" id="H8O-ki-Vwk"/>
+                <constraint firstItem="3jF-Ix-qel" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="0.689333" id="aqS-JF-cpk"/>
+                <constraint firstItem="3jF-Ix-qel" firstAttribute="height" secondItem="fnl-2z-Ty3" secondAttribute="height" multiplier="0.878882" id="pOx-ri-40Z"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="131.8840579710145" y="125.89285714285714"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="endBackground" width="667" height="374"/>
+    </resources>
+</document>

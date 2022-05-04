@@ -17,6 +17,8 @@
 		FA53504D2822858400B0F44C /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA53504B2822858400B0F44C /* MainViewController.xib */; };
 		FA535050282286A800B0F44C /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA53504E282286A800B0F44C /* HelpViewController.swift */; };
 		FA535051282286A800B0F44C /* HelpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA53504F282286A800B0F44C /* HelpViewController.xib */; };
+		FA5350562822A55700B0F44C /* EndViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5350542822A55700B0F44C /* EndViewController.swift */; };
+		FA5350572822A55700B0F44C /* EndViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA5350552822A55700B0F44C /* EndViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		FA53504B2822858400B0F44C /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		FA53504E282286A800B0F44C /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		FA53504F282286A800B0F44C /* HelpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelpViewController.xib; sourceTree = "<group>"; };
+		FA5350542822A55700B0F44C /* EndViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndViewController.swift; sourceTree = "<group>"; };
+		FA5350552822A55700B0F44C /* EndViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EndViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,7 @@
 				FA43A15E2821629400569D01 /* Main.storyboard */,
 				FA53504F282286A800B0F44C /* HelpViewController.xib */,
 				FA53504B2822858400B0F44C /* MainViewController.xib */,
+				FA5350552822A55700B0F44C /* EndViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -91,6 +96,7 @@
 				FA43A15C2821629400569D01 /* ViewController.swift */,
 				FA53504E282286A800B0F44C /* HelpViewController.swift */,
 				FA53504A2822858400B0F44C /* MainViewController.swift */,
+				FA5350542822A55700B0F44C /* EndViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -153,6 +159,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA5350572822A55700B0F44C /* EndViewController.xib in Resources */,
 				FA43A1652821629500569D01 /* LaunchScreen.storyboard in Resources */,
 				FA535051282286A800B0F44C /* HelpViewController.xib in Resources */,
 				FA43A1622821629500569D01 /* Assets.xcassets in Resources */,
@@ -168,6 +175,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA5350562822A55700B0F44C /* EndViewController.swift in Sources */,
 				FA43A15D2821629400569D01 /* ViewController.swift in Sources */,
 				FA43A1592821629400569D01 /* AppDelegate.swift in Sources */,
 				FA43A15B2821629400569D01 /* SceneDelegate.swift in Sources */,

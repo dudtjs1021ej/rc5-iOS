@@ -15,6 +15,8 @@ class ViewController: UIViewController {
   }
 
   @IBAction func clickedGameStart(_ sender: Any) {
+    let vc = MainViewController()
+    present(vc, animated: false, completion: nil)
   }
   
   @IBAction func clickedHelp(_ sender: Any) {
