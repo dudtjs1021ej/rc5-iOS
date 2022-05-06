@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import Gifu
 
 enum Tool {
   case wateringCan // 물뿌리개
@@ -34,6 +35,7 @@ class MainViewController: UIViewController {
   
   @IBOutlet var growthImageViews1: [UIImageView]!
   @IBOutlet var growthImageViews2: [UIImageView]!
+  @IBOutlet var moleImageViews: [GIFImageView]!
   
   @IBOutlet weak var waterCanButton: UIButton!
   @IBOutlet weak var pillButton: UIButton!
@@ -54,7 +56,8 @@ class MainViewController: UIViewController {
     timeLabel.text = String(time)
     createTimer()
     
-    playBGM()
+    //playBGM()
+    createMole()
     
     // 각 작물들의 성장 단계
     for _ in 0..<12 {
@@ -227,5 +230,11 @@ class MainViewController: UIViewController {
     }
     avPlayer = AVPlayer(url: url)
     avPlayer.play()
+  }
+  
+  private func createMole() {
+    DispatchQueue.main.async {
+      self.moleImageViews[0].animate(withGIFNamed: "mole", loopCount: 1)
+    }
   }
 }
