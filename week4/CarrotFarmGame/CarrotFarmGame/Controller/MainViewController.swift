@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 enum Tool {
   case wateringCan // 물뿌리개
@@ -21,6 +22,7 @@ enum Level {
   case level3 // 당근이 자란 상태
   case done // 다 자라서 수확이 가능한 상태
 }
+
 class MainViewController: UIViewController {
 
   // MARK: Properties
@@ -44,11 +46,15 @@ class MainViewController: UIViewController {
   var timer: Timer = Timer()
   var time: Int = 1000 // 시작 시간
   
+  var avPlayer = AVPlayer()
+  
   // MARK: - LifeCycle
   override func viewDidLoad() {
     super.viewDidLoad()
     timeLabel.text = String(time)
     createTimer()
+    
+    playBGM()
     
     // 각 작물들의 성장 단계
     for _ in 0..<12 {
@@ -201,16 +207,25 @@ class MainViewController: UIViewController {
     }
   }
   
-  // 당근 수확
+  // 당근 수확 처리
   private func harvest(imageView: UIImageView, index: Int) {
     DispatchQueue.global().async {
       self.score += 1
       DispatchQueue.main.async {
         imageView.image = .none
-        self.scoreLabel.text = String(self.score)
+        self.scoreLabel.text = String(self.score) // 점수 update
       }
     }
     levels[index] = .level0 // level0으로 초기화
     waterings[index] = [false, false] // 1단계, 2단계 모두 물 안준걸로 초기화
+  }
+  
+  private func playBGM() {
+    guard let url = Bundle.main.url(forResource: "bgm", withExtension: "mp3") else {
+      print("error to get the mp3 file")
+      return
+    }
+    avPlayer = AVPlayer(url: url)
+    avPlayer.play()
   }
 }
