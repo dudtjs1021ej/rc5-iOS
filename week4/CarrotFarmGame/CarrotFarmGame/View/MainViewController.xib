@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="hammerButton" destination="y70-QK-Djn" id="1S1-pZ-fn9"/>
                 <outlet property="pillButton" destination="cNX-fa-vVY" id="Lwq-Dj-unZ"/>
+                <outlet property="scoreLabel" destination="HwY-du-yV9" id="Okj-hD-WM6"/>
                 <outlet property="timeLabel" destination="TCI-fz-Kmv" id="rCZ-rb-mm1"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="waterCanButton" destination="ySI-ST-VgL" id="BwL-JV-UnZ"/>

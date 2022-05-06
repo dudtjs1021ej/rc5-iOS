@@ -8,22 +8,26 @@
 import UIKit
 
 enum Tool {
-  case wateringCan
-  case pill
-  case hammer
-  case none
+  case wateringCan // 물뿌리개
+  case pill // 알약
+  case hammer //망치
+  case none // 선택하징 않음
 }
 
 enum Level {
-  case level0
-  case level1
-  case level2
-  case level3
+  case level0 // 아무것도 아닌 상태
+  case level1 // 씨앗만 뿌린 상태
+  case level2 // 물을 1번 줘서 싹이 자란 상태
+  case level3 // 당근이 자란 상태
+  case done // 다 자라서 수확이 가능한 상태
 }
 class MainViewController: UIViewController {
 
   // MARK: Properties
   @IBOutlet weak var timeLabel: UILabel!
+  @IBOutlet weak var scoreLabel: UILabel!
+  
+  
   @IBOutlet var cropsButtons: [UIButton]!
   
   @IBOutlet var growthImageViews1: [UIImageView]!
@@ -33,11 +37,12 @@ class MainViewController: UIViewController {
   @IBOutlet weak var pillButton: UIButton!
   @IBOutlet weak var hammerButton: UIButton!
   
-  var levels: [Level] = []
-  var waterings: [[Bool]] = []
-  var toolMode: Tool = .none
+  var score: Int = 0
+  var levels: [Level] = [] // 각 작물들의 성장 레벨
+  var waterings: [[Bool]] = [] // 1단계, 2단계에서 물을 줬는지 체크
+  var toolMode: Tool = .none // 현재 선택된 도구
   var timer: Timer = Timer()
-  var time: Int = 1000
+  var time: Int = 1000 // 시작 시간
   
   // MARK: - LifeCycle
   override func viewDidLoad() {
@@ -75,6 +80,8 @@ class MainViewController: UIViewController {
   }
 
   // MARK: - Methods
+  
+  // 타이머 생성 메소드
   private func createTimer() {
     timer = Timer.scheduledTimer(timeInterval: 1,
                                      target: self,
@@ -97,30 +104,38 @@ class MainViewController: UIViewController {
     }
   }
   
+  // 작물 클릭했을 떄 처리
   @objc private func clickedCrops(_ sender: UIButton) {
    
     guard let index = cropsButtons.firstIndex(of: sender) else { return }
     let growthImageView1 = growthImageViews1[index]
     let growthImageView2 = growthImageViews2[index]
+    
+    // 수확할 수 있는 상태이면
+    if levels[index] == .done {
+      harvest(imageView: growthImageView2, index: index)
+    }
+    
     switch toolMode {
-      
     // 물뿌리개 선택했을 때
     case .wateringCan:
+      // 레벨1이고 물을 주지 않은 상태면
       if levels[index] == .level1, waterings[index][0] == false {
-        level1toLevel2(imageView: growthImageView1, index: index) // level
-        waterings[index][0] = true
+        level1toLevel2(imageView: growthImageView1, index: index) // level2로 성장
+        waterings[index][0] = true // level1에서 물 준걸로 체크
       }
       
+      // 레벨2이고 물을 주지 않은 상태면
       if levels[index] == .level2, waterings[index][1] == false {
         growthImageView1.image = .none
-        level2toLevel3(imageView: growthImageView2)
-        waterings[index][1] = true
+        level2toLevel3(imageView: growthImageView2, index: index) // level3으로 성장
+        waterings[index][1] = true // level2에서 물 준걸로 체크
       }
       
     // 알약을 선택했을 때
     case .pill:
       if levels[index] == .level0 {
-        growthImageView1.image = UIImage(named: "level1")
+        growthImageView1.image = UIImage(named: "level1") // 씨앗 뿌려줌
       }
       levels[index] = .level1 // level1로 성장
       
@@ -134,6 +149,8 @@ class MainViewController: UIViewController {
 
   @objc func clickedPill(_ sender: UIButton) {
     toolMode = .pill
+    
+    // 선택된 도구 테두리 넣어줌
     sender.layer.borderColor = UIColor.red.cgColor
     waterCanButton.layer.borderColor = UIColor.clear.cgColor
     hammerButton.layer.borderColor = UIColor.clear.cgColor
@@ -142,6 +159,8 @@ class MainViewController: UIViewController {
   
   @objc func clickedWateringCan(_ sender: UIButton) {
     toolMode = .wateringCan
+    
+    // 선택된 도구 테두리 넣어줌
     sender.layer.borderColor = UIColor.red.cgColor
     pillButton.layer.borderColor = UIColor.clear.cgColor
     hammerButton.layer.borderColor = UIColor.clear.cgColor
@@ -149,24 +168,28 @@ class MainViewController: UIViewController {
   
   @objc func clickedHammer(_ sender: UIButton) {
     toolMode = .hammer
+    
+    // 선택된 도구 테두리 넣어줌
     sender.layer.borderColor = UIColor.red.cgColor
     waterCanButton.layer.borderColor = UIColor.clear.cgColor
     pillButton.layer.borderColor = UIColor.clear.cgColor
   }
   
+  // level1 -> level2로 성장 처리
   private func level1toLevel2(imageView: UIImageView, index: Int) {
     DispatchQueue.global().async {
       for i in 1...5 {
         DispatchQueue.main.async {
-          imageView.image = UIImage(named: "level2_\(i)")
+          imageView.image = UIImage(named: "level2_\(i)") // imageview 바꿔줌
         }
         usleep(1000000)
       }
-      self.levels[index] = .level2
+      self.levels[index] = .level2 // level up
     }
   }
   
-  private func level2toLevel3(imageView: UIImageView) {
+  // level2 -> level3로 성장 처리
+  private func level2toLevel3(imageView: UIImageView, index: Int) {
     DispatchQueue.global().async {
       for i in 1...3 {
         DispatchQueue.main.async {
@@ -174,6 +197,20 @@ class MainViewController: UIViewController {
         }
         usleep(1000000)
       }
+      self.levels[index] = .done // level up
     }
+  }
+  
+  // 당근 수확
+  private func harvest(imageView: UIImageView, index: Int) {
+    DispatchQueue.global().async {
+      self.score += 1
+      DispatchQueue.main.async {
+        imageView.image = .none
+        self.scoreLabel.text = String(self.score)
+      }
+    }
+    levels[index] = .level0 // level0으로 초기화
+    waterings[index] = [false, false] // 1단계, 2단계 모두 물 안준걸로 초기화
   }
 }
