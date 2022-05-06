@@ -47,6 +47,8 @@ class MainViewController: UIViewController {
   var toolMode: Tool = .none // 현재 선택된 도구
   var timer: Timer = Timer()
   var time: Int = 1000 // 시작 시간
+  var moles: [Bool] = [] // 두더지 있는지 체크
+  
   
   var avPlayer = AVPlayer()
   
@@ -58,11 +60,16 @@ class MainViewController: UIViewController {
     
     //playBGM()
     createMole()
+    //checkMole()
     
     // 각 작물들의 성장 단계
     for _ in 0..<12 {
       levels.append(.level0) // 0단계로 초기화
       waterings.append([false, false]) // 1단계, 2단계에서 물 안준걸로 초기화
+    }
+    
+    for _ in 0..<12 {
+      moles.append(false)
     }
     
     for button in cropsButtons {
@@ -151,6 +158,10 @@ class MainViewController: UIViewController {
     // 망치 선택했을 때
     case .hammer:
       print("hammer")
+      if moles[index] == true { //두더지가 있었다면
+        print("catchMole")
+        catchMole(index: index)
+      }
     case .none:
       print("none")
     }
@@ -223,6 +234,7 @@ class MainViewController: UIViewController {
     waterings[index] = [false, false] // 1단계, 2단계 모두 물 안준걸로 초기화
   }
   
+  // 배경 음악 삽입
   private func playBGM() {
     guard let url = Bundle.main.url(forResource: "bgm", withExtension: "mp3") else {
       print("error to get the mp3 file")
@@ -232,17 +244,36 @@ class MainViewController: UIViewController {
     avPlayer.play()
   }
   
+  // 두더지 생성
   private func createMole() {
     DispatchQueue.global().async {
       for _ in 1...50 {
         DispatchQueue.main.async {
           for _ in 0..<1 {
-            let randomNum = Int.random(in: 0...3)
+            let randomNum = Int.random(in: 0...11)
+            self.moles[randomNum] = true // 두더지 있다고 체크
+            print("\(randomNum) : \(self.moles[randomNum])")
             self.moleImageViews[randomNum].animate(withGIFNamed: "mole", loopCount: 1)
+            
+
           }
         }
-        usleep(3000000)
+        usleep(10000000)
       }
     }
+    
+  
+    
   }
+  
+  private func catchMole(index: Int) {
+    DispatchQueue.main.async {
+      //self.moleImageViews[index].stopAnimatingGIF()
+      self.moleImageViews[index].animate(withGIFNamed: "catch", loopCount: 1)
+      self.moles[index] = false // 두더지 없다고 체크
+      self.score += 1
+      self.scoreLabel.text = String(self.score)
+    }
+  }
+  
 }
