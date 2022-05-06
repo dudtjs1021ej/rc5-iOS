@@ -14,16 +14,25 @@ enum Tool {
   case none
 }
 
+enum Level {
+  case level0
+  case level1
+  case level2
+  case level3
+}
 class MainViewController: UIViewController {
 
   // MARK: Properties
   @IBOutlet weak var timeLabel: UILabel!
   @IBOutlet var cropsButtons: [UIButton]!
+  
+  @IBOutlet var growthImageViews: [UIImageView]!
+  
   @IBOutlet weak var waterCanButton: UIButton!
   @IBOutlet weak var pillButton: UIButton!
   @IBOutlet weak var hammerButton: UIButton!
   
-  
+  var levels: [Level] = []
   var toolMode: Tool = .none
   var timer: Timer = Timer()
   var time: Int = 1000
@@ -34,9 +43,15 @@ class MainViewController: UIViewController {
     timeLabel.text = String(time)
     createTimer()
     
+    // 각 작물들의 성장 단계
+    for _ in 0..<12 {
+      levels.append(.level0) // 0단계로 초기화
+    }
+    
     for button in cropsButtons {
       button.layer.cornerRadius = 30
-      button.addTarget(self, action: #selector(clcikedCrops), for: .touchUpInside)
+      button.backgroundColor = .clear
+      button.addTarget(self, action: #selector(clickedCrops(_:)), for: .touchUpInside)
     }
     
     waterCanButton.layer.cornerRadius = 40
@@ -67,6 +82,7 @@ class MainViewController: UIViewController {
       self.timer.fire()
     }
   }
+  
   @objc private func fireTimer() {
     timeLabel.text = String(time)
     time -= 1
@@ -77,8 +93,32 @@ class MainViewController: UIViewController {
       present(vc, animated: false, completion: nil)
     }
   }
-  @objc private func clcikedCrops(_ sender: UIButton) {
-    print("clicked")
+  
+  @objc private func clickedCrops(_ sender: UIButton) {
+   
+    guard let index = cropsButtons.firstIndex(of: sender) else { return }
+    var growthImageView = growthImageViews[index]
+    switch toolMode {
+      
+    // 물뿌리개 선택했을 때
+    case .wateringCan:
+      if levels[index] == .level1 {
+        level1toLevel2(imageView: growthImageView) // level
+      }
+      
+    // 알약을 선택했을 때
+    case .pill:
+      if levels[index] == .level0 {
+        growthImageView.image = UIImage(named: "level1")
+      }
+      levels[index] = .level1 // level1로 성장
+      
+    // 망치 선택했을 때
+    case .hammer:
+      print("hammer")
+    case .none:
+      print("none")
+    }
   }
 
   @objc func clickedPill(_ sender: UIButton) {
@@ -101,6 +141,37 @@ class MainViewController: UIViewController {
     sender.layer.borderColor = UIColor.red.cgColor
     waterCanButton.layer.borderColor = UIColor.clear.cgColor
     pillButton.layer.borderColor = UIColor.clear.cgColor
+  }
+  
+  private func level1toLevel2(imageView: UIImageView) {
+    
+    DispatchQueue.global().async {
+      for i in 1...5 {
+        DispatchQueue.main.async {
+          imageView.image = UIImage(named: "level2_\(i)")
+        }
+        usleep(1000000)
+      }
+    }
+    
+      
+  
+//      DispatchQueue.main.async {
+//        imageView.image = UIImage(named: "level2_2")
+//        //Thread.sleep(forTimeInterval: 1)
+//        usleep(1000000)
+//      }
+//      DispatchQueue.main.async {
+//        imageView.image = UIImage(named: "level2_3")
+//        Thread.sleep(forTimeInterval: 1)
+//      }
+//      DispatchQueue.main.async {
+//        imageView.image = UIImage(named: "level2_4")
+//        Thread.sleep(forTimeInterval: 1)
+//      }
+      
+      
+    
   }
   
 }
