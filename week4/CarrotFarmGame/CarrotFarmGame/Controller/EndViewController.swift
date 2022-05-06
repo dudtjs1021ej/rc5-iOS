@@ -9,21 +9,15 @@ import UIKit
 
 class EndViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+  @IBOutlet weak var resultImageView: UIImageView!
+  @IBOutlet weak var scoreLabel: UILabel!
+  var score: Int = 0
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    scoreLabel.text = String(score*10)
+    resultImageView.layer.cornerRadius = 30
+  }
+  @IBAction func clickedScore(_ sender: Any) {
+    view.window?.rootViewController?.dismiss(animated: false, completion: nil)
+  }
 }

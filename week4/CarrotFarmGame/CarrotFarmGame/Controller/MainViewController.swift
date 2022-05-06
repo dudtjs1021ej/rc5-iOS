@@ -48,7 +48,7 @@ class MainViewController: UIViewController {
   var waterings: [[Bool]] = [] // 1단계, 2단계에서 물을 줬는지 체크
   var toolMode: Tool = .none // 현재 선택된 도구
   var timer: Timer = Timer()
-  var time: Int = 1000 // 시작 시간
+  var time: Int = 3 // 시작 시간
   var moles: [Bool] = [] // 두더지 있는지 체크
   
   
@@ -123,6 +123,7 @@ class MainViewController: UIViewController {
       timer.invalidate() // 타이머 정지
       let vc = EndViewController()
       vc.modalPresentationStyle = .overCurrentContext
+      vc.score = score
       present(vc, animated: false, completion: nil)
     }
   }
@@ -159,9 +160,7 @@ class MainViewController: UIViewController {
       
     // 망치 선택했을 때
     case .hammer:
-      print("hammer")
       if moles[index] == true { //두더지가 있었다면
-        print("catchMole")
         catchMole(index: index)
       }
       
@@ -276,10 +275,7 @@ class MainViewController: UIViewController {
           for _ in 0..<1 {
             let randomNum = Int.random(in: 0...11)
             self.moles[randomNum] = true // 두더지 있다고 체크
-            print("\(randomNum) : \(self.moles[randomNum])")
             self.moleImageViews[randomNum].animate(withGIFNamed: "mole", loopCount: 1)
-            
-
           }
         }
         usleep(10000000)
@@ -292,7 +288,6 @@ class MainViewController: UIViewController {
   
   private func catchMole(index: Int) {
     DispatchQueue.main.async {
-      //self.moleImageViews[index].stopAnimatingGIF()
       self.moleImageViews[index].animate(withGIFNamed: "catch", loopCount: 1)
       self.moles[index] = false // 두더지 없다고 체크
       self.score += 1
