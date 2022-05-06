@@ -26,13 +26,15 @@ class MainViewController: UIViewController {
   @IBOutlet weak var timeLabel: UILabel!
   @IBOutlet var cropsButtons: [UIButton]!
   
-  @IBOutlet var growthImageViews: [UIImageView]!
+  @IBOutlet var growthImageViews1: [UIImageView]!
+  @IBOutlet var growthImageViews2: [UIImageView]!
   
   @IBOutlet weak var waterCanButton: UIButton!
   @IBOutlet weak var pillButton: UIButton!
   @IBOutlet weak var hammerButton: UIButton!
   
   var levels: [Level] = []
+  var waterings: [[Bool]] = []
   var toolMode: Tool = .none
   var timer: Timer = Timer()
   var time: Int = 1000
@@ -46,6 +48,7 @@ class MainViewController: UIViewController {
     // 각 작물들의 성장 단계
     for _ in 0..<12 {
       levels.append(.level0) // 0단계로 초기화
+      waterings.append([false, false]) // 1단계, 2단계에서 물 안준걸로 초기화
     }
     
     for button in cropsButtons {
@@ -97,19 +100,27 @@ class MainViewController: UIViewController {
   @objc private func clickedCrops(_ sender: UIButton) {
    
     guard let index = cropsButtons.firstIndex(of: sender) else { return }
-    var growthImageView = growthImageViews[index]
+    let growthImageView1 = growthImageViews1[index]
+    let growthImageView2 = growthImageViews2[index]
     switch toolMode {
       
     // 물뿌리개 선택했을 때
     case .wateringCan:
-      if levels[index] == .level1 {
-        level1toLevel2(imageView: growthImageView) // level
+      if levels[index] == .level1, waterings[index][0] == false {
+        level1toLevel2(imageView: growthImageView1, index: index) // level
+        waterings[index][0] = true
+      }
+      
+      if levels[index] == .level2, waterings[index][1] == false {
+        growthImageView1.image = .none
+        level2toLevel3(imageView: growthImageView2)
+        waterings[index][1] = true
       }
       
     // 알약을 선택했을 때
     case .pill:
       if levels[index] == .level0 {
-        growthImageView.image = UIImage(named: "level1")
+        growthImageView1.image = UIImage(named: "level1")
       }
       levels[index] = .level1 // level1로 성장
       
@@ -143,8 +154,7 @@ class MainViewController: UIViewController {
     pillButton.layer.borderColor = UIColor.clear.cgColor
   }
   
-  private func level1toLevel2(imageView: UIImageView) {
-    
+  private func level1toLevel2(imageView: UIImageView, index: Int) {
     DispatchQueue.global().async {
       for i in 1...5 {
         DispatchQueue.main.async {
@@ -152,26 +162,18 @@ class MainViewController: UIViewController {
         }
         usleep(1000000)
       }
+      self.levels[index] = .level2
     }
-    
-      
-  
-//      DispatchQueue.main.async {
-//        imageView.image = UIImage(named: "level2_2")
-//        //Thread.sleep(forTimeInterval: 1)
-//        usleep(1000000)
-//      }
-//      DispatchQueue.main.async {
-//        imageView.image = UIImage(named: "level2_3")
-//        Thread.sleep(forTimeInterval: 1)
-//      }
-//      DispatchQueue.main.async {
-//        imageView.image = UIImage(named: "level2_4")
-//        Thread.sleep(forTimeInterval: 1)
-//      }
-      
-      
-    
   }
   
+  private func level2toLevel3(imageView: UIImageView) {
+    DispatchQueue.global().async {
+      for i in 1...3 {
+        DispatchQueue.main.async {
+          imageView.image = UIImage(named: "level3_\(i)")
+        }
+        usleep(1000000)
+      }
+    }
+  }
 }
