@@ -13,6 +13,7 @@ enum Tool {
   case wateringCan // 물뿌리개
   case pill // 알약
   case hammer //망치
+  case sickle // 낫
   case none // 선택하징 않음
 }
 
@@ -40,6 +41,7 @@ class MainViewController: UIViewController {
   @IBOutlet weak var waterCanButton: UIButton!
   @IBOutlet weak var pillButton: UIButton!
   @IBOutlet weak var hammerButton: UIButton!
+  @IBOutlet weak var sickleButton: UIButton!
   
   var score: Int = 0
   var levels: [Level] = [] // 각 작물들의 성장 레벨
@@ -93,6 +95,11 @@ class MainViewController: UIViewController {
     hammerButton.layer.borderColor = UIColor.clear.cgColor
     hammerButton.addTarget(self, action: #selector(clickedHammer), for: .touchUpInside)
     
+    sickleButton.layer.cornerRadius = 30
+    sickleButton.layer.borderWidth = 2
+    sickleButton.layer.borderColor = UIColor.clear.cgColor
+    sickleButton.addTarget(self, action: #selector(clickedSickle), for: .touchUpInside)
+    
   }
 
   // MARK: - Methods
@@ -127,11 +134,6 @@ class MainViewController: UIViewController {
     let growthImageView1 = growthImageViews1[index]
     let growthImageView2 = growthImageViews2[index]
     
-    // 수확할 수 있는 상태이면
-    if levels[index] == .done {
-      harvest(imageView: growthImageView2, index: index)
-    }
-    
     switch toolMode {
     // 물뿌리개 선택했을 때
     case .wateringCan:
@@ -162,6 +164,14 @@ class MainViewController: UIViewController {
         print("catchMole")
         catchMole(index: index)
       }
+      
+    // 낫을 선택했을 때
+    case .sickle:
+      // 수확할 수 있는 상태이면
+      if levels[index] == .done {
+        harvest(imageView: growthImageView2, index: index)
+      }
+      
     case .none:
       print("none")
     }
@@ -174,6 +184,7 @@ class MainViewController: UIViewController {
     sender.layer.borderColor = UIColor.red.cgColor
     waterCanButton.layer.borderColor = UIColor.clear.cgColor
     hammerButton.layer.borderColor = UIColor.clear.cgColor
+    sickleButton.layer.borderColor = UIColor.clear.cgColor
     
   }
   
@@ -184,6 +195,7 @@ class MainViewController: UIViewController {
     sender.layer.borderColor = UIColor.red.cgColor
     pillButton.layer.borderColor = UIColor.clear.cgColor
     hammerButton.layer.borderColor = UIColor.clear.cgColor
+    sickleButton.layer.borderColor = UIColor.clear.cgColor
   }
   
   @objc func clickedHammer(_ sender: UIButton) {
@@ -193,7 +205,19 @@ class MainViewController: UIViewController {
     sender.layer.borderColor = UIColor.red.cgColor
     waterCanButton.layer.borderColor = UIColor.clear.cgColor
     pillButton.layer.borderColor = UIColor.clear.cgColor
+    sickleButton.layer.borderColor = UIColor.clear.cgColor
   }
+  
+  @objc func clickedSickle(_ sender: UIButton) {
+    toolMode = .sickle
+    
+    // 선택된 도구 테두리 넣어줌
+    sender.layer.borderColor = UIColor.red.cgColor
+    waterCanButton.layer.borderColor = UIColor.clear.cgColor
+    pillButton.layer.borderColor = UIColor.clear.cgColor
+    hammerButton.layer.borderColor = UIColor.clear.cgColor
+  }
+  
   
   // level1 -> level2로 성장 처리
   private func level1toLevel2(imageView: UIImageView, index: Int) {
