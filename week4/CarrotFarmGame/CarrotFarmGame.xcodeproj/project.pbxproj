@@ -21,8 +21,8 @@
 		FA5350572822A55700B0F44C /* EndViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA5350552822A55700B0F44C /* EndViewController.xib */; };
 		FA6096F328250950003E74A3 /* bgm.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA6096F228250950003E74A3 /* bgm.mp3 */; };
 		FA6096F528250C04003E74A3 /* tool.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FA6096F428250C04003E74A3 /* tool.mp3 */; };
-		FA6096F728252F70003E74A3 /* mole.gif in Resources */ = {isa = PBXBuildFile; fileRef = FA6096F628252F70003E74A3 /* mole.gif */; };
 		FA6096FA28252FB4003E74A3 /* Gifu in Frameworks */ = {isa = PBXBuildFile; productRef = FA6096F928252FB4003E74A3 /* Gifu */; };
+		FA6096FC28253577003E74A3 /* mole.gif in Resources */ = {isa = PBXBuildFile; fileRef = FA6096FB28253577003E74A3 /* mole.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +42,7 @@
 		FA5350552822A55700B0F44C /* EndViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EndViewController.xib; sourceTree = "<group>"; };
 		FA6096F228250950003E74A3 /* bgm.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bgm.mp3; sourceTree = "<group>"; };
 		FA6096F428250C04003E74A3 /* tool.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tool.mp3; sourceTree = "<group>"; };
-		FA6096F628252F70003E74A3 /* mole.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = mole.gif; sourceTree = "<group>"; };
+		FA6096FB28253577003E74A3 /* mole.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = mole.gif; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +112,7 @@
 		FA6096F128250917003E74A3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				FA6096F628252F70003E74A3 /* mole.gif */,
+				FA6096FB28253577003E74A3 /* mole.gif */,
 				FA6096F428250C04003E74A3 /* tool.mp3 */,
 				FA6096F228250950003E74A3 /* bgm.mp3 */,
 				FA43A1612821629500569D01 /* Assets.xcassets */,
@@ -186,12 +186,12 @@
 			files = (
 				FA5350572822A55700B0F44C /* EndViewController.xib in Resources */,
 				FA43A1652821629500569D01 /* LaunchScreen.storyboard in Resources */,
-				FA6096F728252F70003E74A3 /* mole.gif in Resources */,
 				FA535051282286A800B0F44C /* HelpViewController.xib in Resources */,
 				FA43A1622821629500569D01 /* Assets.xcassets in Resources */,
 				FA6096F528250C04003E74A3 /* tool.mp3 in Resources */,
 				FA43A1602821629400569D01 /* Main.storyboard in Resources */,
 				FA53504D2822858400B0F44C /* MainViewController.xib in Resources */,
+				FA6096FC28253577003E74A3 /* mole.gif in Resources */,
 				FA6096F328250950003E74A3 /* bgm.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

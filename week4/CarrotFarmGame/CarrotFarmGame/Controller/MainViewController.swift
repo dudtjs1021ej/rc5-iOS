@@ -233,8 +233,16 @@ class MainViewController: UIViewController {
   }
   
   private func createMole() {
-    DispatchQueue.main.async {
-      self.moleImageViews[0].animate(withGIFNamed: "mole", loopCount: 1)
+    DispatchQueue.global().async {
+      for _ in 1...50 {
+        DispatchQueue.main.async {
+          for _ in 0..<1 {
+            let randomNum = Int.random(in: 0...3)
+            self.moleImageViews[randomNum].animate(withGIFNamed: "mole", loopCount: 1)
+          }
+        }
+        usleep(3000000)
+      }
     }
   }
 }
