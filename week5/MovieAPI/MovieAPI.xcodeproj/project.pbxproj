@@ -13,10 +13,12 @@
 		FA5AD2662829630600925A9F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5AD2642829630600925A9F /* Main.storyboard */; };
 		FA5AD2682829630800925A9F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA5AD2672829630800925A9F /* Assets.xcassets */; };
 		FA5AD26B2829630800925A9F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA5AD2692829630800925A9F /* LaunchScreen.storyboard */; };
+		FAD669C7282BD14F0009E2E0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FAD669C6282BD14F0009E2E0 /* Alamofire */; };
+		FAD669CC282BD5F00009E2E0 /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD669CB282BD5F00009E2E0 /* Library.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FA5AD25B2829630600925A9F /* LibraryAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LibraryAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA5AD25B2829630600925A9F /* MovieAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA5AD25E2829630600925A9F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA5AD2602829630600925A9F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FA5AD2622829630600925A9F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +26,7 @@
 		FA5AD2672829630800925A9F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA5AD26A2829630800925A9F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA5AD26C2829630800925A9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAD669CB282BD5F00009E2E0 /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAD669C7282BD14F0009E2E0 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,7 +44,7 @@
 		FA5AD2522829630600925A9F = {
 			isa = PBXGroup;
 			children = (
-				FA5AD25D2829630600925A9F /* LibraryAPI */,
+				FA5AD25D2829630600925A9F /* MovieAPI */,
 				FA5AD25C2829630600925A9F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,31 +52,56 @@
 		FA5AD25C2829630600925A9F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FA5AD25B2829630600925A9F /* LibraryAPI.app */,
+				FA5AD25B2829630600925A9F /* MovieAPI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		FA5AD25D2829630600925A9F /* LibraryAPI */ = {
+		FA5AD25D2829630600925A9F /* MovieAPI */ = {
 			isa = PBXGroup;
 			children = (
+				FAD669C8282BD5970009E2E0 /* Model */,
+				FAD669C9282BD59E0009E2E0 /* View */,
+				FAD669CA282BD5A30009E2E0 /* Controller */,
 				FA5AD25E2829630600925A9F /* AppDelegate.swift */,
 				FA5AD2602829630600925A9F /* SceneDelegate.swift */,
-				FA5AD2622829630600925A9F /* ViewController.swift */,
-				FA5AD2642829630600925A9F /* Main.storyboard */,
 				FA5AD2672829630800925A9F /* Assets.xcassets */,
 				FA5AD2692829630800925A9F /* LaunchScreen.storyboard */,
 				FA5AD26C2829630800925A9F /* Info.plist */,
 			);
-			path = LibraryAPI;
+			path = MovieAPI;
+			sourceTree = "<group>";
+		};
+		FAD669C8282BD5970009E2E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FAD669CB282BD5F00009E2E0 /* Library.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FAD669C9282BD59E0009E2E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA5AD2642829630600925A9F /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FAD669CA282BD5A30009E2E0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA5AD2622829630600925A9F /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		FA5AD25A2829630600925A9F /* LibraryAPI */ = {
+		FA5AD25A2829630600925A9F /* MovieAPI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = FA5AD26F2829630800925A9F /* Build configuration list for PBXNativeTarget "LibraryAPI" */;
+			buildConfigurationList = FA5AD26F2829630800925A9F /* Build configuration list for PBXNativeTarget "MovieAPI" */;
 			buildPhases = (
 				FA5AD2572829630600925A9F /* Sources */,
 				FA5AD2582829630600925A9F /* Frameworks */,
@@ -82,9 +111,12 @@
 			);
 			dependencies = (
 			);
-			name = LibraryAPI;
+			name = MovieAPI;
+			packageProductDependencies = (
+				FAD669C6282BD14F0009E2E0 /* Alamofire */,
+			);
 			productName = LibraryAPI;
-			productReference = FA5AD25B2829630600925A9F /* LibraryAPI.app */;
+			productReference = FA5AD25B2829630600925A9F /* MovieAPI.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +134,7 @@
 					};
 				};
 			};
-			buildConfigurationList = FA5AD2562829630600925A9F /* Build configuration list for PBXProject "LibraryAPI" */;
+			buildConfigurationList = FA5AD2562829630600925A9F /* Build configuration list for PBXProject "MovieAPI" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -111,11 +143,14 @@
 				Base,
 			);
 			mainGroup = FA5AD2522829630600925A9F;
+			packageReferences = (
+				FAD669C5282BD14F0009E2E0 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = FA5AD25C2829630600925A9F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FA5AD25A2829630600925A9F /* LibraryAPI */,
+				FA5AD25A2829630600925A9F /* MovieAPI */,
 			);
 		};
 /* End PBXProject section */
@@ -139,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA5AD2632829630600925A9F /* ViewController.swift in Sources */,
+				FAD669CC282BD5F00009E2E0 /* Library.swift in Sources */,
 				FA5AD25F2829630600925A9F /* AppDelegate.swift in Sources */,
 				FA5AD2612829630600925A9F /* SceneDelegate.swift in Sources */,
 			);
@@ -290,7 +326,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LibraryAPI/Info.plist;
+				INFOPLIST_FILE = MovieAPI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -301,7 +337,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = LimYoungSun.LibraryAPI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LimYoungSun.MovieAPI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -317,7 +353,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LibraryAPI/Info.plist;
+				INFOPLIST_FILE = MovieAPI/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -328,7 +364,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = LimYoungSun.LibraryAPI;
+				PRODUCT_BUNDLE_IDENTIFIER = com.LimYoungSun.MovieAPI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -339,7 +375,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		FA5AD2562829630600925A9F /* Build configuration list for PBXProject "LibraryAPI" */ = {
+		FA5AD2562829630600925A9F /* Build configuration list for PBXProject "MovieAPI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA5AD26D2829630800925A9F /* Debug */,
@@ -348,7 +384,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		FA5AD26F2829630800925A9F /* Build configuration list for PBXNativeTarget "LibraryAPI" */ = {
+		FA5AD26F2829630800925A9F /* Build configuration list for PBXNativeTarget "MovieAPI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				FA5AD2702829630800925A9F /* Debug */,
@@ -358,6 +394,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FAD669C5282BD14F0009E2E0 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FAD669C6282BD14F0009E2E0 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FAD669C5282BD14F0009E2E0 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FA5AD2532829630600925A9F /* Project object */;
 }
