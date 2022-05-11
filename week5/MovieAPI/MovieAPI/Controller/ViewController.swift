@@ -7,6 +7,8 @@
 
 import UIKit
 import Alamofire
+import KakaoSDKAuth
+import KakaoSDKUser
 
 class ViewController: UIViewController {
 
@@ -14,21 +16,21 @@ class ViewController: UIViewController {
     super.viewDidLoad()
    
   }
-  
-  func getTest() {
-    let url = "https://openapi.gg.go.kr/Library?key=769a49efd7f44d5f9d074fb57a67e746&type=json"
-//    AF.request(url,
-//               method: .get,
-//               parameters: nil,
-//               encoder: JSONEncoding.default
-//    ).responseJSON {
-//      response in
-//      switch response.result {
-//
-//      }
-//    }
+
+  @IBAction func kakaoLoginTouched(_ sender: UIButton) {
+    UserApi.shared.loginWithKakaoAccount(prompts: [.Login]) { (oAuthToken, error) in
+      if let error = error {
+        print(error)
+      } else {
+        print("loginWithKakaoAccount success")
+        _ = oAuthToken
+        let vc = HomeViewController()
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
+      }
+      
+    }
   }
-
-
+  
 }
 
