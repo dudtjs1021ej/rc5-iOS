@@ -31,7 +31,7 @@ class DailyChartViewController: UIViewController {
           let jsonData = try JSONSerialization.data(withJSONObject: data, options: .prettyPrinted)
           let json = try JSONDecoder().decode(DailyChart.self, from: jsonData)
           self.dailyBoxOfficeList = json.boxOfficeResult.dailyBoxOfficeList
-          print(self.dailyBoxOfficeList)
+          //print(self.dailyBoxOfficeList)
          
           // collectionView reloadData
           DispatchQueue.main.async {

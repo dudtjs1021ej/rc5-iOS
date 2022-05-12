@@ -20,9 +20,11 @@
 		FA643C7E282CEC6C000871EA /* ADCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA643C7D282CEC6C000871EA /* ADCollectionViewCell.swift */; };
 		FA643C80282CF1D7000871EA /* MovieChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA643C7F282CF1D7000871EA /* MovieChartViewController.swift */; };
 		FA643C82282CF1EB000871EA /* DailyChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA643C81282CF1EB000871EA /* DailyChartViewController.swift */; };
-		FA643C84282CF203000871EA /* WeekChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA643C83282CF203000871EA /* WeekChartViewController.swift */; };
+		FA643C84282CF203000871EA /* WeeklyChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA643C83282CF203000871EA /* WeeklyChartViewController.swift */; };
 		FA643C86282CF5C0000871EA /* DailyChartCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA643C85282CF5C0000871EA /* DailyChartCollectionViewCell.swift */; };
 		FA643C88282CFE09000871EA /* DailyChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA643C87282CFE09000871EA /* DailyChart.swift */; };
+		FA643C8D282D2C55000871EA /* WeeklyChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA643C8C282D2C55000871EA /* WeeklyChart.swift */; };
+		FA643C8F282D2CFE000871EA /* WeeklyChartCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA643C8E282D2CFE000871EA /* WeeklyChartCollectionViewCell.swift */; };
 		FAD669C7282BD14F0009E2E0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FAD669C6282BD14F0009E2E0 /* Alamofire */; };
 		FAD669CF282C10010009E2E0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD669CD282C10010009E2E0 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
@@ -45,9 +47,11 @@
 		FA643C7D282CEC6C000871EA /* ADCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ADCollectionViewCell.swift; sourceTree = "<group>"; };
 		FA643C7F282CF1D7000871EA /* MovieChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieChartViewController.swift; sourceTree = "<group>"; };
 		FA643C81282CF1EB000871EA /* DailyChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyChartViewController.swift; sourceTree = "<group>"; };
-		FA643C83282CF203000871EA /* WeekChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekChartViewController.swift; sourceTree = "<group>"; };
+		FA643C83282CF203000871EA /* WeeklyChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyChartViewController.swift; sourceTree = "<group>"; };
 		FA643C85282CF5C0000871EA /* DailyChartCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyChartCollectionViewCell.swift; sourceTree = "<group>"; };
 		FA643C87282CFE09000871EA /* DailyChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DailyChart.swift; path = ../../../../../../Documents/DailyChart.swift; sourceTree = "<group>"; };
+		FA643C8C282D2C55000871EA /* WeeklyChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyChart.swift; sourceTree = "<group>"; };
+		FA643C8E282D2CFE000871EA /* WeeklyChartCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyChartCollectionViewCell.swift; sourceTree = "<group>"; };
 		FAD669CD282C10010009E2E0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,6 +123,7 @@
 			children = (
 				FA643C7D282CEC6C000871EA /* ADCollectionViewCell.swift */,
 				FA643C85282CF5C0000871EA /* DailyChartCollectionViewCell.swift */,
+				FA643C8E282D2CFE000871EA /* WeeklyChartCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -127,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				FA643C87282CFE09000871EA /* DailyChart.swift */,
+				FA643C8C282D2C55000871EA /* WeeklyChart.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -150,7 +156,7 @@
 				FA643C78282CE36E000871EA /* SecondTabViewController.swift */,
 				FA643C7F282CF1D7000871EA /* MovieChartViewController.swift */,
 				FA643C81282CF1EB000871EA /* DailyChartViewController.swift */,
-				FA643C83282CF203000871EA /* WeekChartViewController.swift */,
+				FA643C83282CF203000871EA /* WeeklyChartViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -276,15 +282,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA643C8F282D2CFE000871EA /* WeeklyChartCollectionViewCell.swift in Sources */,
 				FA643C7B282CE66C000871EA /* TabViewController.swift in Sources */,
 				FA643C82282CF1EB000871EA /* DailyChartViewController.swift in Sources */,
 				FAD669CF282C10010009E2E0 /* HomeViewController.swift in Sources */,
 				FA643C7E282CEC6C000871EA /* ADCollectionViewCell.swift in Sources */,
 				FA5AD2632829630600925A9F /* ViewController.swift in Sources */,
 				FA643C80282CF1D7000871EA /* MovieChartViewController.swift in Sources */,
-				FA643C84282CF203000871EA /* WeekChartViewController.swift in Sources */,
+				FA643C84282CF203000871EA /* WeeklyChartViewController.swift in Sources */,
 				FA643C79282CE36E000871EA /* SecondTabViewController.swift in Sources */,
 				FA643C77282CE361000871EA /* FirstTabViewController.swift in Sources */,
+				FA643C8D282D2C55000871EA /* WeeklyChart.swift in Sources */,
 				FA643C88282CFE09000871EA /* DailyChart.swift in Sources */,
 				FA643C86282CF5C0000871EA /* DailyChartCollectionViewCell.swift in Sources */,
 				FA5AD25F2829630600925A9F /* AppDelegate.swift in Sources */,

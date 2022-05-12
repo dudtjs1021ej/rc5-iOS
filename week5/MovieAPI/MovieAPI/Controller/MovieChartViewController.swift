@@ -16,6 +16,7 @@ class MovieChartViewController: TabmanViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setTabMan()
+    isScrollEnabled = false
 
   }
     
@@ -24,7 +25,7 @@ class MovieChartViewController: TabmanViewController {
     guard let firstVC = storyboard?.instantiateViewController(withIdentifier: "dayChartVC")
             as? DailyChartViewController else { return }
     guard let secondVC = storyboard?.instantiateViewController(withIdentifier: "weekChartVC")
-            as? WeekChartViewController else { return }
+            as? WeeklyChartViewController else { return }
     viewControllers.append(firstVC)
     viewControllers.append(secondVC)
     

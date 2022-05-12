@@ -16,6 +16,7 @@ class TabViewController: TabmanViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     setTabMan()
+    isScrollEnabled = false
         
   }
   
