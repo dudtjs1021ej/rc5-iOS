@@ -8,15 +8,18 @@
 import UIKit
 import KakaoSDKUser
 
-class HomeViewController: UIViewController {
 
-  @IBOutlet weak var label: UILabel!
+class HomeViewController: ViewController {
+  // MARK: - Properties
+  
+  // MARK: - LifeCycles
   override func viewDidLoad() {
     super.viewDidLoad()
     setUserInfo()
         
     }
   
+  // MARK: - Methods
   func setUserInfo() {
     UserApi.shared.me() { (user, error) in
       if let error = error {
@@ -24,10 +27,11 @@ class HomeViewController: UIViewController {
       } else {
         print("me() success")
         _ = user
-        self.label.text = user?.kakaoAccount?.profile?.nickname
       }
-      
     }
   }
-
+  
+  
 }
+
+

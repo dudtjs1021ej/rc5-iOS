@@ -24,7 +24,8 @@ class ViewController: UIViewController {
       } else {
         print("loginWithKakaoAccount success")
         _ = oAuthToken
-        let vc = HomeViewController()
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "homeVC")
+                as? HomeViewController else { return }
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
       }
