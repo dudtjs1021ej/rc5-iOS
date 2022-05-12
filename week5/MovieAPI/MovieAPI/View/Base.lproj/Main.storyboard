@@ -196,7 +196,7 @@
                                 </cells>
                             </collectionView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JFQ-aN-AOz">
-                                <rect key="frame" x="0.0" y="243" width="414" height="464"/>
+                                <rect key="frame" x="0.0" y="263" width="414" height="464"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="464" id="T7J-8n-6N1"/>
                                 </constraints>
@@ -211,7 +211,7 @@
                             <constraint firstItem="qQy-ne-8if" firstAttribute="leading" secondItem="ZfR-Yd-lPe" secondAttribute="leading" id="TAw-56-ca9"/>
                             <constraint firstAttribute="trailing" secondItem="JFQ-aN-AOz" secondAttribute="trailing" id="oaz-HE-M8l"/>
                             <constraint firstItem="qQy-ne-8if" firstAttribute="top" secondItem="ZfR-Yd-lPe" secondAttribute="topMargin" constant="40" id="q1b-UY-d6c"/>
-                            <constraint firstItem="JFQ-aN-AOz" firstAttribute="top" secondItem="qQy-ne-8if" secondAttribute="bottom" id="yqT-A0-Oot"/>
+                            <constraint firstItem="JFQ-aN-AOz" firstAttribute="top" secondItem="qQy-ne-8if" secondAttribute="bottom" constant="20" id="yqT-A0-Oot"/>
                             <constraint firstAttribute="trailing" secondItem="qQy-ne-8if" secondAttribute="trailing" id="zSB-ox-NA7"/>
                         </constraints>
                     </view>
@@ -314,31 +314,117 @@
                             <constraint firstAttribute="trailing" secondItem="95L-v0-lgU" secondAttribute="trailing" id="uYx-gV-fzj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tabView" destination="95L-v0-lgU" id="3uD-Na-DUG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xkU-lD-kQs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2289.8550724637685" y="207.58928571428569"/>
         </scene>
-        <!--Day Chart View Controller-->
+        <!--Daily Chart View Controller-->
         <scene sceneID="f2W-2A-Y1b">
             <objects>
-                <viewController id="T94-fK-Fcn" customClass="DayChartViewController" customModule="MovieAPI" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="dayChartVC" id="T94-fK-Fcn" customClass="DailyChartViewController" customModule="MovieAPI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L8m-34-m7t">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="464"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="p5e-sU-arH">
+                                <rect key="frame" x="0.0" y="44" width="414" height="420"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="2nO-HM-SaE">
+                                    <size key="itemSize" width="264" height="406"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="dailyChartCell" id="4Ct-6y-OgJ" customClass="DailyChartCollectionViewCell" customModule="MovieAPI" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="7" width="264" height="406"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Qhy-Zq-PDF">
+                                            <rect key="frame" x="0.0" y="0.0" width="264" height="406"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="noImage" translatesAutoresizingMaskIntoConstraints="NO" id="pce-9e-99p">
+                                                    <rect key="frame" x="15" y="22" width="234" height="276"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S2d-ZM-Jvy">
+                                                    <rect key="frame" x="26" y="251" width="21" height="47"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="39"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="영화제목" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IEr-e7-OPP">
+                                                    <rect key="frame" x="12" y="313" width="240" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="누적관객 300만" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WVV-xX-aMU">
+                                                    <rect key="frame" x="110.5" y="342" width="78" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="80%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUv-gK-dbJ">
+                                                    <rect key="frame" x="79.5" y="342" width="26" height="15"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                                    <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="WVV-xX-aMU" firstAttribute="leading" secondItem="xUv-gK-dbJ" secondAttribute="trailing" constant="5" id="A7d-LS-pit"/>
+                                                <constraint firstItem="S2d-ZM-Jvy" firstAttribute="leading" secondItem="pce-9e-99p" secondAttribute="leading" constant="11" id="ADc-X3-baE"/>
+                                                <constraint firstItem="pce-9e-99p" firstAttribute="leading" secondItem="Qhy-Zq-PDF" secondAttribute="leading" constant="15" id="AFl-UT-TxS"/>
+                                                <constraint firstItem="S2d-ZM-Jvy" firstAttribute="bottom" secondItem="pce-9e-99p" secondAttribute="bottom" id="E9W-1X-Qce"/>
+                                                <constraint firstItem="WVV-xX-aMU" firstAttribute="top" secondItem="IEr-e7-OPP" secondAttribute="bottom" constant="8" symbolic="YES" id="F7e-yy-R07"/>
+                                                <constraint firstItem="pce-9e-99p" firstAttribute="top" secondItem="Qhy-Zq-PDF" secondAttribute="top" constant="22" id="I5s-cd-224"/>
+                                                <constraint firstItem="pce-9e-99p" firstAttribute="height" secondItem="Qhy-Zq-PDF" secondAttribute="height" multiplier="0.679803" id="OQ5-zt-8ps"/>
+                                                <constraint firstItem="IEr-e7-OPP" firstAttribute="leading" secondItem="Qhy-Zq-PDF" secondAttribute="leading" constant="12" id="cvE-9T-OzQ"/>
+                                                <constraint firstItem="xUv-gK-dbJ" firstAttribute="top" secondItem="IEr-e7-OPP" secondAttribute="bottom" constant="8" symbolic="YES" id="hm7-ff-aPa"/>
+                                                <constraint firstAttribute="trailing" secondItem="pce-9e-99p" secondAttribute="trailing" constant="15" id="j96-fx-uJC"/>
+                                                <constraint firstItem="IEr-e7-OPP" firstAttribute="top" secondItem="pce-9e-99p" secondAttribute="bottom" constant="15" id="pAw-an-hOS"/>
+                                                <constraint firstItem="xUv-gK-dbJ" firstAttribute="centerX" secondItem="Qhy-Zq-PDF" secondAttribute="centerX" multiplier="0.7" id="sNJ-eY-Emi"/>
+                                                <constraint firstAttribute="trailing" secondItem="IEr-e7-OPP" secondAttribute="trailing" constant="12" id="uqX-6m-2KA"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="264" height="406"/>
+                                        <connections>
+                                            <outlet property="audiAccLabel" destination="WVV-xX-aMU" id="5xV-Vp-XTC"/>
+                                            <outlet property="posterImageView" destination="pce-9e-99p" id="PF3-Ri-MgZ"/>
+                                            <outlet property="rankLabel" destination="S2d-ZM-Jvy" id="wfv-1F-Qik"/>
+                                            <outlet property="salesLabel" destination="xUv-gK-dbJ" id="VHU-Pl-HN2"/>
+                                            <outlet property="titleLabel" destination="IEr-e7-OPP" id="0HP-Wd-Vls"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="K5t-sw-liF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="K5t-sw-liF" firstAttribute="trailing" secondItem="p5e-sU-arH" secondAttribute="trailing" id="3fw-jk-dkN"/>
+                            <constraint firstItem="p5e-sU-arH" firstAttribute="top" secondItem="K5t-sw-liF" secondAttribute="top" id="aLk-WJ-1ag"/>
+                            <constraint firstItem="K5t-sw-liF" firstAttribute="bottom" secondItem="p5e-sU-arH" secondAttribute="bottom" id="rSi-eT-tTG"/>
+                            <constraint firstItem="p5e-sU-arH" firstAttribute="leading" secondItem="K5t-sw-liF" secondAttribute="leading" id="yhJ-qJ-sJ7"/>
+                        </constraints>
                     </view>
                     <size key="freeformSize" width="414" height="464"/>
+                    <connections>
+                        <outlet property="dailyMovieCollectionView" destination="p5e-sU-arH" id="BY2-q7-R5C"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MF2-Wk-HWG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2954" y="236"/>
+            <point key="canvasLocation" x="2950.7246376811595" y="207.58928571428569"/>
         </scene>
         <!--Week Chart View Controller-->
         <scene sceneID="D9w-kd-IIT">
             <objects>
-                <viewController id="aqv-rj-4Oc" customClass="WeekChartViewController" customModule="MovieAPI" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="weekChartVC" id="aqv-rj-4Oc" customClass="WeekChartViewController" customModule="MovieAPI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rDZ-Jd-o0s">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="468"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -349,7 +435,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6aa-3i-wii" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3621.739130434783" y="236.38392857142856"/>
+            <point key="canvasLocation" x="3616" y="209"/>
         </scene>
     </scenes>
     <resources>
@@ -358,6 +444,7 @@
         <image name="coupon" width="46" height="44"/>
         <image name="icon" width="106" height="52"/>
         <image name="menu" width="44" height="38"/>
+        <image name="noImage" width="1665" height="2048"/>
         <image name="popcorn" width="42" height="40"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
