@@ -10,6 +10,8 @@ import Tabman
 import Pageboy
 
 class MovieChartViewController: TabmanViewController {
+  
+  // MARK: - Properties
   @IBOutlet weak var tabView: UIView!
   private var viewControllers: [UIViewController] = []
   
@@ -20,7 +22,6 @@ class MovieChartViewController: TabmanViewController {
 
   }
     
-
   func setTabMan() {
     guard let firstVC = storyboard?.instantiateViewController(withIdentifier: "dayChartVC")
             as? DailyChartViewController else { return }
@@ -49,7 +50,7 @@ class MovieChartViewController: TabmanViewController {
 }
 
 
-
+// MARK: - PageboyViewControllerDataSource, TMBarDataSource
 extension MovieChartViewController: PageboyViewControllerDataSource, TMBarDataSource {
   func numberOfViewControllers(in pageboyViewController: PageboyViewController) -> Int {
     return viewControllers.count
@@ -66,9 +67,9 @@ extension MovieChartViewController: PageboyViewControllerDataSource, TMBarDataSo
   func barItem(for bar: TMBar, at index: Int) -> TMBarItemable {
     switch index {
     case 0:
-      return TMBarItem(title: "일별 차트")
+      return TMBarItem(title: "일별 순위")
     case 1:
-      return TMBarItem(title: "주간 차트")
+      return TMBarItem(title: "주간 순위")
     default:
       return TMBarItem(title: "page \(index)")
     }

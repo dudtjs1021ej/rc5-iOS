@@ -11,6 +11,7 @@ PODS:
     - KakaoSDKCommon/Common (= 2.9.1)
   - KakaoSDKUser (2.9.1):
     - KakaoSDKAuth (= 2.9.1)
+  - NMapsMap (3.15.0)
   - Pageboy (3.6.2)
   - Tabman (2.12.0):
     - Pageboy (~> 3.6.0)
@@ -19,6 +20,7 @@ DEPENDENCIES:
   - KakaoSDKAuth
   - KakaoSDKCommon
   - KakaoSDKUser
+  - NMapsMap
   - Tabman
 
 SPEC REPOS:
@@ -27,6 +29,7 @@ SPEC REPOS:
     - KakaoSDKAuth
     - KakaoSDKCommon
     - KakaoSDKUser
+    - NMapsMap
     - Pageboy
     - Tabman
 
@@ -35,9 +38,10 @@ SPEC CHECKSUMS:
   KakaoSDKAuth: 8ec514e64f57f405735e92483fdae1cc2830d351
   KakaoSDKCommon: c4b08131fdba6770a280ffe83916048174f329bf
   KakaoSDKUser: 3b82c8f4b7bdd8584b296cf91d1be4b4a84102fb
+  NMapsMap: f151761c088d6516064c59da03ab6503769486e6
   Pageboy: cf121b9dd48c63f3f281b2a9ec93d02e0f23879b
   Tabman: 447a50447ed2869c39ab3b1a779327e43e067c4e
 
-PODFILE CHECKSUM: 211c8bbf2aff829f10119da6990de2b6eee7657a
+PODFILE CHECKSUM: d1d663d019ecfffdf77b43d87192e139bfdbb3b3
 
 COCOAPODS: 1.11.3

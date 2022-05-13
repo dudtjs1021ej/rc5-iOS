@@ -8,6 +8,7 @@ target 'MovieAPI' do
   pod 'KakaoSDKCommon'
   pod 'KakaoSDKAuth'
   pod 'KakaoSDKUser'
+  pod 'NMapsMap'
   # Pods for MovieAPI
 
 end

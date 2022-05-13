@@ -10,9 +10,12 @@ import Tabman
 import Pageboy
 
 class TabViewController: TabmanViewController {
+  
+  // MARK: - Properties
   private var viewControllers: [UIViewController] = []
-
   @IBOutlet weak var tabView: UIView!
+  
+  // MARK: - LifeCycle
   override func viewDidLoad() {
     super.viewDidLoad()
     setTabMan()
@@ -20,35 +23,38 @@ class TabViewController: TabmanViewController {
         
   }
   
+  // MARK: - Methods
   func setTabMan() {
     guard let firstVC = storyboard?.instantiateViewController(withIdentifier: "firstTabVC")
             as? FirstTabViewController else { return }
     guard let secondVC = storyboard?.instantiateViewController(withIdentifier: "secondTabVC")
             as? SecondTabViewController else { return }
+    guard let thridVC = storyboard?.instantiateViewController(withIdentifier: "thirdTabVC")
+            as? ThirdTabViewController else { return }
     viewControllers.append(firstVC)
     viewControllers.append(secondVC)
+    viewControllers.append(thridVC)
     
     self.dataSource = self
-    
     let bar = TMBar.ButtonBar()
     
     bar.backgroundView.style = .blur(style: .light)
     bar.layout.contentInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
     bar.layout.contentMode = .fit
     bar.buttons.customize { button in
-      button.tintColor = .white
-      button.selectedTintColor = .white
-      button.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+      button.tintColor = .systemGray4
+      button.selectedTintColor = .black
+      button.font = UIFont.systemFont(ofSize: 18, weight: .semibold)
     }
     
     bar.indicator.weight = .custom(value: 3)
-    bar.indicator.tintColor = .white
+    bar.indicator.tintColor = .black
     bar.layout.contentInset = UIEdgeInsets(top: 0, left: 50, bottom: 1, right: 50)
     addBar(bar, dataSource: self, at: .custom(view: tabView, layout: nil))
   }
-
 }
 
+// MARK: - PageboyViewControllerDataSource, TMBarDataSource
 extension TabViewController: PageboyViewControllerDataSource, TMBarDataSource {
   func numberOfViewControllers(in pageboyViewController: PageboyViewController) -> Int {
     return viewControllers.count
@@ -68,6 +74,8 @@ extension TabViewController: PageboyViewControllerDataSource, TMBarDataSource {
       return TMBarItem(title: "홈")
     case 1:
       return TMBarItem(title: "지도")
+    case 2:
+      return TMBarItem(title: "검색")
     default:
       return TMBarItem(title: "page \(index)")
     }

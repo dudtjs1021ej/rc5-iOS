@@ -10,28 +10,10 @@ import KakaoSDKUser
 
 
 class HomeViewController: ViewController {
-  // MARK: - Properties
-  
   // MARK: - LifeCycles
   override func viewDidLoad() {
     super.viewDidLoad()
-    setUserInfo()
-        
-    }
-  
-  // MARK: - Methods
-  func setUserInfo() {
-    UserApi.shared.me() { (user, error) in
-      if let error = error {
-        print(error)
-      } else {
-        print("me() success")
-        _ = user
-      }
-    }
   }
-  
-  
 }
 
 

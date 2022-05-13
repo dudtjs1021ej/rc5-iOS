@@ -14,11 +14,10 @@ class ViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-   
   }
 
   @IBAction func kakaoLoginTouched(_ sender: UIButton) {
-    UserApi.shared.loginWithKakaoAccount(prompts: [.Login]) { (oAuthToken, error) in
+    UserApi.shared.loginWithKakaoAccount() { (oAuthToken, error) in
       if let error = error {
         print(error)
       } else {
@@ -29,7 +28,6 @@ class ViewController: UIViewController {
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true)
       }
-      
     }
   }
   
