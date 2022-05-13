@@ -21,4 +21,6 @@
 | 1주차 | <img width="210" src="./gif/week1.gif"> | OT & AutoLayout | 🏡 오늘의 집 클론코딩 | 22.04.09 ~ 22.04.15 | [이동](./week1/TodayHouse/README.md) |
 | 2주차 | <img width="210" src="./gif/week2.gif"> | Life Cycle | ☕️ 빽다방 클론코딩 | 22.04.16 ~ 22.04.22 | [이동](./week2/PalksCoffee/README.md) |
 | 3주차 | <img width="210" src="./gif/week3.gif"> | Table View | 🥕 당근마켓 클론코딩 | 22.04.23 ~ 22.04.29 | [이동](./week3/DaangnMarket/README.md) |
+| 4주차 | <img width="300" src="./gif/week4.gif"> | Multi-Thread | 🕹 당근농장 플래시게임 | 22.04.30 ~ 22.05.06 | [이동](./week4/CarrotFarmGame/README.md) |
+| 5주차 | <img width="210" src="./gif/week5.gif"> | Network Intro & API | 🎬 영화 앱 | 22.05.07 ~ 22.05.13 | [이동](./week5/MovieAPI/README.md) |
 
