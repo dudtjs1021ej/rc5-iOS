@@ -1,16 +1,16 @@
 ## 📌 구현 화면
 
-<img width="400" src="/gif/week3.gif" align = left>
+<img width="400" src="/gif/week3.gif">
 
 
 
 ## 📌 사용한 tableView와 collectionView
 
-<img width="500" src="img/2.jpg" align = left>
+<img width="500" src="img/2.jpg">
 
-<img width="500" src="img/3.jpg" align = left>
+<img width="500" src="img/3.jpg">
 
-<img width="500" src="img/4.jpg" align = left>
+<img width="500" src="img/4.jpg">
 
 
 
