@@ -1,5 +1,5 @@
 ## 📌 구현 화면
-<img width="500" src="/gif/week3.gif">
+<img width="800" src="/gif/week4.gif">
 
 ## 📌 게임 설명
 
@@ -42,6 +42,7 @@
   }
 ```
 
+
 - 점수
 
 ```swift
@@ -58,6 +59,7 @@
     waterings[index] = [false, false] // 1단계, 2단계 모두 물 안준걸로 초기화
   }
 ```
+
 
 - 두더지
 
@@ -113,6 +115,7 @@
     }
   }
 ```
+
 
 ## 📌 스레드 관련 이슈
 
