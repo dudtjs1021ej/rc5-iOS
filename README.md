@@ -1,5 +1,5 @@
 # RisingCamp 5기 - iOS 🏕
-> 2022.04.09 ~ 2022.05.28
+> 2022.04.09 ~ 2022.06.03
 > 
 ## 📌 커리큘럼
 | 주차 | 커리큘럼 | 상세 내용 |
@@ -23,4 +23,7 @@
 | 3주차 | <img width="210" src="./gif/week3.gif"> | Table View | 🥕 당근마켓 클론코딩 | 22.04.23 ~ 22.04.29 | [이동](./week3/DaangnMarket/README.md) |
 | 4주차 | <img width="300" src="./gif/week4.gif"> | Multi-Thread | 🕹 당근농장 플래시게임 | 22.04.30 ~ 22.05.06 | [이동](./week4/CarrotFarmGame/README.md) |
 | 5주차 | <img width="210" src="./gif/week5.gif"> | Network Intro & API | 🎬 영화 앱 | 22.05.07 ~ 22.05.13 | [이동](./week5/MovieAPI/README.md) |
+| 6주차 |  | Token & Restful | 과제x | 22.05.14 ~ 22.05.20 |  |
+| 7주차 | [시연영상](https://youtu.be/IF6Fj2cnl7k) | Rising Test(프론트엔드, 백엔드 협업) | 🥭 망고플레이트 클론코딩 | 22.05.21 ~ 22.05.27 | [이동](https://github.com/mock-rp5/mangoplate_ios_jera) |
+| 8주차 | [시연영상](https://youtu.be/IF6Fj2cnl7k) | Rising Test(프론트엔드, 백엔드 협업) | 🥭 망고플레이트 클론코딩 | 22.05.28 ~ 22.06.03 | [이동](https://github.com/mock-rp5/mangoplate_ios_jera) |
 
